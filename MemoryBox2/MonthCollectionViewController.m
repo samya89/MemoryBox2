@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MonthCollectionViewController.h"
 #import "MonthCollectionViewCell.h"
+#import "DetailMonthCollectionViewController.h"
 #import "Month.h"
 #import "CoverFlowLayout.h"
 
@@ -28,6 +29,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//        RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+//        [defaultRealm beginWriteTransaction];
+//        [defaultRealm deleteAllObjects];
+//        [defaultRealm commitWriteTransaction];
     
     Month *january = [[Month alloc] init];
     Month *february = [[Month alloc] init];
@@ -56,6 +62,21 @@ static NSString * const reuseIdentifier = @"Cell";
     october.monthName = @"October";
     november.monthName = @"November";
     december.monthName = @"December";
+    
+    january.days = 31;
+    february.days = 28;
+    march.days = 31;
+    april.days = 30;
+    may.days = 31;
+    june.days = 30;
+    july.days = 31;
+    august.days = 31;
+    september.days = 30;
+    october.days = 31;
+    september.days = 30;
+    october.days = 31;
+    november.days = 30;
+    december.days = 31;
 
     self.monthArray = [Month allObjects];
     
@@ -87,15 +108,13 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.collectionView reloadData];
 //}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"monthDetail"]) {
+        RLMResults *realmMonth = [Month allObjects];
+        Month *month = [realmMonth objectAtIndex:self.indexPath.row];
+        [[segue destinationViewController] setMonthItem:month];
+    }
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 

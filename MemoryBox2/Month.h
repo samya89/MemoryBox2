@@ -12,6 +12,7 @@
 @interface Month : RLMObject
 
 @property NSString *monthName;
+@property int days;
 //@property NSData *monthImage;
 
 @end
