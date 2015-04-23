@@ -27,15 +27,19 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+////    delete after adding delete option
+//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+//    [defaultRealm beginWriteTransaction];
+//    [defaultRealm deleteAllObjects];
+//    [defaultRealm commitWriteTransaction];
+    
     self.array = [Box allObjects];
     NSLog(@"results %@", self.array);
-
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.collectionView reloadData];
 }
 
 - (Box *)insertNewObject:(id)sender {
@@ -44,7 +48,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UIImage *myImage = [UIImage imageNamed:@"drawerIcon.png"];
     NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
     Box *box = [[Box alloc] init];
-    box.boxName = @"Sam";
+    box.boxName = @"";
     box.imageData = data;
     
     [defaultRealm beginWriteTransaction];
@@ -55,13 +59,13 @@ static NSString * const reuseIdentifier = @"Cell";
     return box;
 }
 
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        
-        NSArray *sectionArray = self.array[self.indexPath.section];
-        Box *box = sectionArray[self.indexPath.row];
+        RLMResults *realmBox = [Box allObjects];
+        Box *box = [realmBox objectAtIndex:self.indexPath.row];
         [[segue destinationViewController] setDetailItem:box];
     }
     else if ([[segue identifier] isEqualToString:@"addBox"]) {
@@ -70,9 +74,6 @@ static NSString * const reuseIdentifier = @"Cell";
         addBoxVC.detailItem = box;
     }
 }
-
-
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -93,13 +94,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     return cell;
 }
-
-
-
-
-
-
-
 
 #pragma mark <UICollectionViewDelegate>
 

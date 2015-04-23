@@ -1,5 +1,5 @@
 //
-//  AddBoxViewController.h
+//  MonthCollectionViewController.h
 //  MemoryBox2
 //
 //  Created by Samia Al Rahmani on 4/22/15.
@@ -8,16 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
-@class Box;
+#import "Box.h"
 
-@interface AddBoxViewController : UIViewController
+@interface MonthCollectionViewController : UICollectionViewController
 
 @property (strong, nonatomic) Box *detailItem;
-@property (weak, nonatomic) IBOutlet UITextField *boxNameTextfield;
-
-- (IBAction)addBox:(id)sender;
-- (IBAction)cancel:(id)sender;
-
-
 
 @end

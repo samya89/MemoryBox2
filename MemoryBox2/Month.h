@@ -1,5 +1,5 @@
 //
-//  Box.h
+//  Month.h
 //  MemoryBox2
 //
 //  Created by Samia Al Rahmani on 4/22/15.
@@ -9,12 +9,10 @@
 #import <Realm/Realm.h>
 #import <UIKit/UIKit.h>
 
-@interface Box : RLMObject
+@interface Month : RLMObject
 
-@property NSString *boxName;
-@property NSData *imageData;
-
-+ (NSDictionary *)defaultPropertyValues;
+@property NSString *monthName;
+//@property NSData *monthImage;
 
 @end
-RLM_ARRAY_TYPE(Box)
+RLM_ARRAY_TYPE(Month)

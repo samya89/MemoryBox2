@@ -7,6 +7,7 @@
 //
 
 #import "AddBoxViewController.h"
+#import "Box.h"
 
 @interface AddBoxViewController ()
 
@@ -45,11 +46,18 @@
 - (IBAction)addBox:(id)sender {
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     [defaultRealm beginWriteTransaction];
-//    box.boxName = @"Thomas Pynchon";
+    self.detailItem.boxName = self.boxNameTextfield.text;
     [defaultRealm commitWriteTransaction];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancel:(id)sender {
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    Box *box = self.detailItem;
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm deleteObject:box];
+    [defaultRealm commitWriteTransaction];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
