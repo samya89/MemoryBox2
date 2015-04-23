@@ -10,8 +10,11 @@
 #import "MonthCollectionViewController.h"
 #import "MonthCollectionViewCell.h"
 #import "Month.h"
+#import "CoverFlowLayout.h"
 
 @interface MonthCollectionViewController ()
+
+@property (nonatomic, strong) CoverFlowLayout *coverFlowLayout;
 
 @property (nonatomic, strong) RLMResults *monthArray;
 @property (nonatomic, strong) RLMNotificationToken *notification;
@@ -41,18 +44,18 @@ static NSString * const reuseIdentifier = @"Cell";
     
     january.monthName = @"January";
     february.monthName = @"February";
-    march.monthName = @"march";
-    april.monthName = @"april";
-    may.monthName = @"may";
-    june.monthName = @"june";
-    july.monthName = @"july";
-    august.monthName = @"august";
-    september.monthName = @"september";
-    october.monthName = @"october";
-    september.monthName = @"september";
-    october.monthName = @"october";
-    november.monthName = @"november";
-    december.monthName = @"december";
+    march.monthName = @"March";
+    april.monthName = @"April";
+    may.monthName = @"May";
+    june.monthName = @"June";
+    july.monthName = @"July";
+    august.monthName = @"August";
+    september.monthName = @"September";
+    october.monthName = @"October";
+    september.monthName = @"September";
+    october.monthName = @"October";
+    november.monthName = @"November";
+    december.monthName = @"December";
 
     self.monthArray = [Month allObjects];
     
@@ -108,7 +111,6 @@ static NSString * const reuseIdentifier = @"Cell";
     MonthCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     Month *month = self.monthArray[indexPath.row];
     cell.monthLabel.text = [month monthName];
-    
     return cell;
 }
 

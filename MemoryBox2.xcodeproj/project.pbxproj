@@ -23,6 +23,8 @@
 		93CF25D41AE872E6007B6C24 /* MonthCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25D31AE872E6007B6C24 /* MonthCollectionViewController.m */; };
 		93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25D61AE87372007B6C24 /* MonthCollectionViewCell.m */; };
 		93CF25E01AE89B1E007B6C24 /* Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25DF1AE89B1E007B6C24 /* Month.m */; };
+		93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */; };
+		93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		93CF25D61AE87372007B6C24 /* MonthCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthCollectionViewCell.m; sourceTree = "<group>"; };
 		93CF25DE1AE89B1E007B6C24 /* Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Month.h; sourceTree = "<group>"; };
 		93CF25DF1AE89B1E007B6C24 /* Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Month.m; sourceTree = "<group>"; };
+		93CF25E11AE8A97E007B6C24 /* DetailMonthCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailMonthCollectionViewController.h; sourceTree = "<group>"; };
+		93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMonthCollectionViewController.m; sourceTree = "<group>"; };
+		93CF25E41AE8AA8F007B6C24 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
+		93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +118,8 @@
 			children = (
 				93CF25991AE80B2B007B6C24 /* AppDelegate.h */,
 				93CF259A1AE80B2B007B6C24 /* AppDelegate.m */,
-				93CF25C51AE80DF9007B6C24 /* BoxCollectionViewCell.h */,
-				93CF25C61AE80DF9007B6C24 /* BoxCollectionViewCell.m */,
+				93CF25E41AE8AA8F007B6C24 /* CoverFlowLayout.h */,
+				93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */,
 				93CF25BF1AE80DBA007B6C24 /* Box.h */,
 				93CF25C01AE80DBA007B6C24 /* Box.m */,
 				93CF25DE1AE89B1E007B6C24 /* Month.h */,
@@ -122,10 +128,14 @@
 				93CF25C31AE80DE2007B6C24 /* BoxCollectionViewController.m */,
 				93CF25CA1AE84E36007B6C24 /* AddBoxViewController.h */,
 				93CF25CD1AE86144007B6C24 /* AddBoxViewController.m */,
-				93CF25D51AE87372007B6C24 /* MonthCollectionViewCell.h */,
-				93CF25D61AE87372007B6C24 /* MonthCollectionViewCell.m */,
 				93CF25D21AE872E6007B6C24 /* MonthCollectionViewController.h */,
 				93CF25D31AE872E6007B6C24 /* MonthCollectionViewController.m */,
+				93CF25E11AE8A97E007B6C24 /* DetailMonthCollectionViewController.h */,
+				93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */,
+				93CF25C51AE80DF9007B6C24 /* BoxCollectionViewCell.h */,
+				93CF25C61AE80DF9007B6C24 /* BoxCollectionViewCell.m */,
+				93CF25D51AE87372007B6C24 /* MonthCollectionViewCell.h */,
+				93CF25D61AE87372007B6C24 /* MonthCollectionViewCell.m */,
 				93CF259F1AE80B2B007B6C24 /* Main.storyboard */,
 				93CF25A21AE80B2B007B6C24 /* Images.xcassets */,
 				93CF25A41AE80B2B007B6C24 /* LaunchScreen.xib */,
@@ -263,7 +273,9 @@
 			files = (
 				93CF25CE1AE86144007B6C24 /* AddBoxViewController.m in Sources */,
 				93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */,
+				93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */,
 				93CF25C41AE80DE2007B6C24 /* BoxCollectionViewController.m in Sources */,
+				93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */,
 				93CF25E01AE89B1E007B6C24 /* Month.m in Sources */,
 				93CF25C11AE80DBA007B6C24 /* Box.m in Sources */,
 				93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */,
