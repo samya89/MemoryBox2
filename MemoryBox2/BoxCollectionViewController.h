@@ -10,7 +10,7 @@
 #import <Realm/Realm.h>
 @class Box;
 
-@interface BoxCollectionViewController : UICollectionViewController
+@interface BoxCollectionViewController : UICollectionViewController<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) Box *box;
 

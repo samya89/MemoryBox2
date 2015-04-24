@@ -42,20 +42,51 @@
                                             <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-eh-vUm">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deleteBox:" destination="PlV-9B-ZI7" eventType="touchUpInside" id="3xi-7r-LwN"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="aSM-iQ-HBT" firstAttribute="top" secondItem="PlV-9B-ZI7" secondAttribute="topMargin" constant="-3" id="2fT-fx-BEE"/>
                                     <constraint firstAttribute="centerX" secondItem="aSM-iQ-HBT" secondAttribute="centerX" id="357-mV-lbo"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="d6d-eh-vUm" secondAttribute="trailing" id="AGH-Dn-iDE"/>
                                     <constraint firstAttribute="centerX" secondItem="xFz-ZK-uOW" secondAttribute="centerX" id="GBq-c4-YIj"/>
                                     <constraint firstItem="xFz-ZK-uOW" firstAttribute="top" secondItem="aSM-iQ-HBT" secondAttribute="bottom" constant="-3" id="KpT-5e-LfQ"/>
+                                    <constraint firstItem="d6d-eh-vUm" firstAttribute="top" secondItem="PlV-9B-ZI7" secondAttribute="topMargin" id="zjd-pA-Xun"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="d6d-eh-vUm"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="AGH-Dn-iDE"/>
+                                        <exclude reference="zjd-pA-Xun"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="d6d-eh-vUm"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="AGH-Dn-iDE"/>
+                                        <include reference="zjd-pA-Xun"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="boxImageView" destination="aSM-iQ-HBT" id="p6K-cs-ymJ"/>
                                     <outlet property="boxNameLabel" destination="xFz-ZK-uOW" id="YIm-xJ-IkK"/>
-                                    <segue destination="W2Y-qc-dpS" kind="show" identifier="showDetail" id="hLB-JH-mj5"/>
+                                    <outlet property="deleteButton" destination="d6d-eh-vUm" id="pnE-Xg-noO"/>
+                                    <outletCollection property="gestureRecognizers" destination="kdr-bc-mZ8" appends="YES" id="0Sx-bu-uIb"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -72,8 +103,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="W2Y-qc-dpS" kind="show" identifier="boxDetail" id="Cf6-34-klF"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oed-b0-Q4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="kdr-bc-mZ8"/>
             </objects>
             <point key="canvasLocation" x="1037" y="180"/>
         </scene>

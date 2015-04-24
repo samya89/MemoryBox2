@@ -10,4 +10,6 @@
 
 @implementation BoxCollectionViewCell
 
+- (IBAction)deleteBox:(id)sender {
+}
 @end

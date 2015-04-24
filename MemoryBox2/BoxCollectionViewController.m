@@ -27,14 +27,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-////    delete after adding delete option
-    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    [defaultRealm beginWriteTransaction];
-    [defaultRealm deleteAllObjects];
-    [defaultRealm commitWriteTransaction];
-    
     self.array = [Box allObjects];
     NSLog(@"results %@", self.array);
+    
+    UILongPressGestureRecognizer *lpgr
+    = [[UILongPressGestureRecognizer alloc]
+       initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = .5; //seconds
+    lpgr.delegate = self;
+    [self.collectionView addGestureRecognizer:lpgr];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -59,11 +60,33 @@ static NSString * const reuseIdentifier = @"Cell";
     return box;
 }
 
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        // get the cell at indexPath (the one you long pressed)
+        BoxCollectionViewCell *cell =
+        [self.collectionView cellForItemAtIndexPath:indexPath];
+        // do stuff with the cell
+        RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+        [defaultRealm beginWriteTransaction];
+//        [realm deleteObject:cheeseBook];
+        [defaultRealm commitWriteTransaction];
+        
+    }
+}
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"boxDetail"]) {
         RLMResults *realmBox = [Box allObjects];
         Box *box = [realmBox objectAtIndex:self.indexPath.row];
         [[segue destinationViewController] setDetailItem:box];
@@ -96,6 +119,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.indexPath = indexPath;
+    [self performSegueWithIdentifier:@"boxDetail" sender:self];
+    NSLog(@"selected box = %@", self.box);
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
