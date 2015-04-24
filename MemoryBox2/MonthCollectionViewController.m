@@ -112,9 +112,15 @@ static NSString * const reuseIdentifier = @"Cell";
     if ([[segue identifier] isEqualToString:@"monthDetail"]) {
         Month *month = [self.monthArray objectAtIndex:self.selectedIndexPath.row];
         NSLog(@"selected month = %@", month);
+        NSLog(@"selected box %@", self.detailItem);
         [[segue destinationViewController] setMonthItem:month];
+        [[segue destinationViewController] setBoxItem:self.detailItem];
     }
 }
+
+//NSLog(@"selected month = %@", self.monthItem);
+//[[segue destinationViewController] setSelectedMonth:self.monthItem];
+//[[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
 
 #pragma mark <UICollectionViewDataSource>
 

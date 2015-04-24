@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Box.h"
+#import "Month.h"
 @class MonthCollectionViewController;
-@class Month;
 
 @interface DetailMonthCollectionViewController : UICollectionViewController
 
 @property (strong, nonatomic) Month *monthItem;
+@property (strong, nonatomic) Box *boxItem;
 
 @end

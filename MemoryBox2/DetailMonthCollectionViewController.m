@@ -34,7 +34,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"dayDetail"]) {
         NSLog(@"selected month = %@", self.monthItem);
@@ -42,8 +41,6 @@ static NSString * const reuseIdentifier = @"Cell";
         [[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
     }
 }
-
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -58,15 +55,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-//    if (indexPath.section == 0) {
-//        Month *month = self.monthItem[indexPath.item];
-//        cell.iconImageView.image = [month iconImage];
-//    }
-//    else if (indexPath.section == 1){
-//        int firstIndex = 2;
-//        Month *month = self.icons[indexPath.row+firstIndex];
-//        cell.iconImageView.image = [month iconImage];
-//    }
     return cell;
 }
 

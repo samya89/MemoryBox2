@@ -79,7 +79,6 @@ static NSString * const reuseIdentifier = @"Cell";
         [defaultRealm beginWriteTransaction];
 //        [realm deleteObject:cheeseBook];
         [defaultRealm commitWriteTransaction];
-        
     }
 }
 
@@ -87,8 +86,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"boxDetail"]) {
-        RLMResults *realmBox = [Box allObjects];
-        Box *box = [realmBox objectAtIndex:self.indexPath.row];
+        Box *box = [self.array objectAtIndex:self.indexPath.row];
+        NSLog(@"selected month = %@", box);
         [[segue destinationViewController] setDetailItem:box];
     }
     else if ([[segue identifier] isEqualToString:@"addBox"]) {
@@ -97,6 +96,10 @@ static NSString * const reuseIdentifier = @"Cell";
         addBoxVC.detailItem = box;
     }
 }
+
+// Month *month = [self.monthArray objectAtIndex:self.selectedIndexPath.row];
+//NSLog(@"selected month = %@", month);
+//[[segue destinationViewController] setMonthItem:month];
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -123,7 +126,6 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     self.indexPath = indexPath;
     [self performSegueWithIdentifier:@"boxDetail" sender:self];
-    NSLog(@"selected box = %@", self.box);
 }
 
 /*
