@@ -23,8 +23,9 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.momentArray = [Moment allObjects];
-    
+    NSString *queryString = [NSString stringWithFormat:@"timeString = '%d%@'", self.selectedDayOfMonth,self.selectedMonth.monthName];
+    self.momentArray = [Moment objectsWhere:queryString];
+
     NSLog(@"passed selected month and day of month = %@, %d", self.selectedMonth, self.selectedDayOfMonth);
 
 }
@@ -56,8 +57,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MomentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    // Configure the cell
     
     return cell;
 }
