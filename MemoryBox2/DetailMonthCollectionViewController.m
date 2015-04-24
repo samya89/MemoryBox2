@@ -7,9 +7,12 @@
 //
 
 #import "DetailMonthCollectionViewController.h"
+#import "MomentCollectionViewController.h"
 #import "Month.h"
 
 @interface DetailMonthCollectionViewController ()
+
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -34,15 +37,19 @@ static NSString * const reuseIdentifier = @"Cell";
         _monthItem = newDetailItem;
     }
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"dayDetail"]) {
+        NSLog(@"selected month = %@", self.monthItem);
+        [[segue destinationViewController] setSelectedMonth:self.monthItem];
+        [[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
+    }
 }
-*/
+
+
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -70,6 +77,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"dayDetail" sender:self];
+    NSLog(@"selected date = %@, %ld", self.monthItem,indexPath.row+1);
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

@@ -7,9 +7,12 @@
 //
 
 #import "MomentCollectionViewController.h"
+#import "MomentCollectionViewCell.h"
 #import "Moment.h"
 
 @interface MomentCollectionViewController ()
+
+@property (nonatomic, strong) RLMResults *momentArray;
 
 @end
 
@@ -19,14 +22,18 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     
+    
+    self.momentArray = [Moment allObjects];
+    
+    NSLog(@"passed selected month and day of month = %@, %d", self.selectedMonth, self.selectedDayOfMonth);
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setselectedMonth:(id)newDetailItem {
+    if (_selectedMonth != newDetailItem) {
+        _selectedMonth = newDetailItem;
+    }
 }
-
 /*
 #pragma mark - Navigation
 
@@ -44,12 +51,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-//    return [self.monthArray count];
-    return 1;
+    return [self.momentArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MomentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell
     
@@ -86,5 +92,17 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+- (IBAction)addMoment:(id)sender {
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    
+    NSString *timeString = [NSString stringWithFormat:@"%d%@", self.selectedDayOfMonth,self.selectedMonth.monthName];
+    
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
+    [defaultRealm commitWriteTransaction];
+    
+    [self.collectionView reloadData];
+}
 
 @end

@@ -12,9 +12,10 @@
 
 @interface Moment : RLMObject
 
-@property NSString *monthStamp;
-@property int momentID;
-@property int type;
+@property NSString *timeString;
+//@property int type;
+
+- (id)initWithTimeString:(NSString *)timeString;
 
 @end
 RLM_ARRAY_TYPE(Moment)

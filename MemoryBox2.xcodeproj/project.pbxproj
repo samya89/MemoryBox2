@@ -520,6 +520,7 @@
 				93CF25B71AE80B2B007B6C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93CF25B81AE80B2B007B6C24 /* Build configuration list for PBXNativeTarget "MemoryBox2Tests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				93CF25BA1AE80B2B007B6C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

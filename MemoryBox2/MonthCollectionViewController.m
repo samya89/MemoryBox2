@@ -16,10 +16,9 @@
 @interface MonthCollectionViewController ()
 
 @property (nonatomic, strong) CoverFlowLayout *coverFlowLayout;
-
 @property (nonatomic, strong) RLMResults *monthArray;
 @property (nonatomic, strong) RLMNotificationToken *notification;
-@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -110,8 +109,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"monthDetail"]) {
-        RLMResults *realmMonth = [Month allObjects];
-        Month *month = [realmMonth objectAtIndex:self.indexPath.row];
+        Month *month = [self.monthArray objectAtIndex:self.selectedIndexPath.row];
+        NSLog(@"selected month = %@", month);
         [[segue destinationViewController] setMonthItem:month];
     }
 }
@@ -134,6 +133,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"monthDetail" sender:self];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

@@ -10,5 +10,13 @@
 
 @implementation Moment
 
+- (id)initWithTimeString:(NSString *)timeString{
+    self = [super init];
+    if (self) {
+        self.timeString = timeString;
+    }
+    return self;
+}
+
 
 @end
