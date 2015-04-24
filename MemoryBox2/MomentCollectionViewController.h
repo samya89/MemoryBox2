@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
 
-@interface DayCollectionViewController : UICollectionViewController
+@interface MomentCollectionViewController : UICollectionViewController
 
 @end

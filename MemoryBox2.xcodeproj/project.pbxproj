@@ -29,8 +29,9 @@
 		93CF25ED1AE8BDD6007B6C24 /* cameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CF25EA1AE8BDD6007B6C24 /* cameraIcon.png */; };
 		93CF25EE1AE8BDD6007B6C24 /* diaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CF25EB1AE8BDD6007B6C24 /* diaryIcon.png */; };
 		93CF25EF1AE8BDD6007B6C24 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CF25EC1AE8BDD6007B6C24 /* mapIcon.png */; };
-		93CF25F21AE8BE99007B6C24 /* DayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25F11AE8BE99007B6C24 /* DayCollectionViewController.m */; };
+		93CF25F21AE8BE99007B6C24 /* MomentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25F11AE8BE99007B6C24 /* MomentCollectionViewController.m */; };
 		93CF25F81AE98752007B6C24 /* Moment.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25F71AE98752007B6C24 /* Moment.m */; };
+		93CF25FB1AE9C0F3007B6C24 /* MomentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25FA1AE9C0F3007B6C24 /* MomentCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +82,12 @@
 		93CF25EA1AE8BDD6007B6C24 /* cameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIcon.png; sourceTree = "<group>"; };
 		93CF25EB1AE8BDD6007B6C24 /* diaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaryIcon.png; sourceTree = "<group>"; };
 		93CF25EC1AE8BDD6007B6C24 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
-		93CF25F01AE8BE99007B6C24 /* DayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCollectionViewController.h; sourceTree = "<group>"; };
-		93CF25F11AE8BE99007B6C24 /* DayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCollectionViewController.m; sourceTree = "<group>"; };
+		93CF25F01AE8BE99007B6C24 /* MomentCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCollectionViewController.h; sourceTree = "<group>"; };
+		93CF25F11AE8BE99007B6C24 /* MomentCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCollectionViewController.m; sourceTree = "<group>"; };
 		93CF25F61AE98752007B6C24 /* Moment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moment.h; sourceTree = "<group>"; };
 		93CF25F71AE98752007B6C24 /* Moment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moment.m; sourceTree = "<group>"; };
+		93CF25F91AE9C0F3007B6C24 /* MomentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCollectionViewCell.h; sourceTree = "<group>"; };
+		93CF25FA1AE9C0F3007B6C24 /* MomentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,12 +157,14 @@
 				93CF25D31AE872E6007B6C24 /* MonthCollectionViewController.m */,
 				93CF25E11AE8A97E007B6C24 /* DetailMonthCollectionViewController.h */,
 				93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */,
-				93CF25F01AE8BE99007B6C24 /* DayCollectionViewController.h */,
-				93CF25F11AE8BE99007B6C24 /* DayCollectionViewController.m */,
+				93CF25F01AE8BE99007B6C24 /* MomentCollectionViewController.h */,
+				93CF25F11AE8BE99007B6C24 /* MomentCollectionViewController.m */,
 				93CF25C51AE80DF9007B6C24 /* BoxCollectionViewCell.h */,
 				93CF25C61AE80DF9007B6C24 /* BoxCollectionViewCell.m */,
 				93CF25D51AE87372007B6C24 /* MonthCollectionViewCell.h */,
 				93CF25D61AE87372007B6C24 /* MonthCollectionViewCell.m */,
+				93CF25F91AE9C0F3007B6C24 /* MomentCollectionViewCell.h */,
+				93CF25FA1AE9C0F3007B6C24 /* MomentCollectionViewCell.m */,
 				93CF259F1AE80B2B007B6C24 /* Main.storyboard */,
 				93CF25A21AE80B2B007B6C24 /* Images.xcassets */,
 				93CF25A41AE80B2B007B6C24 /* LaunchScreen.xib */,
@@ -302,7 +307,7 @@
 				93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */,
 				93CF25E91AE8BC1C007B6C24 /* DiaryEntry.m in Sources */,
 				93CF25F81AE98752007B6C24 /* Moment.m in Sources */,
-				93CF25F21AE8BE99007B6C24 /* DayCollectionViewController.m in Sources */,
+				93CF25F21AE8BE99007B6C24 /* MomentCollectionViewController.m in Sources */,
 				93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */,
 				93CF25C41AE80DE2007B6C24 /* BoxCollectionViewController.m in Sources */,
 				93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */,
@@ -312,6 +317,7 @@
 				93CF25C71AE80DF9007B6C24 /* BoxCollectionViewCell.m in Sources */,
 				93CF25981AE80B2B007B6C24 /* main.m in Sources */,
 				93CF25D41AE872E6007B6C24 /* MonthCollectionViewController.m in Sources */,
+				93CF25FB1AE9C0F3007B6C24 /* MomentCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,70 +6,20 @@
 //  Copyright (c) 2015 Samya Al Rahmani. All rights reserved.
 //
 
-#import "DayCollectionViewController.h"
+#import "MomentCollectionViewController.h"
 #import "Moment.h"
 
-@interface DayCollectionViewController ()
+@interface MomentCollectionViewController ()
 
 @end
 
-@implementation DayCollectionViewController
+@implementation MomentCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    Moment *moment = [[Moment alloc] init];
-//
-//    january.monthName = @"January";
-//    february.monthName = @"February";
-//    march.monthName = @"March";
-//    april.monthName = @"April";
-//    may.monthName = @"May";
-//    june.monthName = @"June";
-//    july.monthName = @"July";
-//    august.monthName = @"August";
-//    september.monthName = @"September";
-//    october.monthName = @"October";
-//    september.monthName = @"September";
-//    october.monthName = @"October";
-//    november.monthName = @"November";
-//    december.monthName = @"December";
-//    
-//    january.days = 31;
-//    february.days = 28;
-//    march.days = 31;
-//    april.days = 30;
-//    may.days = 31;
-//    june.days = 30;
-//    july.days = 31;
-//    august.days = 31;
-//    september.days = 30;
-//    october.days = 31;
-//    september.days = 30;
-//    october.days = 31;
-//    november.days = 30;
-//    december.days = 31;
-//    
-//    self.monthArray = [Month allObjects];
-//    
-//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-//    [defaultRealm beginWriteTransaction];
-//    [defaultRealm addObject:january];
-//    [defaultRealm addObject:february];
-//    [defaultRealm addObject:march];
-//    [defaultRealm addObject:april];
-//    [defaultRealm addObject:may];
-//    [defaultRealm addObject:june];
-//    [defaultRealm addObject:july];
-//    [defaultRealm addObject:august];
-//    [defaultRealm addObject:september];
-//    [defaultRealm addObject:october];
-//    [defaultRealm addObject:november];
-//    [defaultRealm addObject:december];
-//    [defaultRealm commitWriteTransaction];
-//    
+     
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,14 +40,12 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+    return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+//    return [self.monthArray count];
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
