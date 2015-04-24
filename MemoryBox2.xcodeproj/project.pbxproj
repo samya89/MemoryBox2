@@ -25,6 +25,12 @@
 		93CF25E01AE89B1E007B6C24 /* Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25DF1AE89B1E007B6C24 /* Month.m */; };
 		93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */; };
 		93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */; };
+		93CF25E91AE8BC1C007B6C24 /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25E81AE8BC1C007B6C24 /* DiaryEntry.m */; };
+		93CF25ED1AE8BDD6007B6C24 /* cameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CF25EA1AE8BDD6007B6C24 /* cameraIcon.png */; };
+		93CF25EE1AE8BDD6007B6C24 /* diaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CF25EB1AE8BDD6007B6C24 /* diaryIcon.png */; };
+		93CF25EF1AE8BDD6007B6C24 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CF25EC1AE8BDD6007B6C24 /* mapIcon.png */; };
+		93CF25F21AE8BE99007B6C24 /* DayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25F11AE8BE99007B6C24 /* DayCollectionViewController.m */; };
+		93CF25F81AE98752007B6C24 /* Moment.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25F71AE98752007B6C24 /* Moment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,15 @@
 		93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMonthCollectionViewController.m; sourceTree = "<group>"; };
 		93CF25E41AE8AA8F007B6C24 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
 		93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
+		93CF25E71AE8BC1C007B6C24 /* DiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEntry.h; sourceTree = "<group>"; };
+		93CF25E81AE8BC1C007B6C24 /* DiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEntry.m; sourceTree = "<group>"; };
+		93CF25EA1AE8BDD6007B6C24 /* cameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIcon.png; sourceTree = "<group>"; };
+		93CF25EB1AE8BDD6007B6C24 /* diaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaryIcon.png; sourceTree = "<group>"; };
+		93CF25EC1AE8BDD6007B6C24 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		93CF25F01AE8BE99007B6C24 /* DayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCollectionViewController.h; sourceTree = "<group>"; };
+		93CF25F11AE8BE99007B6C24 /* DayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCollectionViewController.m; sourceTree = "<group>"; };
+		93CF25F61AE98752007B6C24 /* Moment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moment.h; sourceTree = "<group>"; };
+		93CF25F71AE98752007B6C24 /* Moment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +115,9 @@
 				93CF25AE1AE80B2B007B6C24 /* MemoryBox2Tests */,
 				93CF25931AE80B2B007B6C24 /* Products */,
 				93CF25BD1AE80CBE007B6C24 /* libc++.dylib */,
+				93CF25EA1AE8BDD6007B6C24 /* cameraIcon.png */,
+				93CF25EB1AE8BDD6007B6C24 /* diaryIcon.png */,
+				93CF25EC1AE8BDD6007B6C24 /* mapIcon.png */,
 				93CF25C81AE80F32007B6C24 /* drawerIcon.png */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +142,10 @@
 				93CF25C01AE80DBA007B6C24 /* Box.m */,
 				93CF25DE1AE89B1E007B6C24 /* Month.h */,
 				93CF25DF1AE89B1E007B6C24 /* Month.m */,
+				93CF25F61AE98752007B6C24 /* Moment.h */,
+				93CF25F71AE98752007B6C24 /* Moment.m */,
+				93CF25E71AE8BC1C007B6C24 /* DiaryEntry.h */,
+				93CF25E81AE8BC1C007B6C24 /* DiaryEntry.m */,
 				93CF25C21AE80DE2007B6C24 /* BoxCollectionViewController.h */,
 				93CF25C31AE80DE2007B6C24 /* BoxCollectionViewController.m */,
 				93CF25CA1AE84E36007B6C24 /* AddBoxViewController.h */,
@@ -132,6 +154,8 @@
 				93CF25D31AE872E6007B6C24 /* MonthCollectionViewController.m */,
 				93CF25E11AE8A97E007B6C24 /* DetailMonthCollectionViewController.h */,
 				93CF25E21AE8A97E007B6C24 /* DetailMonthCollectionViewController.m */,
+				93CF25F01AE8BE99007B6C24 /* DayCollectionViewController.h */,
+				93CF25F11AE8BE99007B6C24 /* DayCollectionViewController.m */,
 				93CF25C51AE80DF9007B6C24 /* BoxCollectionViewCell.h */,
 				93CF25C61AE80DF9007B6C24 /* BoxCollectionViewCell.m */,
 				93CF25D51AE87372007B6C24 /* MonthCollectionViewCell.h */,
@@ -250,6 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CF25EE1AE8BDD6007B6C24 /* diaryIcon.png in Resources */,
+				93CF25EF1AE8BDD6007B6C24 /* mapIcon.png in Resources */,
+				93CF25ED1AE8BDD6007B6C24 /* cameraIcon.png in Resources */,
 				93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */,
 				93CF25A61AE80B2B007B6C24 /* LaunchScreen.xib in Resources */,
 				93CF25A31AE80B2B007B6C24 /* Images.xcassets in Resources */,
@@ -273,6 +300,9 @@
 			files = (
 				93CF25CE1AE86144007B6C24 /* AddBoxViewController.m in Sources */,
 				93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */,
+				93CF25E91AE8BC1C007B6C24 /* DiaryEntry.m in Sources */,
+				93CF25F81AE98752007B6C24 /* Moment.m in Sources */,
+				93CF25F21AE8BE99007B6C24 /* DayCollectionViewController.m in Sources */,
 				93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */,
 				93CF25C41AE80DE2007B6C24 /* BoxCollectionViewController.m in Sources */,
 				93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */,

@@ -47,18 +47,25 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.monthItem.days];
+    NSInteger days = self.monthItem.days;
+    return days;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+//    if (indexPath.section == 0) {
+//        Month *month = self.monthItem[indexPath.item];
+//        cell.iconImageView.image = [month iconImage];
+//    }
+//    else if (indexPath.section == 1){
+//        int firstIndex = 2;
+//        Month *month = self.icons[indexPath.row+firstIndex];
+//        cell.iconImageView.image = [month iconImage];
+//    }
     return cell;
 }
 

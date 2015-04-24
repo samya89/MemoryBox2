@@ -28,10 +28,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
 ////    delete after adding delete option
-//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-//    [defaultRealm beginWriteTransaction];
-//    [defaultRealm deleteAllObjects];
-//    [defaultRealm commitWriteTransaction];
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm deleteAllObjects];
+    [defaultRealm commitWriteTransaction];
     
     self.array = [Box allObjects];
     NSLog(@"results %@", self.array);

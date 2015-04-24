@@ -162,7 +162,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L47-pB-ua0">
-                                            <rect key="frame" x="86" y="8" width="50" height="21"/>
+                                            <rect key="frame" x="87" y="8" width="50" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -202,21 +202,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2nt-Hp-dbx">
-                            <size key="itemSize" width="115" height="120"/>
+                            <size key="itemSize" width="141" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="95W-uH-bUS">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="95W-uH-bUS">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="115" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="WFV-IW-Vyd" kind="show" identifier="dayDetail" id="CZc-iw-b4Z"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -228,6 +231,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPL-wF-3Tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2461" y="574"/>
+        </scene>
+        <!--Day Collection View Controller-->
+        <scene sceneID="Dgm-nb-K6R">
+            <objects>
+                <collectionViewController id="WFV-IW-Vyd" customClass="DayCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mf7-oL-eNu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="foC-Bd-XuE">
+                            <size key="itemSize" width="176" height="192"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="kfF-Yw-RQy">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="192"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diaryIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="oA1-L8-Q3o">
+                                            <rect key="frame" x="9" y="8" width="159" height="143"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="159" id="Doz-MM-uO2"/>
+                                                <constraint firstAttribute="height" constant="143" id="z8Y-f8-lrH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-z8-jhP">
+                                            <rect key="frame" x="70" y="152" width="37" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="dBu-z8-jhP" secondAttribute="centerX" id="F7y-IH-iZW"/>
+                                    <constraint firstItem="oA1-L8-Q3o" firstAttribute="top" secondItem="kfF-Yw-RQy" secondAttribute="topMargin" id="Skt-Rw-pxu"/>
+                                    <constraint firstAttribute="centerX" secondItem="oA1-L8-Q3o" secondAttribute="centerX" id="gC0-OE-Pbx"/>
+                                    <constraint firstItem="dBu-z8-jhP" firstAttribute="top" secondItem="oA1-L8-Q3o" secondAttribute="bottom" constant="1" id="iiA-UW-HVW"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="WFV-IW-Vyd" id="e72-1E-w2N"/>
+                            <outlet property="delegate" destination="WFV-IW-Vyd" id="lFA-ha-eQB"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycG-hY-Csh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3175.5" y="573"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qr6-xO-qFc">
@@ -249,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="diaryIcon.png" width="344" height="329"/>
         <image name="drawerIcon.png" width="395" height="323"/>
     </resources>
 </document>
