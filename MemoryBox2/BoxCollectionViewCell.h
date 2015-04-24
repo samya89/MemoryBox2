@@ -16,8 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
-- (IBAction)deleteBox:(id)sender;
-
 @property (nonatomic, strong) Box *box;
 
 @end

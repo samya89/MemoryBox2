@@ -49,6 +49,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="deleteBox:" destination="PlV-9B-ZI7" eventType="touchUpInside" id="3xi-7r-LwN"/>
+                                                <action selector="deleteBox:" destination="Tli-zT-qj5" eventType="touchUpInside" id="97c-F9-xr7"/>
                                             </connections>
                                         </button>
                                     </subviews>

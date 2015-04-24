@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
 #import "Month.h"
+#import "Box.h"
 
 @interface MomentCollectionViewController : UICollectionViewController
 
+@property (strong, nonatomic) Box *selectedBox;
 @property (strong, nonatomic) Month *selectedMonth;
 @property (assign, nonatomic) int selectedDayOfMonth;
 

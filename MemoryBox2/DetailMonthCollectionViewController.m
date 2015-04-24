@@ -37,8 +37,10 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"dayDetail"]) {
         NSLog(@"selected month = %@", self.monthItem);
+        NSLog(@"selected box = %@", self.boxItem);
         [[segue destinationViewController] setSelectedMonth:self.monthItem];
         [[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
+        [[segue destinationViewController] setSelectedBox:self.boxItem];
     }
 }
 

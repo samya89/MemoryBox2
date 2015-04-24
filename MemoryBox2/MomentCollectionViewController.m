@@ -23,10 +23,11 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *queryString = [NSString stringWithFormat:@"timeString = '%d%@'", self.selectedDayOfMonth,self.selectedMonth.monthName];
+    NSString *queryString = [NSString stringWithFormat:@"timeString = '%@%d%@'", self.selectedBox.boxName,self.selectedDayOfMonth,self.selectedMonth.monthName];
     self.momentArray = [Moment objectsWhere:queryString];
 
-    NSLog(@"passed selected month and day of month = %@, %d", self.selectedMonth, self.selectedDayOfMonth);
+    NSLog(@"passed selected month and day of month = %@, %d,", self.selectedMonth, self.selectedDayOfMonth);
+    NSLog(@"query string = %@", queryString);
 
 }
 
@@ -95,7 +96,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (IBAction)addMoment:(id)sender {
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     
-    NSString *timeString = [NSString stringWithFormat:@"%d%@", self.selectedDayOfMonth,self.selectedMonth.monthName];
+    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
     
     [defaultRealm beginWriteTransaction];
     [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];

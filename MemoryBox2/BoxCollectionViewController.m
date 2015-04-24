@@ -17,6 +17,7 @@
 @property (nonatomic, strong) RLMResults *array;
 @property (nonatomic, strong) RLMNotificationToken *notification;
 @property (nonatomic, strong) NSIndexPath *indexPath;
+@property BOOL shouldHideDeleteButton;
 
 @end
 
@@ -27,6 +28,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.shouldHideDeleteButton = YES;
+    
     self.array = [Box allObjects];
     NSLog(@"results %@", self.array);
     
@@ -36,6 +39,7 @@ static NSString * const reuseIdentifier = @"Cell";
     lpgr.minimumPressDuration = .5; //seconds
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -117,6 +121,8 @@ static NSString * const reuseIdentifier = @"Cell";
     Box *box = self.array[indexPath.item];
     cell.boxNameLabel.text = [box boxName];
     cell.boxImageView.image = [UIImage imageWithData:[box imageData]];
+    cell.deleteButton.tag = indexPath.row;
+    cell.deleteButton.hidden = self.shouldHideDeleteButton;
     
     return cell;
 }
@@ -156,5 +162,9 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+- (IBAction)deleteBox:(UIButton *)sender {
+    NSLog(@"%ld", sender.tag);
+}
 
 @end

@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) Box *box;
 
+- (IBAction)deleteBox:(UIButton *)sender;
+
 @end

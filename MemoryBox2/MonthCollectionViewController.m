@@ -118,10 +118,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
-//NSLog(@"selected month = %@", self.monthItem);
-//[[segue destinationViewController] setSelectedMonth:self.monthItem];
-//[[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
-
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
