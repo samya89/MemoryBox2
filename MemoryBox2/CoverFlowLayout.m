@@ -16,7 +16,7 @@ static const CGFloat ZOOM_FACTOR = 0.25f;
 {
     [super prepareLayout];
     
-    self.itemSize = CGSizeMake(220.0, 330.0);
+    self.itemSize = CGSizeMake(330.0, 220.0);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 }
 
@@ -30,7 +30,6 @@ static const CGFloat ZOOM_FACTOR = 0.25f;
         self.sectionInset = UIEdgeInsetsMake(200.0f, 0.0f, 200.0f, 0.0f);
         self.minimumLineSpacing = 100.0f;
     }
-    
     return self;
 }
 
@@ -63,7 +62,7 @@ static const CGFloat ZOOM_FACTOR = 0.25f;
                 CATransform3D zoomTransform = CATransform3DMakeScale(zoom, zoom, 1.0);
                 layoutAttributes.transform3D = CATransform3DConcat(zoomTransform, rotationTransform);
                 layoutAttributes.zIndex = ABS(normalizedDistance) * 10.0f;
-                CGFloat alpha = (1  - ABS(normalizedDistance)) + 0.1;
+                CGFloat alpha = (1  - ABS(normalizedDistance)) + 0.3;
                 if (alpha > 1.0f) alpha = 1.0f;
                 layoutAttributes.alpha = alpha;
             }

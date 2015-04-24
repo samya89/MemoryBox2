@@ -94,6 +94,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [defaultRealm addObject:november];
     [defaultRealm addObject:december];
     [defaultRealm commitWriteTransaction];
+    
 }
 
 - (void)setDetailItem:(id)newDetailItem {

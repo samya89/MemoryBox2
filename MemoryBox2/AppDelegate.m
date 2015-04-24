@@ -32,6 +32,9 @@
     // now that we have called `setSchemaVersion:withMigrationBlock:`, opening an outdated
     // Realm will automatically perform the migration and opening the Realm will succeed
     [RLMRealm defaultRealm];
+
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:131.0 green:188.0 blue:201.0 alpha:1.0]];
+
     return YES;
 }
 
