@@ -35,15 +35,12 @@ static NSString * const reuseIdentifier = @"Cell";
         _selectedMonth = newDetailItem;
     }
 }
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//
+//}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -57,7 +54,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MomentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
     return cell;
 }
 
@@ -92,16 +88,16 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
-- (IBAction)addMoment:(id)sender {
-    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    
-    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
-    
-    [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
-    [defaultRealm commitWriteTransaction];
-    
-    [self.collectionView reloadData];
-}
+//- (IBAction)addMoment:(id)sender {
+//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+//    
+//    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
+//    
+//    [defaultRealm beginWriteTransaction];
+//    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
+//    [defaultRealm commitWriteTransaction];
+//    
+//    [self.collectionView reloadData];
+//}
 
 @end

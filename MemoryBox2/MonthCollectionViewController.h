@@ -15,3 +15,5 @@
 @property (strong, nonatomic) Box *detailItem;
 
 @end
+
+

@@ -334,7 +334,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ixp-Mr-Qh0">
                             <color key="tintColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="addMoment:" destination="WFV-IW-Vyd" id="3Dt-Sp-Pwy"/>
                                 <segue destination="VFI-0Z-A0Q" kind="show" identifier="addMoment" id="VYh-vW-o0g"/>
                             </connections>
                         </barButtonItem>
@@ -344,10 +343,10 @@
             </objects>
             <point key="canvasLocation" x="3175.5" y="573"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Moment View Controller-->
         <scene sceneID="ZMA-kx-ccJ">
             <objects>
-                <viewController id="VFI-0Z-A0Q" sceneMemberID="viewController">
+                <viewController id="VFI-0Z-A0Q" customClass="AddMomentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMV-Q0-Hf7"/>
                         <viewControllerLayoutGuide type="bottom" id="r0q-pr-GyO"/>
@@ -364,7 +363,7 @@
                                     <rect key="frame" x="16" y="105" width="100" height="100"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="oDo-Ve-jCn" kind="presentation" id="8DS-vN-819"/>
+                                    <segue destination="TXt-rG-hLj" kind="presentation" id="8DS-vN-819"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="3961.5" y="372"/>
         </scene>
-        <!--View Controller-->
+        <!--Diary Entry View Controller-->
         <scene sceneID="wzB-x7-e5r">
             <objects>
-                <viewController id="oDo-Ve-jCn" sceneMemberID="viewController">
+                <viewController id="oDo-Ve-jCn" customClass="DiaryEntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XKn-7T-oSw"/>
                         <viewControllerLayoutGuide type="bottom" id="IuG-Q8-Ra9"/>
@@ -399,53 +398,179 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-Uh-uye">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="oPS-a7-8Qc"/>
+                                    <constraint firstAttribute="height" constant="205" id="tDB-be-cPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="47" y="28" width="307" height="205"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oPS-a7-8Qc"/>
+                                        <exclude reference="tDB-be-cPH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="oPS-a7-8Qc"/>
+                                        <include reference="tDB-be-cPH"/>
+                                    </mask>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-yJ-cNq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelEntry:" destination="oDo-Ve-jCn" eventType="touchUpInside" id="QLK-9F-tbF"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21U-mt-CKV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="185" y="264" width="30" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-yJ-cNq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="313" width="48" height="30"/>
-                                </variation>
+                                <connections>
+                                    <action selector="addDiaryEntry:" destination="oDo-Ve-jCn" eventType="touchUpInside" id="1Z5-h9-SjK"/>
+                                    <segue destination="iV8-EF-aIG" kind="show" identifier="addDiary" id="yBk-rc-bE5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="21U-mt-CKV" firstAttribute="top" secondItem="6mS-Uh-uye" secondAttribute="bottom" constant="25" id="7OR-ye-ndM"/>
+                            <constraint firstAttribute="centerX" secondItem="FoI-yJ-cNq" secondAttribute="centerX" id="c0t-It-jTB"/>
+                            <constraint firstAttribute="centerX" secondItem="6mS-Uh-uye" secondAttribute="centerX" id="dBc-Ut-TtJ"/>
+                            <constraint firstItem="6mS-Uh-uye" firstAttribute="top" secondItem="XKn-7T-oSw" secondAttribute="bottom" constant="8" id="pNU-fL-Wc4"/>
+                            <constraint firstAttribute="centerX" secondItem="21U-mt-CKV" secondAttribute="centerX" id="qha-GJ-dui"/>
+                            <constraint firstItem="FoI-yJ-cNq" firstAttribute="top" secondItem="21U-mt-CKV" secondAttribute="bottom" constant="8" id="qwc-jB-ER5"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6mS-Uh-uye"/>
-                                <exclude reference="21U-mt-CKV"/>
                                 <exclude reference="FoI-yJ-cNq"/>
+                                <exclude reference="21U-mt-CKV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="dBc-Ut-TtJ"/>
+                                <exclude reference="pNU-fL-Wc4"/>
+                                <exclude reference="7OR-ye-ndM"/>
+                                <exclude reference="qha-GJ-dui"/>
+                                <exclude reference="c0t-It-jTB"/>
+                                <exclude reference="qwc-jB-ER5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6mS-Uh-uye"/>
-                                <include reference="21U-mt-CKV"/>
                                 <include reference="FoI-yJ-cNq"/>
+                                <include reference="21U-mt-CKV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="dBc-Ut-TtJ"/>
+                                <include reference="pNU-fL-Wc4"/>
+                                <include reference="7OR-ye-ndM"/>
+                                <include reference="qha-GJ-dui"/>
+                                <include reference="c0t-It-jTB"/>
+                                <include reference="qwc-jB-ER5"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="sFw-dG-EAJ"/>
+                    <connections>
+                        <outlet property="diaryTextView" destination="6mS-Uh-uye" id="Uqc-FX-erm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8S-6t-eny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4696.5" y="372"/>
+            <point key="canvasLocation" x="5469" y="84"/>
+        </scene>
+        <!--Add Diary Note View Controller-->
+        <scene sceneID="fsa-a4-5zV">
+            <objects>
+                <viewController id="iV8-EF-aIG" customClass="AddDiaryNoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Utq-3j-DjJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sao-s8-6f6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SD2-1b-ATH">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QkT-Mi-4Ef">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kei-Rd-n2t"/>
+                                    <constraint firstAttribute="width" constant="304" id="MRb-aA-AzP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Kei-Rd-n2t"/>
+                                        <exclude reference="MRb-aA-AzP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Kei-Rd-n2t"/>
+                                        <include reference="MRb-aA-AzP"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N53-19-7ud">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add note">
+                                    <color key="titleColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDiaryNote:" destination="iV8-EF-aIG" eventType="touchUpInside" id="MGr-eu-Q3r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N53-19-7ud" firstAttribute="top" secondItem="QkT-Mi-4Ef" secondAttribute="bottom" constant="12" id="INT-hd-H88"/>
+                            <constraint firstAttribute="centerX" secondItem="N53-19-7ud" secondAttribute="centerX" id="SR4-tJ-XP7"/>
+                            <constraint firstAttribute="centerX" secondItem="QkT-Mi-4Ef" secondAttribute="centerX" id="VRM-ex-Q5c"/>
+                            <constraint firstAttribute="centerY" secondItem="N53-19-7ud" secondAttribute="centerY" id="c9H-cl-3Zg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QkT-Mi-4Ef"/>
+                                <exclude reference="N53-19-7ud"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="VRM-ex-Q5c"/>
+                                <exclude reference="INT-hd-H88"/>
+                                <exclude reference="SR4-tJ-XP7"/>
+                                <exclude reference="c9H-cl-3Zg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="QkT-Mi-4Ef"/>
+                                <include reference="N53-19-7ud"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="VRM-ex-Q5c"/>
+                                <include reference="INT-hd-H88"/>
+                                <include reference="SR4-tJ-XP7"/>
+                                <include reference="c9H-cl-3Zg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="diaryNoteTextfield" destination="QkT-Mi-4Ef" id="cQ3-ba-Iee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8W-qD-HvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6204" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eFu-Wg-vrR">
@@ -497,6 +622,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yp-vK-7ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u0R-Ij-eBO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXt-rG-hLj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ItW-Tl-tnr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oDo-Ve-jCn" kind="relationship" relationship="rootViewController" id="h7U-gV-ce7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Huc-uZ-plK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4735.5" y="84"/>
         </scene>
     </scenes>
     <resources>
