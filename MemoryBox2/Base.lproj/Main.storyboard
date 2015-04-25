@@ -44,11 +44,12 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-eh-vUm">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <state key="normal" title="X">
+                                                <color key="titleColor" red="0.82723721590909094" green="0.50383018112273725" blue="0.30666554681837827" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="deleteBox:" destination="PlV-9B-ZI7" eventType="touchUpInside" id="3xi-7r-LwN"/>
                                                 <action selector="deleteBox:" destination="Tli-zT-qj5" eventType="touchUpInside" id="97c-F9-xr7"/>
                                             </connections>
                                         </button>
@@ -63,7 +64,9 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="d6d-eh-vUm" secondAttribute="trailing" id="AGH-Dn-iDE"/>
                                     <constraint firstAttribute="centerX" secondItem="xFz-ZK-uOW" secondAttribute="centerX" id="GBq-c4-YIj"/>
                                     <constraint firstItem="xFz-ZK-uOW" firstAttribute="top" secondItem="aSM-iQ-HBT" secondAttribute="bottom" constant="-3" id="KpT-5e-LfQ"/>
-                                    <constraint firstItem="d6d-eh-vUm" firstAttribute="top" secondItem="PlV-9B-ZI7" secondAttribute="topMargin" id="zjd-pA-Xun"/>
+                                    <constraint firstItem="d6d-eh-vUm" firstAttribute="top" secondItem="PlV-9B-ZI7" secondAttribute="topMargin" id="zjd-pA-Xun">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="-14"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">

@@ -36,7 +36,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UILongPressGestureRecognizer *lpgr
     = [[UILongPressGestureRecognizer alloc]
        initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = .5; //seconds
+    lpgr.minimumPressDuration = .3; //seconds
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
 
@@ -44,7 +44,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.collectionView reloadData];
+    [self reloadDataWithoutDelete];
 }
 
 - (Box *)insertNewObject:(id)sender {
@@ -64,6 +64,12 @@ static NSString * const reuseIdentifier = @"Cell";
     return box;
 }
 
+-(void)reloadDataWithoutDelete{
+    self.array = [Box allObjects];
+    self.shouldHideDeleteButton = YES;
+    [self.collectionView reloadData];
+}
+
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
@@ -79,10 +85,8 @@ static NSString * const reuseIdentifier = @"Cell";
         BoxCollectionViewCell *cell =
         [self.collectionView cellForItemAtIndexPath:indexPath];
         // do stuff with the cell
-        RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-        [defaultRealm beginWriteTransaction];
-//        [realm deleteObject:cheeseBook];
-        [defaultRealm commitWriteTransaction];
+        [self.collectionView reloadData];
+        self.shouldHideDeleteButton = NO;
     }
 }
 
@@ -134,37 +138,49 @@ static NSString * const reuseIdentifier = @"Cell";
     [self performSegueWithIdentifier:@"boxDetail" sender:self];
 }
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
-
 - (IBAction)deleteBox:(UIButton *)sender {
-    NSLog(@"%ld", sender.tag);
+    [self deleteObject:self.box];
+    [self reloadDataWithoutDelete];
+     //    NSLog(@"%ld", sender.tag);
 }
+
+- (void)deleteObject:(RLMObject *)object{
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    Box *box = [self.array objectAtIndex:self.indexPath.row];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm deleteObject:box];
+    [defaultRealm commitWriteTransaction];
+    [self reloadDataWithoutDelete];
+}
+
+
+/*
+ // Uncomment this method to specify if the specified item should be highlighted during tracking
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+	return YES;
+ }
+ */
+
+/*
+ // Uncomment this method to specify if the specified item should be selected
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+ return YES;
+ }
+ */
+
+/*
+ // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+	return NO;
+ }
+ 
+ - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+	return NO;
+ }
+ 
+ - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+	
+ }
+ */
 
 @end

@@ -28,7 +28,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
     NSLog(@"passed selected month and day of month = %@, %d,", self.selectedMonth, self.selectedDayOfMonth);
     NSLog(@"query string = %@", queryString);
-
 }
 
 - (void)setselectedMonth:(id)newDetailItem {
