@@ -335,6 +335,7 @@
                             <color key="tintColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addMoment:" destination="WFV-IW-Vyd" id="3Dt-Sp-Pwy"/>
+                                <segue destination="VFI-0Z-A0Q" kind="show" identifier="addMoment" id="VYh-vW-o0g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -342,6 +343,126 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycG-hY-Csh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3175.5" y="573"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZMA-kx-ccJ">
+            <objects>
+                <viewController id="VFI-0Z-A0Q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vMV-Q0-Hf7"/>
+                        <viewControllerLayoutGuide type="bottom" id="r0q-pr-GyO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mK2-jZ-xme">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tF-rs-Iy5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="diaryIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="105" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="oDo-Ve-jCn" kind="presentation" id="8DS-vN-819"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2tF-rs-Iy5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2tF-rs-Iy5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1y-c9-Sdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3961.5" y="372"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wzB-x7-e5r">
+            <objects>
+                <viewController id="oDo-Ve-jCn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XKn-7T-oSw"/>
+                        <viewControllerLayoutGuide type="bottom" id="IuG-Q8-Ra9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GMr-sx-8IL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-Uh-uye">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="28" width="307" height="205"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21U-mt-CKV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="185" y="264" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-yJ-cNq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="313" width="48" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6mS-Uh-uye"/>
+                                <exclude reference="21U-mt-CKV"/>
+                                <exclude reference="FoI-yJ-cNq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6mS-Uh-uye"/>
+                                <include reference="21U-mt-CKV"/>
+                                <include reference="FoI-yJ-cNq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8S-6t-eny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4696.5" y="372"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eFu-Wg-vrR">
+            <objects>
+                <viewController id="Mkz-nl-WO6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yut-hm-MrE"/>
+                        <viewControllerLayoutGuide type="bottom" id="KJy-IL-tpK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y1k-pX-3gv">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htg-TD-L81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3961.5" y="1102.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qr6-xO-qFc">
@@ -360,6 +481,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYe-Yy-OFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="225" y="180"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hrl-aI-rla">
+            <objects>
+                <viewController id="o62-BR-yZJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AKD-x8-iX6"/>
+                        <viewControllerLayoutGuide type="bottom" id="6S5-Ad-XMP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f9g-6C-8ak">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5yp-vK-7ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
