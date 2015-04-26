@@ -41,6 +41,11 @@
 		93CF26131AEC6184007B6C24 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CF26121AEC6184007B6C24 /* AssetsLibrary.framework */; };
 		93CF26161AEC62ED007B6C24 /* ImagePickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26151AEC62ED007B6C24 /* ImagePickerTableViewController.m */; };
 		93CF26191AEC6410007B6C24 /* AlbumContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26181AEC6410007B6C24 /* AlbumContentsViewController.m */; };
+		93CF261C1AEC6794007B6C24 /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF261B1AEC6794007B6C24 /* MyPageViewController.m */; };
+		93CF261F1AEC67F8007B6C24 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF261E1AEC67F8007B6C24 /* PhotoViewController.m */; };
+		93CF26221AEC692E007B6C24 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26211AEC692E007B6C24 /* ImageScrollView.m */; };
+		93CF26251AEC6987007B6C24 /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26241AEC6987007B6C24 /* PageViewControllerData.m */; };
+		93CF26281AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26271AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,16 @@
 		93CF26151AEC62ED007B6C24 /* ImagePickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTableViewController.m; sourceTree = "<group>"; };
 		93CF26171AEC6410007B6C24 /* AlbumContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumContentsViewController.h; sourceTree = "<group>"; };
 		93CF26181AEC6410007B6C24 /* AlbumContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumContentsViewController.m; sourceTree = "<group>"; };
+		93CF261A1AEC6794007B6C24 /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageViewController.h; sourceTree = "<group>"; };
+		93CF261B1AEC6794007B6C24 /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewController.m; sourceTree = "<group>"; };
+		93CF261D1AEC67F8007B6C24 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		93CF261E1AEC67F8007B6C24 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		93CF26201AEC692E007B6C24 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		93CF26211AEC692E007B6C24 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
+		93CF26231AEC6987007B6C24 /* PageViewControllerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewControllerData.h; sourceTree = "<group>"; };
+		93CF26241AEC6987007B6C24 /* PageViewControllerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewControllerData.m; sourceTree = "<group>"; };
+		93CF26261AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsDataIsInaccessibleViewController.h; sourceTree = "<group>"; };
+		93CF26271AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsDataIsInaccessibleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +223,16 @@
 				93CF26151AEC62ED007B6C24 /* ImagePickerTableViewController.m */,
 				93CF26171AEC6410007B6C24 /* AlbumContentsViewController.h */,
 				93CF26181AEC6410007B6C24 /* AlbumContentsViewController.m */,
+				93CF261A1AEC6794007B6C24 /* MyPageViewController.h */,
+				93CF261B1AEC6794007B6C24 /* MyPageViewController.m */,
+				93CF261D1AEC67F8007B6C24 /* PhotoViewController.h */,
+				93CF261E1AEC67F8007B6C24 /* PhotoViewController.m */,
+				93CF26201AEC692E007B6C24 /* ImageScrollView.h */,
+				93CF26211AEC692E007B6C24 /* ImageScrollView.m */,
+				93CF26231AEC6987007B6C24 /* PageViewControllerData.h */,
+				93CF26241AEC6987007B6C24 /* PageViewControllerData.m */,
+				93CF26261AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.h */,
+				93CF26271AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m */,
 				93CF25A21AE80B2B007B6C24 /* Images.xcassets */,
 				93CF25A41AE80B2B007B6C24 /* LaunchScreen.xib */,
 				93CF25951AE80B2B007B6C24 /* Supporting Files */,
@@ -346,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CF25CE1AE86144007B6C24 /* AddBoxViewController.m in Sources */,
+				93CF261C1AEC6794007B6C24 /* MyPageViewController.m in Sources */,
 				93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */,
 				93CF26161AEC62ED007B6C24 /* ImagePickerTableViewController.m in Sources */,
 				93CF26071AEB379F007B6C24 /* AddDiaryNoteViewController.m in Sources */,
@@ -353,10 +379,14 @@
 				93CF25F81AE98752007B6C24 /* Moment.m in Sources */,
 				93CF25F21AE8BE99007B6C24 /* MomentCollectionViewController.m in Sources */,
 				93CF26041AEB30A9007B6C24 /* DiaryEntryViewController.m in Sources */,
+				93CF26221AEC692E007B6C24 /* ImageScrollView.m in Sources */,
 				93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */,
+				93CF261F1AEC67F8007B6C24 /* PhotoViewController.m in Sources */,
 				93CF25C41AE80DE2007B6C24 /* BoxCollectionViewController.m in Sources */,
 				93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */,
+				93CF26281AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m in Sources */,
 				93CF25E01AE89B1E007B6C24 /* Month.m in Sources */,
+				93CF26251AEC6987007B6C24 /* PageViewControllerData.m in Sources */,
 				93CF26011AEB3089007B6C24 /* AddMomentViewController.m in Sources */,
 				93CF25C11AE80DBA007B6C24 /* Box.m in Sources */,
 				93CF26191AEC6410007B6C24 /* AlbumContentsViewController.m in Sources */,
