@@ -10,7 +10,6 @@
 #import "AddBoxViewController.h"
 #import "BoxCollectionViewCell.h"
 #import "UIKit/UIKit.h"
-#import "Box.h"
 
 @interface BoxCollectionViewController ()
 
@@ -82,8 +81,7 @@ static NSString * const reuseIdentifier = @"Cell";
         NSLog(@"couldn't find index path");
     } else {
         // get the cell at indexPath (the one you long pressed)
-        BoxCollectionViewCell *cell =
-        [self.collectionView cellForItemAtIndexPath:indexPath];
+        UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         // do stuff with the cell
         [self.collectionView reloadData];
         self.shouldHideDeleteButton = NO;

@@ -8,14 +8,18 @@
 
 #import <Realm/Realm.h>
 #import <UIKit/UIKit.h>
-@class Box;
+#import "DiaryEntry.h"
+#import "Box.h"
 
 @interface Moment : RLMObject
 
 @property NSString *timeString;
 //@property int type;
 
+@property RLMArray<DiaryEntry> *diaryEntries;
+
 - (id)initWithTimeString:(NSString *)timeString;
+
 
 @end
 RLM_ARRAY_TYPE(Moment)

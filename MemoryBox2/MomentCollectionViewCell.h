@@ -10,4 +10,8 @@
 
 @interface MomentCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *momentIconImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *momentNoteLabel;
+
 @end

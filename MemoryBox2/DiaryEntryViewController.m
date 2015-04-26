@@ -24,6 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 
 #pragma mark - Navigation
 
@@ -33,11 +38,9 @@
 //        [[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
 //        [[segue destinationViewController] setSelectedBox:self.boxItem];
 }
-
-
-- (IBAction)addDiaryEntry:(UIButton *)sender {
 }
 
-- (IBAction)cancelEntry:(UIButton *)sender {
-}
+
+  
+
 @end

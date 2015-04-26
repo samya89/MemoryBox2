@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Realm/Realm.h>
+#import "Moment.h"
+#import "DiaryEntry.h"
 
 @interface DiaryEntryViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *diaryTextView;
-
-- (IBAction)addDiaryEntry:(UIButton *)sender;
-- (IBAction)cancelEntry:(UIButton *)sender;
 
 @end

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
-@class Box;
+#import <QuartzCore/QuartzCore.h>
+#import "Box.h"
 
 @interface BoxCollectionViewController : UICollectionViewController<UIGestureRecognizerDelegate>
 

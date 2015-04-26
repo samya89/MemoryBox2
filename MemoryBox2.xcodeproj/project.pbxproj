@@ -36,6 +36,11 @@
 		93CF26011AEB3089007B6C24 /* AddMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26001AEB3089007B6C24 /* AddMomentViewController.m */; };
 		93CF26041AEB30A9007B6C24 /* DiaryEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26031AEB30A9007B6C24 /* DiaryEntryViewController.m */; };
 		93CF26071AEB379F007B6C24 /* AddDiaryNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26061AEB379F007B6C24 /* AddDiaryNoteViewController.m */; };
+		93CF26091AEC2697007B6C24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CF26081AEC2697007B6C24 /* QuartzCore.framework */; };
+		93CF26111AEC6174007B6C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CF26101AEC6174007B6C24 /* CoreGraphics.framework */; };
+		93CF26131AEC6184007B6C24 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CF26121AEC6184007B6C24 /* AssetsLibrary.framework */; };
+		93CF26161AEC62ED007B6C24 /* ImagePickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26151AEC62ED007B6C24 /* ImagePickerTableViewController.m */; };
+		93CF26191AEC6410007B6C24 /* AlbumContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26181AEC6410007B6C24 /* AlbumContentsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,13 @@
 		93CF26031AEB30A9007B6C24 /* DiaryEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEntryViewController.m; sourceTree = "<group>"; };
 		93CF26051AEB379F007B6C24 /* AddDiaryNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDiaryNoteViewController.h; sourceTree = "<group>"; };
 		93CF26061AEB379F007B6C24 /* AddDiaryNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDiaryNoteViewController.m; sourceTree = "<group>"; };
+		93CF26081AEC2697007B6C24 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93CF26101AEC6174007B6C24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		93CF26121AEC6184007B6C24 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		93CF26141AEC62ED007B6C24 /* ImagePickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerTableViewController.h; sourceTree = "<group>"; };
+		93CF26151AEC62ED007B6C24 /* ImagePickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTableViewController.m; sourceTree = "<group>"; };
+		93CF26171AEC6410007B6C24 /* AlbumContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumContentsViewController.h; sourceTree = "<group>"; };
+		93CF26181AEC6410007B6C24 /* AlbumContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumContentsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CF26131AEC6184007B6C24 /* AssetsLibrary.framework in Frameworks */,
+				93CF26111AEC6174007B6C24 /* CoreGraphics.framework in Frameworks */,
+				93CF26091AEC2697007B6C24 /* QuartzCore.framework in Frameworks */,
 				93CF25BE1AE80CBE007B6C24 /* libc++.dylib in Frameworks */,
 				93CF25BC1AE80C9C007B6C24 /* Realm.framework in Frameworks */,
 			);
@@ -125,6 +140,9 @@
 		93CF25891AE80B2B007B6C24 = {
 			isa = PBXGroup;
 			children = (
+				93CF26121AEC6184007B6C24 /* AssetsLibrary.framework */,
+				93CF26101AEC6174007B6C24 /* CoreGraphics.framework */,
+				93CF26081AEC2697007B6C24 /* QuartzCore.framework */,
 				93CF25BB1AE80C9C007B6C24 /* Realm.framework */,
 				93CF25941AE80B2B007B6C24 /* MemoryBox2 */,
 				93CF25AE1AE80B2B007B6C24 /* MemoryBox2Tests */,
@@ -186,6 +204,10 @@
 				93CF25F91AE9C0F3007B6C24 /* MomentCollectionViewCell.h */,
 				93CF25FA1AE9C0F3007B6C24 /* MomentCollectionViewCell.m */,
 				93CF259F1AE80B2B007B6C24 /* Main.storyboard */,
+				93CF26141AEC62ED007B6C24 /* ImagePickerTableViewController.h */,
+				93CF26151AEC62ED007B6C24 /* ImagePickerTableViewController.m */,
+				93CF26171AEC6410007B6C24 /* AlbumContentsViewController.h */,
+				93CF26181AEC6410007B6C24 /* AlbumContentsViewController.m */,
 				93CF25A21AE80B2B007B6C24 /* Images.xcassets */,
 				93CF25A41AE80B2B007B6C24 /* LaunchScreen.xib */,
 				93CF25951AE80B2B007B6C24 /* Supporting Files */,
@@ -325,6 +347,7 @@
 			files = (
 				93CF25CE1AE86144007B6C24 /* AddBoxViewController.m in Sources */,
 				93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */,
+				93CF26161AEC62ED007B6C24 /* ImagePickerTableViewController.m in Sources */,
 				93CF26071AEB379F007B6C24 /* AddDiaryNoteViewController.m in Sources */,
 				93CF25E91AE8BC1C007B6C24 /* DiaryEntry.m in Sources */,
 				93CF25F81AE98752007B6C24 /* Moment.m in Sources */,
@@ -336,6 +359,7 @@
 				93CF25E01AE89B1E007B6C24 /* Month.m in Sources */,
 				93CF26011AEB3089007B6C24 /* AddMomentViewController.m in Sources */,
 				93CF25C11AE80DBA007B6C24 /* Box.m in Sources */,
+				93CF26191AEC6410007B6C24 /* AlbumContentsViewController.m in Sources */,
 				93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */,
 				93CF25C71AE80DF9007B6C24 /* BoxCollectionViewCell.m in Sources */,
 				93CF25981AE80B2B007B6C24 /* main.m in Sources */,

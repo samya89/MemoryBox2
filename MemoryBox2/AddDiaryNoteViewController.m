@@ -37,12 +37,13 @@
 
 - (IBAction)addDiaryNote:(UIButton *)sender {
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    
-    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
-    [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
-    [defaultRealm commitWriteTransaction];
-    
-    [self.collectionView reloadData];
+//    
+//    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
+//    [defaultRealm beginWriteTransaction];
+//    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
+//    [defaultRealm commitWriteTransaction];
+//    
+//    [self.collectionView reloadData];
 }
+
 @end
