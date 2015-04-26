@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="1753" y="-158"/>
         </scene>
-        <!--Month Collection View Controller-->
+        <!--2015-->
         <scene sceneID="WL7-sy-CVT">
             <objects>
                 <collectionViewController id="W2Y-qc-dpS" customClass="MonthCollectionViewController" sceneMemberID="viewController">
@@ -206,7 +206,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L47-pB-ua0">
                                             <rect key="frame" x="87" y="8" width="50" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -216,9 +216,27 @@
                                 <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="L47-pB-ua0" secondAttribute="centerX" id="4d5-rf-see"/>
-                                    <constraint firstItem="L47-pB-ua0" firstAttribute="top" secondItem="yNm-np-nph" secondAttribute="topMargin" id="RKp-Hg-BXu"/>
+                                    <constraint firstAttribute="centerX" secondItem="L47-pB-ua0" secondAttribute="centerX" id="Fhv-QZ-pLp"/>
+                                    <constraint firstAttribute="centerY" secondItem="L47-pB-ua0" secondAttribute="centerY" id="Mai-OX-67g"/>
+                                    <constraint firstItem="L47-pB-ua0" firstAttribute="top" secondItem="yNm-np-nph" secondAttribute="topMargin" id="RKp-Hg-BXu">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="41"/>
+                                    </constraint>
                                 </constraints>
                                 <size key="customSize" width="223" height="119"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fhv-QZ-pLp"/>
+                                        <exclude reference="Mai-OX-67g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="4d5-rf-see"/>
+                                        <include reference="Fhv-QZ-pLp"/>
+                                        <include reference="Mai-OX-67g"/>
+                                        <exclude reference="RKp-Hg-BXu"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="monthLabel" destination="L47-pB-ua0" id="nTC-Yo-SXo"/>
                                 </connections>
@@ -229,7 +247,7 @@
                             <outlet property="delegate" destination="W2Y-qc-dpS" id="Brr-E1-Gp8"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="sxR-fk-nR6"/>
+                    <navigationItem key="navigationItem" title="2015" id="sxR-fk-nR6"/>
                     <connections>
                         <segue destination="Wry-3N-weD" kind="show" identifier="monthDetail" id="vUS-Os-sGJ"/>
                     </connections>
@@ -254,15 +272,48 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="95W-uH-bUS">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="95W-uH-bUS" customClass="DetailMonthCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="141" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-cu-MKO">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                            <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="DG1-cu-MKO" secondAttribute="centerY" id="VWW-oD-gzw"/>
+                                    <constraint firstAttribute="centerX" secondItem="DG1-cu-MKO" secondAttribute="centerX" id="luu-oE-Ia0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="DG1-cu-MKO"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="VWW-oD-gzw"/>
+                                        <exclude reference="luu-oE-Ia0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="DG1-cu-MKO"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="VWW-oD-gzw"/>
+                                        <include reference="luu-oE-Ia0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dayNumberLabel" destination="DG1-cu-MKO" id="LyE-aw-znw"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -750,7 +801,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="79" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jAX-vJ-YSV">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jAX-vJ-YSV">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="79" id="adW-5K-HTk"/>

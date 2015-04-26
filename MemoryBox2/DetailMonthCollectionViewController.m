@@ -8,6 +8,7 @@
 
 #import "DetailMonthCollectionViewController.h"
 #import "MomentCollectionViewController.h"
+#import "DetailMonthCollectionViewCell.h"
 #import "Month.h"
 
 @interface DetailMonthCollectionViewController ()
@@ -56,7 +57,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    DetailMonthCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    int dayNumber = (int)indexPath.row+1;
+    NSLog(@"selected day number %d", dayNumber);
+    cell.dayNumberLabel.text = [NSString stringWithFormat:@"%d", dayNumber];
+
     return cell;
 }
 

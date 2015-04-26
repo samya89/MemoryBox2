@@ -46,6 +46,7 @@
 		93CF26221AEC692E007B6C24 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26211AEC692E007B6C24 /* ImageScrollView.m */; };
 		93CF26251AEC6987007B6C24 /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26241AEC6987007B6C24 /* PageViewControllerData.m */; };
 		93CF26281AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF26271AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m */; };
+		93CF262B1AEC7761007B6C24 /* DetailMonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF262A1AEC7761007B6C24 /* DetailMonthCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		93CF26241AEC6987007B6C24 /* PageViewControllerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewControllerData.m; sourceTree = "<group>"; };
 		93CF26261AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsDataIsInaccessibleViewController.h; sourceTree = "<group>"; };
 		93CF26271AEC69D6007B6C24 /* AssetsDataIsInaccessibleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsDataIsInaccessibleViewController.m; sourceTree = "<group>"; };
+		93CF26291AEC7761007B6C24 /* DetailMonthCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailMonthCollectionViewCell.h; sourceTree = "<group>"; };
+		93CF262A1AEC7761007B6C24 /* DetailMonthCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMonthCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				93CF25C61AE80DF9007B6C24 /* BoxCollectionViewCell.m */,
 				93CF25D51AE87372007B6C24 /* MonthCollectionViewCell.h */,
 				93CF25D61AE87372007B6C24 /* MonthCollectionViewCell.m */,
+				93CF26291AEC7761007B6C24 /* DetailMonthCollectionViewCell.h */,
+				93CF262A1AEC7761007B6C24 /* DetailMonthCollectionViewCell.m */,
 				93CF25F91AE9C0F3007B6C24 /* MomentCollectionViewCell.h */,
 				93CF25FA1AE9C0F3007B6C24 /* MomentCollectionViewCell.m */,
 				93CF259F1AE80B2B007B6C24 /* Main.storyboard */,
@@ -393,6 +398,7 @@
 				93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */,
 				93CF25C71AE80DF9007B6C24 /* BoxCollectionViewCell.m in Sources */,
 				93CF25981AE80B2B007B6C24 /* main.m in Sources */,
+				93CF262B1AEC7761007B6C24 /* DetailMonthCollectionViewCell.m in Sources */,
 				93CF25D41AE872E6007B6C24 /* MonthCollectionViewController.m in Sources */,
 				93CF25FE1AE9F75E007B6C24 /* PathFlowLayout.m in Sources */,
 				93CF25FB1AE9C0F3007B6C24 /* MomentCollectionViewCell.m in Sources */,
