@@ -393,8 +393,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ixp-Mr-Qh0">
                             <color key="tintColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="addMoment:" destination="WFV-IW-Vyd" id="88y-U8-OGh"/>
-                                <segue destination="VFI-0Z-A0Q" kind="show" id="I1l-8r-1Lc"/>
+                                <segue destination="VFI-0Z-A0Q" kind="show" identifier="addMoment" id="I1l-8r-1Lc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

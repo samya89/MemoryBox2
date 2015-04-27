@@ -33,7 +33,7 @@ static NSString * const reuseIdentifier = @"Cell";
 //        [defaultRealm beginWriteTransaction];
 //        [defaultRealm deleteAllObjects];
 //        [defaultRealm commitWriteTransaction];
-//    
+//
     Month *january = [[Month alloc] init];
     Month *february = [[Month alloc] init];
     Month *march = [[Month alloc] init];

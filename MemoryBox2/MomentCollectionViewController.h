@@ -10,6 +10,7 @@
 #import <Realm/Realm.h>
 #import "Month.h"
 #import "Box.h"
+#import "Moment.h"
 
 @interface MomentCollectionViewController : UICollectionViewController
 
@@ -17,6 +18,6 @@
 @property (strong, nonatomic) Month *selectedMonth;
 @property (assign, nonatomic) int selectedDayOfMonth;
 
-- (IBAction)addMoment:(id)sender;
+//- (IBAction)addMoment:(id)sender;
 
 @end

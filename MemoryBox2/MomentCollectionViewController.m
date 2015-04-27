@@ -8,7 +8,7 @@
 
 #import "MomentCollectionViewController.h"
 #import "MomentCollectionViewCell.h"
-#import "Moment.h"
+#import "AddMomentViewController.h"
 
 @interface MomentCollectionViewController ()
 
@@ -38,9 +38,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark - Navigation
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"addMoment"]) {
+        NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox.boxName, self.selectedDayOfMonth,self.selectedMonth.monthName];
+        [[segue destinationViewController] setAddMomentTimeString:timeString];
+    }
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -57,47 +60,16 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
-
-- (IBAction)addMoment:(id)sender {
-    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    
-    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
-    
-    [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
-    [defaultRealm commitWriteTransaction];
-    
-    [self.collectionView reloadData];
-}
+//- (IBAction)addMoment:(id)sender {
+//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+//    
+//    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
+//    
+//    [defaultRealm beginWriteTransaction];
+////    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
+//    [defaultRealm commitWriteTransaction];
+//    
+//    [self.collectionView reloadData];
+//}
 
 @end

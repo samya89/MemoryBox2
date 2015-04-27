@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
 #import "Moment.h"
-#import "DiaryEntry.h"
 
 @interface DiaryEntryViewController : UIViewController
 

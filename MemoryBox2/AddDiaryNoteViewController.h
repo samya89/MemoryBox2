@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Moment.h"
 
 @interface AddDiaryNoteViewController : UIViewController
 

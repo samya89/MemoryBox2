@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Moment.h"
 
 @interface AddMomentViewController : UIViewController
 
+@property (nonatomic, strong) NSString *addMomentTimeString;
 
 
 @end
