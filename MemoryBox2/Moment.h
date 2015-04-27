@@ -8,17 +8,26 @@
 
 #import <Realm/Realm.h>
 #import <UIKit/UIKit.h>
-#import "DiaryEntry.h"
 #import "Box.h"
+
+typedef NS_ENUM(NSInteger, momentType) {
+    DiaryEntry,
+    Photo,
+};
 
 @interface Moment : RLMObject
 
 @property NSString *timeString;
-//@property int type;
 
-@property RLMArray<DiaryEntry> *diaryEntries;
+@property NSString *diaryText;
+@property NSString *diaryNote;
 
-- (id)initWithTimeString:(NSString *)timeString;
+@property momentType type;
+
+@property NSData *photoImageData;
+@property NSString *photoNote;
+
+- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote;
 
 
 @end
