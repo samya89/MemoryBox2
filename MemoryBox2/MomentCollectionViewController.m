@@ -9,10 +9,12 @@
 #import "MomentCollectionViewController.h"
 #import "MomentCollectionViewCell.h"
 #import "AddMomentViewController.h"
+#import "DiaryDetailViewController.h"
 
 @interface MomentCollectionViewController ()
 
 @property (nonatomic, strong) RLMResults *momentArray;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -44,10 +46,14 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox.boxName, self.selectedDayOfMonth,self.selectedMonth.monthName];
     if ([[segue identifier] isEqualToString:@"addMoment"]) {
-        NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox.boxName, self.selectedDayOfMonth,self.selectedMonth.monthName];
         [[segue destinationViewController] setAddMomentTimeString:timeString];
+        
+    } else if ([[segue identifier] isEqualToString:@"diaryDetail"]) {
+        [[segue destinationViewController] setDetailDiaryTimeString:timeString];
     }
+    //else if [[segue identifier] isEqualToString:@"photoDetail"])
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -74,6 +80,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedIndexPath = indexPath;
+    Moment *moment = self.momentArray[indexPath.row];
+    if (moment.type == 0){
+    [self performSegueWithIdentifier:@"diaryDetail" sender:self];
+    }
 }
 
 
