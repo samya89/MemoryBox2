@@ -60,6 +60,11 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
+
+
 //- (IBAction)addMoment:(id)sender {
 //    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
 //    

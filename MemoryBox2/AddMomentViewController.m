@@ -36,8 +36,7 @@
         [[segue destinationViewController] setDiaryEntryTimeString:self.addMomentTimeString];
         [[segue destinationViewController] setDiaryEntryType:0];
     } else if ([[segue identifier] isEqualToString:@"addPhoto"]) {
-        [[segue destinationViewController] setDiaryEntryTimeString:self.addMomentTimeString];
-        [[segue destinationViewController] setDiaryEntryType:1];
+        //pass timestring and type as 1 to photo VC
     }
 }
 

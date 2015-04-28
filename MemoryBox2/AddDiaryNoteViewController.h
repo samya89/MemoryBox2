@@ -11,6 +11,10 @@
 
 @interface AddDiaryNoteViewController : UIViewController
 
+@property (nonatomic, strong) NSString *inputText;
+@property (nonatomic, assign) int diaryNoteType;
+@property (nonatomic, strong) NSString *diaryNoteTimeString;
+
 @property (weak, nonatomic) IBOutlet UITextField *diaryNoteTextfield;
 
 - (IBAction)addDiaryNote:(UIButton *)sender;

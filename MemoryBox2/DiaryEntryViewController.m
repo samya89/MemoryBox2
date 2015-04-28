@@ -7,6 +7,7 @@
 //
 
 #import "DiaryEntryViewController.h"
+#import "AddDiaryNoteViewController.h"
 
 @interface DiaryEntryViewController ()
 
@@ -17,11 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"int type and string = %@ %d", self.diaryEntryTimeString, self.diaryEntryType);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -32,14 +29,15 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"addDiary"]) {
-//        [[segue destinationViewController] setSelectedMonth:self.monthItem];
-//        [[segue destinationViewController] setSelectedDayOfMonth:(int)self.selectedIndexPath.row+1];
-//        [[segue destinationViewController] setSelectedBox:self.boxItem];
-}
+    if ([[segue identifier] isEqualToString:@"addDiaryNote"]) {
+        NSString *diaryEntryText = self.diaryTextView.text;
+        [[segue destinationViewController] setInputText:diaryEntryText];
+        [[segue destinationViewController] setDiaryNoteType:self.diaryEntryType];
+        [[segue destinationViewController] setDiaryNoteTimeString:self.diaryEntryTimeString];
+    }
 }
 
 
-  
+
 
 @end

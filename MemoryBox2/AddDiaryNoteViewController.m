@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@" add diary note VC %@ %d %@", self.inputText, self.diaryNoteType, self.diaryNoteTimeString);
+
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -25,25 +26,15 @@
     [super touchesBegan:touches withEvent:event];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)addDiaryNote:(UIButton *)sender {
+    UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
+    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+    
+    NSString *diaryNoteText = self.diaryNoteTextfield.text;
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-//    
-//    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
-//    [defaultRealm beginWriteTransaction];
-//    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
-//    [defaultRealm commitWriteTransaction];
-//    
-//    [self.collectionView reloadData];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryNoteTimeString andType:self.diaryNoteType andDiaryText:self.inputText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@""]];
+    [defaultRealm commitWriteTransaction];
 }
 
 @end

@@ -13,5 +13,4 @@
 
 @property (nonatomic, strong) NSString *addMomentTimeString;
 
-
 @end
