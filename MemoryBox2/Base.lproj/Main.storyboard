@@ -429,9 +429,6 @@
                                                         <color key="titleColor" red="0.82723721589999999" green="0.5038301811" blue="0.30666554680000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="137" y="0.0" width="30" height="60"/>
-                                                    </variation>
                                                     <connections>
                                                         <action selector="deleteMemory:" destination="WFV-IW-Vyd" eventType="touchUpInside" id="Kf2-UE-QTG"/>
                                                     </connections>
@@ -448,9 +445,11 @@
                                                 <constraint firstItem="dBu-z8-jhP" firstAttribute="top" secondItem="oA1-L8-Q3o" secondAttribute="bottom" constant="3" id="3gq-Vi-PzX"/>
                                                 <constraint firstAttribute="centerX" secondItem="dBu-z8-jhP" secondAttribute="centerX" id="SC4-Bi-0bW"/>
                                                 <constraint firstAttribute="centerX" secondItem="oA1-L8-Q3o" secondAttribute="centerX" id="XKP-1R-1a1"/>
+                                                <constraint firstItem="kem-S6-8AH" firstAttribute="top" secondItem="hxQ-Ie-JZs" secondAttribute="top" id="bA7-2u-JZD"/>
                                                 <constraint firstAttribute="width" constant="175" id="cj0-l6-dH4"/>
                                                 <constraint firstAttribute="height" constant="192" id="d6N-Re-yW9"/>
                                                 <constraint firstAttribute="centerY" secondItem="oA1-L8-Q3o" secondAttribute="centerY" id="dUd-Sj-FjM"/>
+                                                <constraint firstAttribute="trailing" secondItem="kem-S6-8AH" secondAttribute="trailing" constant="8" id="hQn-0U-VOM"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -458,6 +457,8 @@
                                                     <exclude reference="d6N-Re-yW9"/>
                                                     <exclude reference="XKP-1R-1a1"/>
                                                     <exclude reference="dUd-Sj-FjM"/>
+                                                    <exclude reference="bA7-2u-JZD"/>
+                                                    <exclude reference="hQn-0U-VOM"/>
                                                     <exclude reference="3gq-Vi-PzX"/>
                                                     <exclude reference="SC4-Bi-0bW"/>
                                                 </mask>
@@ -468,6 +469,8 @@
                                                     <include reference="d6N-Re-yW9"/>
                                                     <include reference="XKP-1R-1a1"/>
                                                     <include reference="dUd-Sj-FjM"/>
+                                                    <include reference="bA7-2u-JZD"/>
+                                                    <include reference="hQn-0U-VOM"/>
                                                     <include reference="3gq-Vi-PzX"/>
                                                     <include reference="SC4-Bi-0bW"/>
                                                 </mask>
