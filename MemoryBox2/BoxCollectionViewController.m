@@ -71,39 +71,17 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
-    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
-        return;
-    }
-    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+//    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+//        return;
+//    }
     
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
-    if (indexPath == nil){
-        NSLog(@"couldn't find index path");
-    } else {
-        // get the cell at indexPath (the one you long pressed)
-        UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-        // do stuff with the cell
-        [self.collectionView reloadData];
+    if (self.shouldHideDeleteButton == YES)
+    {
         self.shouldHideDeleteButton = NO;
-        
+        [self.collectionView reloadData];
     }
-}
-
-- (CAAnimation*)getShakeAnimation
-{
-    CAKeyframeAnimation* animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     
-    CGFloat wobbleAngle = 0.06f;
     
-    NSValue* valLeft = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(wobbleAngle, 0.0f, 0.0f, 1.0f)];
-    NSValue* valRight = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-wobbleAngle, 0.0f, 0.0f, 1.0f)];
-    animation.values = [NSArray arrayWithObjects:valLeft, valRight, nil];
-    
-    animation.autoreverses = YES;
-    animation.duration = 0.125;
-    animation.repeatCount = HUGE_VALF;
-    
-    return animation;
 }
 
 #pragma mark - Navigation
@@ -120,10 +98,6 @@ static NSString * const reuseIdentifier = @"Cell";
         addBoxVC.detailItem = box;
     }
 }
-
-// Month *month = [self.monthArray objectAtIndex:self.selectedIndexPath.row];
-//NSLog(@"selected month = %@", month);
-//[[segue destinationViewController] setMonthItem:month];
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -143,6 +117,9 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.boxImageView.image = [UIImage imageWithData:[box imageData]];
     cell.deleteButton.tag = indexPath.row;
     cell.deleteButton.hidden = self.shouldHideDeleteButton;
+    if (self.shouldHideDeleteButton == NO) {
+        [cell jiggleWithCompletionDelegate:nil];
+    }
     
     return cell;
 }
@@ -155,14 +132,15 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (IBAction)deleteBox:(UIButton *)sender {
-    [self deleteObject:self.box];
+    NSInteger selectedIndex = sender.tag;
+    Box *box = [self.array objectAtIndex:selectedIndex];
+    [self deleteObject:box];
     [self reloadDataWithoutDelete];
      //    NSLog(@"%ld", sender.tag);
 }
 
-- (void)deleteObject:(RLMObject *)object{
+- (void)deleteObject:(RLMObject *)box{
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    Box *box = [self.array objectAtIndex:self.indexPath.row];
     [defaultRealm beginWriteTransaction];
     [defaultRealm deleteObject:box];
     [defaultRealm commitWriteTransaction];

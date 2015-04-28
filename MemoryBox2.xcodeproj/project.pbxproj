@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		93A0D1901AEEB60700F277F2 /* AddPhotoNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D18F1AEEB60700F277F2 /* AddPhotoNoteViewController.m */; };
 		93A0D1961AEF39A200F277F2 /* DiaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */; };
+		93A0D19F1AF000BE00F277F2 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D19E1AF000BE00F277F2 /* UIView+Animation.m */; };
 		93CF25981AE80B2B007B6C24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25971AE80B2B007B6C24 /* main.m */; };
 		93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF259A1AE80B2B007B6C24 /* AppDelegate.m */; };
 		93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CF259F1AE80B2B007B6C24 /* Main.storyboard */; };
@@ -65,6 +66,8 @@
 		93A0D18F1AEEB60700F277F2 /* AddPhotoNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoNoteViewController.m; sourceTree = "<group>"; };
 		93A0D1941AEF39A200F277F2 /* DiaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryDetailViewController.m; sourceTree = "<group>"; };
+		93A0D19D1AF000BE00F277F2 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		93A0D19E1AF000BE00F277F2 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		93CF25921AE80B2B007B6C24 /* MemoryBox2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryBox2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CF25961AE80B2B007B6C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CF25971AE80B2B007B6C24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 			children = (
 				93CF25991AE80B2B007B6C24 /* AppDelegate.h */,
 				93CF259A1AE80B2B007B6C24 /* AppDelegate.m */,
+				93A0D19D1AF000BE00F277F2 /* UIView+Animation.h */,
+				93A0D19E1AF000BE00F277F2 /* UIView+Animation.m */,
 				93CF25E41AE8AA8F007B6C24 /* CoverFlowLayout.h */,
 				93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */,
 				93CF25FC1AE9F75E007B6C24 /* PathFlowLayout.h */,
@@ -388,6 +393,7 @@
 				93CF26071AEB379F007B6C24 /* AddDiaryNoteViewController.m in Sources */,
 				93CF25F81AE98752007B6C24 /* Moment.m in Sources */,
 				93CF25F21AE8BE99007B6C24 /* MomentCollectionViewController.m in Sources */,
+				93A0D19F1AF000BE00F277F2 /* UIView+Animation.m in Sources */,
 				93CF26041AEB30A9007B6C24 /* DiaryEntryViewController.m in Sources */,
 				93CF26221AEC692E007B6C24 /* ImageScrollView.m in Sources */,
 				93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */,

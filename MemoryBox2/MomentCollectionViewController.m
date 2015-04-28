@@ -133,7 +133,8 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (IBAction)deleteMemory:(UIButton *)sender {
-    [self deleteObject:self.moment];
+    Moment *moment = [self.momentArray objectAtIndex:self.selectedIndexPath.row];
+    [self deleteObject:moment];
     [self reloadDataWithoutDelete];
     //    NSLog(@"%ld", sender.tag);
 }

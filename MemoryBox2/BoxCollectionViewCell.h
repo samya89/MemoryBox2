@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Box.h"
+#import "UIView+Animation.h"
 
 @interface BoxCollectionViewCell : UICollectionViewCell
 
@@ -16,6 +17,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
+@property (weak, nonatomic) IBOutlet UIView *backgroundBaseView;
+
 @property (nonatomic, strong) Box *box;
 
+
+- (void)jiggleWithCompletionDelegate:(id)delegate;
 @end
