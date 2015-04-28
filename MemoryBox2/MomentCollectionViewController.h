@@ -12,12 +12,14 @@
 #import "Box.h"
 #import "Moment.h"
 
-@interface MomentCollectionViewController : UICollectionViewController
+@interface MomentCollectionViewController : UICollectionViewController<UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) Moment *moment;
 
 @property (strong, nonatomic) Box *selectedBox;
 @property (strong, nonatomic) Month *selectedMonth;
 @property (assign, nonatomic) int selectedDayOfMonth;
 
-//- (IBAction)addMoment:(id)sender;
+- (IBAction)deleteMemory:(UIButton *)sender;
 
 @end

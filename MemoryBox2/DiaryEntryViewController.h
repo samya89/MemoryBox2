@@ -17,4 +17,5 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *diaryTextView;
 
+
 @end

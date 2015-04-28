@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) RLMResults *momentArray;
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property BOOL shouldHideDeleteButton;
 
 @end
 
@@ -25,11 +26,20 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *queryString = [NSString stringWithFormat:@"timeString = '%@%d%@'", self.selectedBox.boxName,self.selectedDayOfMonth,self.selectedMonth.monthName];
-    self.momentArray = [Moment objectsWhere:queryString];
+    [self fetchWithQuery];
+    self.shouldHideDeleteButton = YES;
     
-    NSLog(@"passed selected month and day of month = %@, %d,", self.selectedMonth, self.selectedDayOfMonth);
-    NSLog(@"query string = %@", queryString);
+    UILongPressGestureRecognizer *lpgr
+    = [[UILongPressGestureRecognizer alloc]
+       initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = .3; //seconds
+    lpgr.delegate = self;
+    [self.collectionView addGestureRecognizer:lpgr];
+
+    
+//    NSLog(@"passed selected month and day of month = %@, %d,", self.selectedMonth, self.selectedDayOfMonth);
+//    NSLog(@"query string = %@", queryString);
+    
 }
 
 - (void)setselectedMonth:(id)newDetailItem {
@@ -40,7 +50,37 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self reloadDataWithoutDelete];
+}
+
+-(void)fetchWithQuery{
+    NSString *queryString = [NSString stringWithFormat:@"timeString = '%@%d%@'", self.selectedBox.boxName,self.selectedDayOfMonth,self.selectedMonth.monthName];
+    self.momentArray = [Moment objectsWhere:queryString];
+}
+
+-(void)reloadDataWithoutDelete{
+    [self fetchWithQuery];
+    self.shouldHideDeleteButton = YES;
     [self.collectionView reloadData];
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        // get the cell at indexPath (the one you long pressed)
+        UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+        // do stuff with the cell
+        [self.collectionView reloadData];
+        self.shouldHideDeleteButton = NO;
+    }
 }
 
 #pragma mark - Navigation
@@ -70,6 +110,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MomentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     Moment *moment = self.momentArray[indexPath.row];
+    cell.deleteMemoryButton.tag = indexPath.row;
+    cell.deleteMemoryButton.hidden = self.shouldHideDeleteButton;
     if (moment.type == 0){
         UIImage *myImage = [UIImage imageNamed:@"diaryIcon.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
@@ -78,7 +120,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     return cell;
 }
-
 
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
@@ -91,17 +132,20 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
+- (IBAction)deleteMemory:(UIButton *)sender {
+    [self deleteObject:self.moment];
+    [self reloadDataWithoutDelete];
+    //    NSLog(@"%ld", sender.tag);
+}
 
-//- (IBAction)addMoment:(id)sender {
-//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-//    
-//    NSString *timeString = [NSString stringWithFormat:@"%@%d%@", self.selectedBox, self.selectedDayOfMonth,self.selectedMonth.monthName];
-//    
-//    [defaultRealm beginWriteTransaction];
-////    [defaultRealm addObject:[[Moment alloc]initWithTimeString:timeString]];
-//    [defaultRealm commitWriteTransaction];
-//    
-//    [self.collectionView reloadData];
-//}
+- (void)deleteObject:(RLMObject *)object{
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    Moment *moment = [self.momentArray objectAtIndex:self.selectedIndexPath.row];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm deleteObject:moment];
+    [defaultRealm commitWriteTransaction];
+    [self reloadDataWithoutDelete];
+}
+
 
 @end

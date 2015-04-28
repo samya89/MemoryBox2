@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *momentNoteLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *deleteMemoryButton;
+
 @end
