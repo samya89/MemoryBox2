@@ -85,7 +85,25 @@ static NSString * const reuseIdentifier = @"Cell";
         // do stuff with the cell
         [self.collectionView reloadData];
         self.shouldHideDeleteButton = NO;
+        
     }
+}
+
+- (CAAnimation*)getShakeAnimation
+{
+    CAKeyframeAnimation* animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    
+    CGFloat wobbleAngle = 0.06f;
+    
+    NSValue* valLeft = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(wobbleAngle, 0.0f, 0.0f, 1.0f)];
+    NSValue* valRight = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-wobbleAngle, 0.0f, 0.0f, 1.0f)];
+    animation.values = [NSArray arrayWithObjects:valLeft, valRight, nil];
+    
+    animation.autoreverses = YES;
+    animation.duration = 0.125;
+    animation.repeatCount = HUGE_VALF;
+    
+    return animation;
 }
 
 #pragma mark - Navigation
