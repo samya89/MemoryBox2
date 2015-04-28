@@ -16,4 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *deleteMemoryButton;
 
+@property (weak, nonatomic) IBOutlet UIView *momentBaseView;
+
+- (void)jiggleMomentWithCompletionDelegate:(id)delegate;
+
+
 @end

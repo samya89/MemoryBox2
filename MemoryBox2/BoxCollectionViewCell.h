@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Box.h"
-#import "UIView+Animation.h"
 
 @interface BoxCollectionViewCell : UICollectionViewCell
 
@@ -21,6 +20,6 @@
 
 @property (nonatomic, strong) Box *box;
 
-
 - (void)jiggleWithCompletionDelegate:(id)delegate;
+
 @end

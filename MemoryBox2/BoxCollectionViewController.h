@@ -10,7 +10,6 @@
 #import <Realm/Realm.h>
 #import <QuartzCore/QuartzCore.h>
 #import "Box.h"
-#import "UIView+Animation.h"
 
 @interface BoxCollectionViewController : UICollectionViewController<UIGestureRecognizerDelegate>
 

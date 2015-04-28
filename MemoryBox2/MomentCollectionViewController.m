@@ -66,20 +66,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
-    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
-        return;
-    }
-    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
-    
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
-    if (indexPath == nil){
-        NSLog(@"couldn't find index path");
-    } else {
-        // get the cell at indexPath (the one you long pressed)
-        UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-        // do stuff with the cell
-        [self.collectionView reloadData];
+    if (self.shouldHideDeleteButton == YES)
+    {
         self.shouldHideDeleteButton = NO;
+        [self.collectionView reloadData];
     }
 }
 
@@ -110,8 +100,13 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MomentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     Moment *moment = self.momentArray[indexPath.row];
-    cell.deleteMemoryButton.tag = indexPath.row;
+    cell.deleteMemoryButton.tag = indexPath.item;
     cell.deleteMemoryButton.hidden = self.shouldHideDeleteButton;
+    if (self.shouldHideDeleteButton == NO){
+        [cell jiggleMomentWithCompletionDelegate:nil];
+    } else {
+        [cell.momentBaseView.layer removeAnimationForKey:@"transform.rotation"];
+    }
     if (moment.type == 0){
         UIImage *myImage = [UIImage imageNamed:@"diaryIcon.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];

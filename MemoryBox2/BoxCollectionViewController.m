@@ -71,17 +71,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
 {
-//    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
-//        return;
-//    }
-    
     if (self.shouldHideDeleteButton == YES)
     {
         self.shouldHideDeleteButton = NO;
         [self.collectionView reloadData];
-    }
-    
-    
+    }  
 }
 
 #pragma mark - Navigation
@@ -115,12 +109,13 @@ static NSString * const reuseIdentifier = @"Cell";
     Box *box = self.array[indexPath.item];
     cell.boxNameLabel.text = [box boxName];
     cell.boxImageView.image = [UIImage imageWithData:[box imageData]];
-    cell.deleteButton.tag = indexPath.row;
+    cell.deleteButton.tag = indexPath.item;
     cell.deleteButton.hidden = self.shouldHideDeleteButton;
     if (self.shouldHideDeleteButton == NO) {
         [cell jiggleWithCompletionDelegate:nil];
+    }else{
+        [cell.backgroundBaseView.layer removeAnimationForKey:@"transform.rotation"];
     }
-    
     return cell;
 }
 
@@ -134,6 +129,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (IBAction)deleteBox:(UIButton *)sender {
     NSInteger selectedIndex = sender.tag;
     Box *box = [self.array objectAtIndex:selectedIndex];
+    
     [self deleteObject:box];
     [self reloadDataWithoutDelete];
      //    NSLog(@"%ld", sender.tag);
@@ -144,7 +140,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [defaultRealm beginWriteTransaction];
     [defaultRealm deleteObject:box];
     [defaultRealm commitWriteTransaction];
-    [self reloadDataWithoutDelete];
+//    [self reloadDataWithoutDelete];
 }
 
 

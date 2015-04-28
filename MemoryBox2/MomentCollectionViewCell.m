@@ -10,4 +10,19 @@
 
 @implementation MomentCollectionViewCell
 
+- (void)jiggleMomentWithCompletionDelegate:(id)delegate{
+    CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotateAnimation.fromValue = @(-1*M_PI * 0.05);
+    rotateAnimation.toValue = @(M_PI * 0.05);
+    rotateAnimation.duration = 0.1;
+    rotateAnimation.repeatCount = 50;
+    rotateAnimation.autoreverses = YES;
+    rotateAnimation.delegate = delegate;
+    
+    [self.momentBaseView.layer addAnimation:rotateAnimation forKey:rotateAnimation.keyPath];
+    
+}
+
+
+
 @end

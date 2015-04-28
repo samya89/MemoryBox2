@@ -400,99 +400,101 @@
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diaryIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="oA1-L8-Q3o">
-                                            <rect key="frame" x="9" y="8" width="159" height="143"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxQ-Ie-JZs">
+                                            <rect key="frame" x="-11" y="-24" width="199" height="233"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diaryIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="oA1-L8-Q3o">
+                                                    <rect key="frame" x="20" y="49" width="159" height="143"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="159" id="Agw-m9-P87"/>
+                                                        <constraint firstAttribute="height" constant="143" id="RWX-x2-1at"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Agw-m9-P87"/>
+                                                            <exclude reference="RWX-x2-1at"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="Agw-m9-P87"/>
+                                                            <include reference="RWX-x2-1at"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kem-S6-8AH">
+                                                    <rect key="frame" x="149" y="20" width="30" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <state key="normal" title="X">
+                                                        <color key="titleColor" red="0.82723721589999999" green="0.5038301811" blue="0.30666554680000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="137" y="0.0" width="30" height="60"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="deleteMemory:" destination="WFV-IW-Vyd" eventType="touchUpInside" id="Kf2-UE-QTG"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-z8-jhP">
+                                                    <rect key="frame" x="84" y="192" width="37" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="159" id="Doz-MM-uO2"/>
-                                                <constraint firstAttribute="height" constant="143" id="NmP-zp-EVe"/>
-                                                <constraint firstAttribute="width" constant="159" id="wax-7Y-2F2"/>
-                                                <constraint firstAttribute="height" constant="143" id="z8Y-f8-lrH"/>
+                                                <constraint firstItem="dBu-z8-jhP" firstAttribute="top" secondItem="oA1-L8-Q3o" secondAttribute="bottom" constant="3" id="3gq-Vi-PzX"/>
+                                                <constraint firstAttribute="centerX" secondItem="dBu-z8-jhP" secondAttribute="centerX" id="SC4-Bi-0bW"/>
+                                                <constraint firstAttribute="centerX" secondItem="oA1-L8-Q3o" secondAttribute="centerX" id="XKP-1R-1a1"/>
+                                                <constraint firstAttribute="width" constant="175" id="cj0-l6-dH4"/>
+                                                <constraint firstAttribute="height" constant="192" id="d6N-Re-yW9"/>
+                                                <constraint firstAttribute="centerY" secondItem="oA1-L8-Q3o" secondAttribute="centerY" id="dUd-Sj-FjM"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="NmP-zp-EVe"/>
-                                                    <exclude reference="wax-7Y-2F2"/>
+                                                    <exclude reference="cj0-l6-dH4"/>
+                                                    <exclude reference="d6N-Re-yW9"/>
+                                                    <exclude reference="XKP-1R-1a1"/>
+                                                    <exclude reference="dUd-Sj-FjM"/>
+                                                    <exclude reference="3gq-Vi-PzX"/>
+                                                    <exclude reference="SC4-Bi-0bW"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=compact-widthClass=compact">
                                                 <mask key="constraints">
-                                                    <exclude reference="Doz-MM-uO2"/>
-                                                    <include reference="NmP-zp-EVe"/>
-                                                    <include reference="wax-7Y-2F2"/>
-                                                    <exclude reference="z8Y-f8-lrH"/>
+                                                    <include reference="cj0-l6-dH4"/>
+                                                    <include reference="d6N-Re-yW9"/>
+                                                    <include reference="XKP-1R-1a1"/>
+                                                    <include reference="dUd-Sj-FjM"/>
+                                                    <include reference="3gq-Vi-PzX"/>
+                                                    <include reference="SC4-Bi-0bW"/>
                                                 </mask>
                                             </variation>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-z8-jhP">
-                                            <rect key="frame" x="70" y="152" width="37" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kem-S6-8AH">
-                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                            <state key="normal" title="X">
-                                                <color key="titleColor" red="0.82723721589999999" green="0.5038301811" blue="0.30666554680000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="deleteMemory:" destination="WFV-IW-Vyd" eventType="touchUpInside" id="Kf2-UE-QTG"/>
-                                            </connections>
-                                        </button>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="oA1-L8-Q3o" secondAttribute="centerX" id="28G-3x-TzE"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="kem-S6-8AH" secondAttribute="trailing" constant="-14" id="302-FX-Cme">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
-                                    </constraint>
-                                    <constraint firstAttribute="centerX" secondItem="dBu-z8-jhP" secondAttribute="centerX" id="F7y-IH-iZW"/>
-                                    <constraint firstItem="oA1-L8-Q3o" firstAttribute="top" secondItem="kfF-Yw-RQy" secondAttribute="topMargin" id="Skt-Rw-pxu"/>
-                                    <constraint firstItem="kem-S6-8AH" firstAttribute="top" secondItem="kfF-Yw-RQy" secondAttribute="topMargin" id="b4S-1e-Lva">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="-12"/>
-                                    </constraint>
-                                    <constraint firstAttribute="centerX" secondItem="oA1-L8-Q3o" secondAttribute="centerX" id="gC0-OE-Pbx"/>
-                                    <constraint firstItem="dBu-z8-jhP" firstAttribute="top" secondItem="oA1-L8-Q3o" secondAttribute="bottom" constant="1" id="iiA-UW-HVW"/>
-                                    <constraint firstAttribute="centerY" secondItem="oA1-L8-Q3o" secondAttribute="centerY" id="jer-oC-1ll"/>
-                                    <constraint firstAttribute="centerX" secondItem="dBu-z8-jhP" secondAttribute="centerX" id="xKm-NE-QfC">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="-3.5"/>
-                                    </constraint>
-                                    <constraint firstItem="dBu-z8-jhP" firstAttribute="top" secondItem="oA1-L8-Q3o" secondAttribute="bottom" id="zdb-l8-kPV"/>
+                                    <constraint firstAttribute="centerY" secondItem="hxQ-Ie-JZs" secondAttribute="centerY" id="2W0-dy-RRq"/>
+                                    <constraint firstAttribute="centerX" secondItem="hxQ-Ie-JZs" secondAttribute="centerX" id="baZ-q5-AcG"/>
                                 </constraints>
                                 <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="kem-S6-8AH"/>
-                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="28G-3x-TzE"/>
-                                        <exclude reference="jer-oC-1ll"/>
-                                        <exclude reference="302-FX-Cme"/>
-                                        <exclude reference="b4S-1e-Lva"/>
-                                        <exclude reference="xKm-NE-QfC"/>
-                                        <exclude reference="zdb-l8-kPV"/>
+                                        <exclude reference="2W0-dy-RRq"/>
+                                        <exclude reference="baZ-q5-AcG"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="kem-S6-8AH"/>
-                                    </mask>
                                     <mask key="constraints">
-                                        <include reference="28G-3x-TzE"/>
-                                        <exclude reference="Skt-Rw-pxu"/>
-                                        <exclude reference="gC0-OE-Pbx"/>
-                                        <include reference="jer-oC-1ll"/>
-                                        <include reference="302-FX-Cme"/>
-                                        <include reference="b4S-1e-Lva"/>
-                                        <exclude reference="F7y-IH-iZW"/>
-                                        <exclude reference="iiA-UW-HVW"/>
-                                        <include reference="xKm-NE-QfC"/>
-                                        <include reference="zdb-l8-kPV"/>
+                                        <include reference="2W0-dy-RRq"/>
+                                        <include reference="baZ-q5-AcG"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <outlet property="deleteMemoryButton" destination="kem-S6-8AH" id="p5G-Zx-hsi"/>
+                                    <outlet property="momentBaseView" destination="hxQ-Ie-JZs" id="ONx-tl-Kyk"/>
                                     <outlet property="momentIconImage" destination="oA1-L8-Q3o" id="gwm-0e-jYB"/>
                                     <outlet property="momentNoteLabel" destination="dBu-z8-jhP" id="UxD-6r-l0M"/>
                                 </connections>
@@ -785,7 +787,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nat-xS-blV">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqh-2m-8Oj">
@@ -796,6 +798,7 @@
                                     <constraint firstAttribute="height" constant="221" id="UIe-Sk-A9V"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">

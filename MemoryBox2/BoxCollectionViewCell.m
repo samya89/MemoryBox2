@@ -24,8 +24,9 @@
     
 }
 
-- (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
-{
-    //[delegate jiggleAnimationDidStop]
+- (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag {
+    
+    
+
 }
 @end
