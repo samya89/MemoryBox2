@@ -51,7 +51,8 @@ static NSString * const reuseIdentifier = @"Cell";
         [[segue destinationViewController] setAddMomentTimeString:timeString];
         
     } else if ([[segue identifier] isEqualToString:@"diaryDetail"]) {
-        [[segue destinationViewController] setDetailDiaryTimeString:timeString];
+        Moment *selectedMoment = self.momentArray[self.selectedIndexPath.row];
+        [[segue destinationViewController] setDiaryDetail:selectedMoment];
     }
     //else if [[segue identifier] isEqualToString:@"photoDetail"])
 }

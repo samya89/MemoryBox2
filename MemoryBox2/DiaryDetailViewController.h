@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Moment.h"
 
 @interface DiaryDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *diaryTitle;
 @property (weak, nonatomic) IBOutlet UITextView *diaryDetailTextview;
 
-@property (strong, nonatomic) NSString *detailDiaryTimeString;
+@property (strong, nonatomic) Moment *diaryDetail;
 
 @end

@@ -10,16 +10,16 @@
 
 @interface DiaryDetailViewController ()
 
+@property (nonatomic, strong) RLMResults *momentArray;
+
 @end
 
 @implementation DiaryDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"detail diary %@", self.detailDiaryTimeString);
-    
-    
+    self.diaryTitle.text = self.diaryDetail.diaryNote;
+    self.diaryDetailTextview.text = self.diaryDetail.diaryText;
 
 }
 
