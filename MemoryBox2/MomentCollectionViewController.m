@@ -25,7 +25,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSString *queryString = [NSString stringWithFormat:@"timeString = '%@%d%@'", self.selectedBox.boxName,self.selectedDayOfMonth,self.selectedMonth.monthName];
     self.momentArray = [Moment objectsWhere:queryString];
-
+    
     NSLog(@"passed selected month and day of month = %@, %d,", self.selectedMonth, self.selectedDayOfMonth);
     NSLog(@"query string = %@", queryString);
 }
@@ -34,6 +34,11 @@ static NSString * const reuseIdentifier = @"Cell";
     if (_selectedMonth != newDetailItem) {
         _selectedMonth = newDetailItem;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - Navigation
@@ -57,6 +62,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MomentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    Moment *moment = self.momentArray[indexPath.row];
+    if (moment.type == 0){
+        UIImage *myImage = [UIImage imageNamed:@"diaryIcon.png"];
+        NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+        cell.momentIconImage.image = [UIImage imageWithData:data];
+        cell.momentNoteLabel.text = [moment diaryNote];
+    }
     return cell;
 }
 
