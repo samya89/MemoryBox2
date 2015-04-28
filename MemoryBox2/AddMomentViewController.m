@@ -7,6 +7,7 @@
 //
 
 #import "AddMomentViewController.h"
+#import "DiaryEntryViewController.h"
 
 @interface AddMomentViewController ()
 
@@ -27,16 +28,17 @@
     }
 }
 
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"addDiary"]) {
+        [[segue destinationViewController] setDiaryEntryTimeString:self.addMomentTimeString];
+        [[segue destinationViewController] setDiaryEntryType:0];
+    } else if ([[segue identifier] isEqualToString:@"addPhoto"]) {
+        [[segue destinationViewController] setDiaryEntryTimeString:self.addMomentTimeString];
+        [[segue destinationViewController] setDiaryEntryType:1];
+    }
 }
-
-
-
-
-
 
 @end

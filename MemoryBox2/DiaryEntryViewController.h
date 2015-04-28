@@ -12,6 +12,9 @@
 
 @interface DiaryEntryViewController : UIViewController
 
+@property (nonatomic, strong) NSString *diaryEntryTimeString;
+@property (nonatomic, assign) int diaryEntryType;
+
 @property (weak, nonatomic) IBOutlet UITextView *diaryTextView;
 
 @end
