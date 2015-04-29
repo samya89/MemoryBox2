@@ -48,4 +48,8 @@
     [defaultRealm commitWriteTransaction];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    [self.diaryNoteTextfield setText:@""];
+}
+
 @end

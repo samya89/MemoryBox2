@@ -27,6 +27,8 @@
     NSLog(@"photo VC = %@ %d",self.photoTimeString, self.photoType);
 }
 
+
+
 - (IBAction)pressedAdd:(id)sender {
     
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Choose Photo" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
@@ -58,30 +60,27 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
-    UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.selectedPhoto = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     if ([picker sourceType] == UIImagePickerControllerSourceTypeCamera) {
         // Do something with an image from the camera
-        UIImageWriteToSavedPhotosAlbum(originalImage, nil, nil, nil);
+        UIImageWriteToSavedPhotosAlbum(self.selectedPhoto, nil, nil, nil);
     }
     
     [self.photoImageView setContentMode:UIViewContentModeScaleAspectFit];
-    self.photoImageView.image = originalImage;
+    self.photoImageView.image = self.selectedPhoto;
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
 - (IBAction)addPhoto:(UIButton *)sender{
-//    UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
-//    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
-//    
-//    NSString *diaryNoteText = self.diaryNoteTextfield.text;
-//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-//    [defaultRealm beginWriteTransaction];
-//    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryNoteTimeString andType:self.diaryNoteType andDiaryText:self.inputText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@""]];
-//    [defaultRealm commitWriteTransaction];
-    
+    UIImage *photo = self.selectedPhoto;
+    NSData *selectedPhotoData = [NSData dataWithData:UIImagePNGRepresentation(photo)];
+    NSString *photoTitleText = self.photoTitleTextfield.text;
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.photoTimeString andType:self.photoType andDiaryText:@"" andDiaryNote:@"" andPhotoImage:selectedPhotoData andPhotoNote:photoTitleText]];
+    [defaultRealm commitWriteTransaction];
 }
-
 
 @end

@@ -11,6 +11,8 @@
 		93A0D1A51AF0425F00F277F2 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */; };
 		93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */; };
 		93A0D1AB1AF0657600F277F2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1AA1AF0657600F277F2 /* MapViewController.m */; };
+		93A0D1B11AF079C200F277F2 /* UIViewController+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1B01AF079C200F277F2 /* UIViewController+OrientationFix.m */; };
+		93A0D1B41AF079E900F277F2 /* UIImagePickerController+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1B31AF079E900F277F2 /* UIImagePickerController+OrientationFix.m */; };
 		93CF25981AE80B2B007B6C24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25971AE80B2B007B6C24 /* main.m */; };
 		93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF259A1AE80B2B007B6C24 /* AppDelegate.m */; };
 		93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CF259F1AE80B2B007B6C24 /* Main.storyboard */; };
@@ -64,6 +66,10 @@
 		93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		93A0D1A91AF0657600F277F2 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		93A0D1AA1AF0657600F277F2 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		93A0D1AF1AF079C100F277F2 /* UIViewController+OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+OrientationFix.h"; sourceTree = "<group>"; };
+		93A0D1B01AF079C200F277F2 /* UIViewController+OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+OrientationFix.m"; sourceTree = "<group>"; };
+		93A0D1B21AF079E900F277F2 /* UIImagePickerController+OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+OrientationFix.h"; sourceTree = "<group>"; };
+		93A0D1B31AF079E900F277F2 /* UIImagePickerController+OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+OrientationFix.m"; sourceTree = "<group>"; };
 		93CF25921AE80B2B007B6C24 /* MemoryBox2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryBox2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CF25961AE80B2B007B6C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CF25971AE80B2B007B6C24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -175,6 +181,10 @@
 			children = (
 				93CF25991AE80B2B007B6C24 /* AppDelegate.h */,
 				93CF259A1AE80B2B007B6C24 /* AppDelegate.m */,
+				93A0D1AF1AF079C100F277F2 /* UIViewController+OrientationFix.h */,
+				93A0D1B01AF079C200F277F2 /* UIViewController+OrientationFix.m */,
+				93A0D1B21AF079E900F277F2 /* UIImagePickerController+OrientationFix.h */,
+				93A0D1B31AF079E900F277F2 /* UIImagePickerController+OrientationFix.m */,
 				93CF25E41AE8AA8F007B6C24 /* CoverFlowLayout.h */,
 				93CF25E51AE8AA8F007B6C24 /* CoverFlowLayout.m */,
 				93CF25FC1AE9F75E007B6C24 /* PathFlowLayout.h */,
@@ -360,6 +370,7 @@
 				93CF25D71AE87372007B6C24 /* MonthCollectionViewCell.m in Sources */,
 				93CF26071AEB379F007B6C24 /* AddDiaryNoteViewController.m in Sources */,
 				93CF25F81AE98752007B6C24 /* Moment.m in Sources */,
+				93A0D1B41AF079E900F277F2 /* UIImagePickerController+OrientationFix.m in Sources */,
 				93CF25F21AE8BE99007B6C24 /* MomentCollectionViewController.m in Sources */,
 				93CF26041AEB30A9007B6C24 /* DiaryEntryViewController.m in Sources */,
 				93CF25E31AE8A97E007B6C24 /* DetailMonthCollectionViewController.m in Sources */,
@@ -376,6 +387,7 @@
 				93CF25981AE80B2B007B6C24 /* main.m in Sources */,
 				93CF262B1AEC7761007B6C24 /* DetailMonthCollectionViewCell.m in Sources */,
 				93CF25D41AE872E6007B6C24 /* MonthCollectionViewController.m in Sources */,
+				93A0D1B11AF079C200F277F2 /* UIViewController+OrientationFix.m in Sources */,
 				93CF25FE1AE9F75E007B6C24 /* PathFlowLayout.m in Sources */,
 				93CF25FB1AE9C0F3007B6C24 /* MomentCollectionViewCell.m in Sources */,
 			);

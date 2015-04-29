@@ -10,7 +10,7 @@
 #import <Realm/Realm.h>
 #import "Moment.h"
 
-@interface DiaryEntryViewController : UIViewController
+@interface DiaryEntryViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString *diaryEntryTimeString;
 @property (nonatomic, assign) int diaryEntryType;

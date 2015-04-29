@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Realm/Realm.h>
+#import "Moment.h"
 
 @interface PhotoViewController : UIViewController
 
@@ -16,5 +18,6 @@
 
 @property (nonatomic, strong) NSString *photoTimeString;
 @property (nonatomic, assign) int photoType;
+@property (nonatomic, strong) UIImage *selectedPhoto;
 
 @end
