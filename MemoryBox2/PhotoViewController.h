@@ -13,6 +13,8 @@
 @interface PhotoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *photoTitleTextfield;
+@property (weak, nonatomic) IBOutlet UIButton *addPhotoButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelPhotoButton;
 
 - (IBAction)addPhoto:(UIButton *)sender;
 

@@ -1257,6 +1257,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoButton" destination="qQn-zj-bfv" id="e2Q-OD-zyb"/>
+                        <outlet property="cancelPhotoButton" destination="p53-9s-kPN" id="mgh-9q-P5c"/>
                         <outlet property="photoImageView" destination="MIA-y5-LFH" id="lM5-Au-Fon"/>
                         <outlet property="photoTitleTextfield" destination="HZ3-n7-1b1" id="EKr-Ow-Kdq"/>
                     </connections>

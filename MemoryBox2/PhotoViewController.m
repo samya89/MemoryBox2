@@ -24,6 +24,11 @@
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
     
+    self.photoImageView.hidden = YES;
+    self.photoTitleTextfield.hidden = YES;
+    self.addPhotoButton.hidden = YES;
+    self.cancelPhotoButton.hidden = YES;
+
     NSLog(@"photo VC = %@ %d",self.photoTimeString, self.photoType);
 }
 
@@ -38,7 +43,6 @@
             self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
             [self presentViewController:self.imagePicker animated:YES completion:nil];
         }];
-        
         [actionSheet addAction:camera];
     }
     
@@ -56,6 +60,10 @@
     [actionSheet addAction:cancelAction];
     
     [self presentViewController:actionSheet animated:YES completion:nil];
+        self.photoImageView.hidden = NO;
+        self.photoTitleTextfield.hidden = NO;
+        self.addPhotoButton.hidden = NO;
+        self.cancelPhotoButton.hidden = NO;
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
