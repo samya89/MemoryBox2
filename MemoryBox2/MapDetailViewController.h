@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Moment.h"
 
 @interface MapDetailViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *mapNoteLabel;
+
+@property (strong, nonatomic) Moment *mapDetail;
 
 @end

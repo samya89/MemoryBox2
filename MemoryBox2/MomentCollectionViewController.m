@@ -121,6 +121,11 @@ static NSString * const reuseIdentifier = @"Cell";
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment photoNote];
+    } else if (moment.type == 2){
+        UIImage *myImage = [UIImage imageNamed:@"mapIcon.png"];
+        NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+        cell.momentIconImage.image = [UIImage imageWithData:data];
+        cell.momentNoteLabel.text = [moment mapNote];
     }
     return cell;
 }
@@ -132,10 +137,12 @@ static NSString * const reuseIdentifier = @"Cell";
     self.selectedIndexPath = indexPath;
     Moment *moment = self.momentArray[indexPath.row];
     if (moment.type == 0){
-    [self performSegueWithIdentifier:@"diaryDetail" sender:self];
+        [self performSegueWithIdentifier:@"diaryDetail" sender:self];
     }
     else if (moment.type == 1){
         [self performSegueWithIdentifier:@"photoDetail" sender:self];
+    } else if (moment.type ==2){
+        [self performSegueWithIdentifier:@"mapDetail" sender:self];
     }
 }
 

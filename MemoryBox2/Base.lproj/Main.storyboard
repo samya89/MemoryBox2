@@ -1241,6 +1241,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapNoteLabel" destination="NwR-Xk-U5y" id="HDJ-VQ-sti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLD-k4-tiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
