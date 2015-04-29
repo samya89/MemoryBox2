@@ -17,5 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *diaryTextView;
 
+@property (weak, nonatomic) IBOutlet UITextField *diaryNoteTextfield;
+
+- (IBAction)addDiaryNote:(UIButton *)sender;
 
 @end

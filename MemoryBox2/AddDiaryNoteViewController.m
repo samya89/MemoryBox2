@@ -26,15 +26,5 @@
     [super touchesBegan:touches withEvent:event];
 }
 
-- (IBAction)addDiaryNote:(UIButton *)sender {
-    UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
-    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
-    
-    NSString *diaryNoteText = self.diaryNoteTextfield.text;
-    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryNoteTimeString andType:self.diaryNoteType andDiaryText:self.inputText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@""]];
-    [defaultRealm commitWriteTransaction];
-}
 
 @end

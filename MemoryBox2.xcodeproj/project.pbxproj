@@ -10,6 +10,7 @@
 		93A0D1961AEF39A200F277F2 /* DiaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */; };
 		93A0D1A51AF0425F00F277F2 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */; };
 		93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */; };
+		93A0D1AB1AF0657600F277F2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1AA1AF0657600F277F2 /* MapViewController.m */; };
 		93CF25981AE80B2B007B6C24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25971AE80B2B007B6C24 /* main.m */; };
 		93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF259A1AE80B2B007B6C24 /* AppDelegate.m */; };
 		93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CF259F1AE80B2B007B6C24 /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 		93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		93A0D1A61AF0637F00F277F2 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		93A0D1A91AF0657600F277F2 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		93A0D1AA1AF0657600F277F2 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		93CF25921AE80B2B007B6C24 /* MemoryBox2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryBox2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CF25961AE80B2B007B6C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CF25971AE80B2B007B6C24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */,
 				93A0D1A61AF0637F00F277F2 /* PhotoDetailViewController.h */,
 				93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */,
+				93A0D1A91AF0657600F277F2 /* MapViewController.h */,
+				93A0D1AA1AF0657600F277F2 /* MapViewController.m */,
 				93CF25A21AE80B2B007B6C24 /* Images.xcassets */,
 				93CF25A41AE80B2B007B6C24 /* LaunchScreen.xib */,
 				93CF25951AE80B2B007B6C24 /* Supporting Files */,
@@ -363,6 +368,7 @@
 				93CF25E61AE8AA8F007B6C24 /* CoverFlowLayout.m in Sources */,
 				93CF25E01AE89B1E007B6C24 /* Month.m in Sources */,
 				93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */,
+				93A0D1AB1AF0657600F277F2 /* MapViewController.m in Sources */,
 				93CF26011AEB3089007B6C24 /* AddMomentViewController.m in Sources */,
 				93CF25C11AE80DBA007B6C24 /* Box.m in Sources */,
 				93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */,

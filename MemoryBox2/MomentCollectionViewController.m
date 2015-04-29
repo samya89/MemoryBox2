@@ -89,7 +89,6 @@ static NSString * const reuseIdentifier = @"Cell";
         Moment *selectedMoment = self.momentArray[self.selectedIndexPath.row];
         [[segue destinationViewController] setPhotoDetail:selectedMoment];
     }
-    
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -121,7 +120,7 @@ static NSString * const reuseIdentifier = @"Cell";
         UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
-        cell.momentNoteLabel.text = [moment photoNote];
+//        cell.momentNoteLabel.text = [moment photoNote];
     }
     return cell;
 }

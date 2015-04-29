@@ -28,16 +28,24 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"addDiaryNote"]) {
-        NSString *diaryEntryText = self.diaryTextView.text;
-        [[segue destinationViewController] setInputText:diaryEntryText];
-        [[segue destinationViewController] setDiaryNoteType:self.diaryEntryType];
-        [[segue destinationViewController] setDiaryNoteTimeString:self.diaryEntryTimeString];
-    }
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([[segue identifier] isEqualToString:@"addDiaryNote"]) {
+//        NSString *diaryEntryText = self.diaryTextView.text;
+//        [[segue destinationViewController] setInputText:diaryEntryText];
+//        [[segue destinationViewController] setDiaryNoteType:self.diaryEntryType];
+//        [[segue destinationViewController] setDiaryNoteTimeString:self.diaryEntryTimeString];
+//    }
+//}
+
+- (IBAction)addDiaryNote:(UIButton *)sender {
+    UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
+    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+    NSString *diaryEntryText = self.diaryTextView.text;
+    NSString *diaryNoteText = self.diaryNoteTextfield.text;
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryEntryTimeString andType:self.diaryEntryType andDiaryText:diaryEntryText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@""]];
+    [defaultRealm commitWriteTransaction];
 }
-
-
-
 
 @end
