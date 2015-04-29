@@ -1184,6 +1184,18 @@
                                 </state>
                                 <connections>
                                     <action selector="addPhoto:" destination="eYL-u0-u36" eventType="touchUpInside" id="gHo-Qr-49z"/>
+                                    <segue destination="qJQ-3w-RSZ" kind="unwind" unwindAction="prepareForUnwind:" id="Cw5-PF-e2f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p53-9s-kPN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qJQ-3w-RSZ" kind="unwind" unwindAction="cancelPrepareForUnwind:" id="vhF-JH-WM5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1192,17 +1204,20 @@
                             <constraint firstAttribute="centerX" secondItem="MIA-y5-LFH" secondAttribute="centerX" id="3VP-8R-Tlb"/>
                             <constraint firstAttribute="centerX" secondItem="qQn-zj-bfv" secondAttribute="centerX" id="43h-pe-iXC"/>
                             <constraint firstItem="qQn-zj-bfv" firstAttribute="top" secondItem="HZ3-n7-1b1" secondAttribute="bottom" constant="8" id="BJ4-p1-KmU"/>
+                            <constraint firstAttribute="centerX" secondItem="p53-9s-kPN" secondAttribute="centerX" id="TuN-co-mgM"/>
                             <constraint firstItem="HZ3-n7-1b1" firstAttribute="top" secondItem="MIA-y5-LFH" secondAttribute="bottom" constant="18" id="jHa-Od-9sz"/>
                             <constraint firstAttribute="centerX" secondItem="HZ3-n7-1b1" secondAttribute="centerX" id="nRL-md-6Tk">
                                 <variation key="heightClass=compact-widthClass=compact" constant="-1"/>
                             </constraint>
                             <constraint firstItem="MIA-y5-LFH" firstAttribute="top" secondItem="h1x-m8-CiC" secondAttribute="bottom" constant="8" id="yUn-Sf-izc"/>
+                            <constraint firstItem="p53-9s-kPN" firstAttribute="top" secondItem="qQn-zj-bfv" secondAttribute="bottom" constant="-6" id="yq5-ph-fbR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="MIA-y5-LFH"/>
                                 <exclude reference="HZ3-n7-1b1"/>
                                 <exclude reference="qQn-zj-bfv"/>
+                                <exclude reference="p53-9s-kPN"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3VP-8R-Tlb"/>
@@ -1211,6 +1226,8 @@
                                 <exclude reference="nRL-md-6Tk"/>
                                 <exclude reference="43h-pe-iXC"/>
                                 <exclude reference="BJ4-p1-KmU"/>
+                                <exclude reference="TuN-co-mgM"/>
+                                <exclude reference="yq5-ph-fbR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -1218,6 +1235,7 @@
                                 <include reference="MIA-y5-LFH"/>
                                 <include reference="HZ3-n7-1b1"/>
                                 <include reference="qQn-zj-bfv"/>
+                                <include reference="p53-9s-kPN"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3VP-8R-Tlb"/>
@@ -1226,6 +1244,8 @@
                                 <include reference="nRL-md-6Tk"/>
                                 <include reference="43h-pe-iXC"/>
                                 <include reference="BJ4-p1-KmU"/>
+                                <include reference="TuN-co-mgM"/>
+                                <include reference="yq5-ph-fbR"/>
                             </mask>
                         </variation>
                     </view>
@@ -1242,6 +1262,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPi-Fb-hcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qJQ-3w-RSZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4740" y="828"/>
         </scene>

@@ -120,7 +120,7 @@ static NSString * const reuseIdentifier = @"Cell";
         UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
-//        cell.momentNoteLabel.text = [moment photoNote];
+        cell.momentNoteLabel.text = [moment photoNote];
     }
     return cell;
 }
@@ -133,6 +133,9 @@ static NSString * const reuseIdentifier = @"Cell";
     Moment *moment = self.momentArray[indexPath.row];
     if (moment.type == 0){
     [self performSegueWithIdentifier:@"diaryDetail" sender:self];
+    }
+    else if (moment.type == 1){
+        [self performSegueWithIdentifier:@"photoDetail" sender:self];
     }
 }
 
