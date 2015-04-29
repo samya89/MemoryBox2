@@ -686,7 +686,7 @@
                     <view key="view" contentMode="scaleToFill" id="dDO-wC-mcg">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-Sj-IQg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapView.png" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-Sj-IQg">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="67w-Fh-MfG"/>
@@ -705,11 +705,12 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pY-WF-sXA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add Location" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pY-WF-sXA">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="w1g-2V-V1v"/>
                                 </constraints>
+                                <color key="textColor" red="0.32156862749999998" green="0.50196078430000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
@@ -733,15 +734,55 @@
                                     <segue destination="xXp-h5-9gB" kind="unwind" unwindAction="prepareForUnwind:" id="c8J-Dg-Hzb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oON-Jq-Q98">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="176" y="362" width="48" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqR-7t-EjV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="362" width="48" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbo-6k-W48">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xXp-h5-9gB" kind="unwind" unwindAction="cancelPrepareForUnwind:" id="5Nd-bA-goQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Mbo-6k-W48" firstAttribute="top" secondItem="hHC-Zs-jbD" secondAttribute="bottom" constant="-6" id="EBP-nS-dQZ"/>
                             <constraint firstItem="7J3-Sj-IQg" firstAttribute="top" secondItem="woa-c0-cuR" secondAttribute="bottom" constant="22" id="HlB-t3-RRG"/>
+                            <constraint firstAttribute="centerX" secondItem="Mbo-6k-W48" secondAttribute="centerX" id="Ime-Pg-z6j"/>
                             <constraint firstAttribute="centerX" secondItem="3pY-WF-sXA" secondAttribute="centerX" id="Mwv-2I-pdf"/>
                             <constraint firstAttribute="centerX" secondItem="hHC-Zs-jbD" secondAttribute="centerX" id="Xt3-nZ-O6b"/>
-                            <constraint firstItem="3pY-WF-sXA" firstAttribute="top" secondItem="7J3-Sj-IQg" secondAttribute="bottom" constant="17" id="ZpN-x1-KDK"/>
+                            <constraint firstItem="3pY-WF-sXA" firstAttribute="top" secondItem="7J3-Sj-IQg" secondAttribute="bottom" constant="17" id="ZpN-x1-KDK">
+                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="7J3-Sj-IQg" firstAttribute="leading" secondItem="dDO-wC-mcg" secondAttribute="leadingMargin" constant="-16" id="hVo-Jc-ALZ"/>
-                            <constraint firstItem="hHC-Zs-jbD" firstAttribute="top" secondItem="3pY-WF-sXA" secondAttribute="bottom" constant="8" id="tZZ-4n-m2I"/>
+                            <constraint firstItem="hHC-Zs-jbD" firstAttribute="top" secondItem="3pY-WF-sXA" secondAttribute="bottom" constant="8" id="tZZ-4n-m2I">
+                                <variation key="heightClass=compact-widthClass=compact" constant="2"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="oON-Jq-Q98" secondAttribute="centerX" id="wZe-Dm-KVc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7J3-Sj-IQg" secondAttribute="trailing" constant="-16" id="wxe-w9-Zbe"/>
                         </constraints>
                         <variation key="default">
@@ -749,6 +790,9 @@
                                 <exclude reference="7J3-Sj-IQg"/>
                                 <exclude reference="3pY-WF-sXA"/>
                                 <exclude reference="hHC-Zs-jbD"/>
+                                <exclude reference="oON-Jq-Q98"/>
+                                <exclude reference="lqR-7t-EjV"/>
+                                <exclude reference="Mbo-6k-W48"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="HlB-t3-RRG"/>
@@ -758,6 +802,9 @@
                                 <exclude reference="ZpN-x1-KDK"/>
                                 <exclude reference="Xt3-nZ-O6b"/>
                                 <exclude reference="tZZ-4n-m2I"/>
+                                <exclude reference="EBP-nS-dQZ"/>
+                                <exclude reference="Ime-Pg-z6j"/>
+                                <exclude reference="wZe-Dm-KVc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -765,6 +812,9 @@
                                 <include reference="7J3-Sj-IQg"/>
                                 <include reference="3pY-WF-sXA"/>
                                 <include reference="hHC-Zs-jbD"/>
+                                <include reference="oON-Jq-Q98"/>
+                                <include reference="lqR-7t-EjV"/>
+                                <include reference="Mbo-6k-W48"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="HlB-t3-RRG"/>
@@ -774,6 +824,9 @@
                                 <include reference="ZpN-x1-KDK"/>
                                 <include reference="Xt3-nZ-O6b"/>
                                 <include reference="tZZ-4n-m2I"/>
+                                <include reference="EBP-nS-dQZ"/>
+                                <include reference="Ime-Pg-z6j"/>
+                                <include reference="wZe-Dm-KVc"/>
                             </mask>
                         </variation>
                     </view>
@@ -938,7 +991,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8S-6t-eny" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6QD-Xi-cqk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4735.5" y="90"/>
+            <point key="canvasLocation" x="4735.5" y="114"/>
         </scene>
         <!--Diary Detail View Controller-->
         <scene sceneID="eFu-Wg-vrR">
@@ -1024,7 +1077,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2868" y="1395"/>
+            <point key="canvasLocation" x="2535" y="1395"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="s9Y-0U-XjX">
@@ -1037,7 +1090,7 @@
                     <view key="view" contentMode="scaleToFill" id="bwj-ZM-6YI">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1p5-BB-6YF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="1p5-BB-6YF">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="333" id="4h3-b1-i3A"/>
@@ -1102,7 +1155,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pot-8p-jBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3502.5" y="1395"/>
+            <point key="canvasLocation" x="3169.5" y="1395"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KVc-cD-WFZ">
+            <objects>
+                <viewController id="LVa-gT-RfS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bft-rl-6sw"/>
+                        <viewControllerLayoutGuide type="bottom" id="xcB-Hb-380"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bYV-fh-aO9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLD-k4-tiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3855" y="1395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qr6-xO-qFc">
@@ -1160,7 +1230,7 @@
                                     </constraint>
                                     <constraint firstAttribute="height" constant="30" id="YpJ-SE-tsb"/>
                                 </constraints>
-                                <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.50196078430000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
@@ -1266,13 +1336,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPi-Fb-hcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qJQ-3w-RSZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4740" y="828"/>
+            <point key="canvasLocation" x="4735.5" y="831"/>
         </scene>
     </scenes>
     <resources>
         <image name="cameraIcon.png" width="373" height="326"/>
         <image name="diaryIcon.png" width="344" height="329"/>
         <image name="drawerIcon.png" width="395" height="323"/>
+        <image name="mapDetail.png" width="640" height="467"/>
         <image name="mapIcon.png" width="346" height="337"/>
+        <image name="mapView.png" width="1280" height="613"/>
     </resources>
 </document>

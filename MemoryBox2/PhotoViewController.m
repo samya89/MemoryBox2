@@ -32,8 +32,6 @@
     NSLog(@"photo VC = %@ %d",self.photoTimeString, self.photoType);
 }
 
-
-
 - (IBAction)pressedAdd:(id)sender {
     
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Choose Photo" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
