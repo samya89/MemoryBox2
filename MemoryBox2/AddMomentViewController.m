@@ -8,6 +8,7 @@
 
 #import "AddMomentViewController.h"
 #import "DiaryEntryViewController.h"
+#import "PhotoViewController.h"
 
 @interface AddMomentViewController ()
 
@@ -36,7 +37,8 @@
         [[segue destinationViewController] setDiaryEntryTimeString:self.addMomentTimeString];
         [[segue destinationViewController] setDiaryEntryType:0];
     } else if ([[segue identifier] isEqualToString:@"addPhoto"]) {
-        //pass timestring and type as 1 to photo VC
+        [[segue destinationViewController] setPhotoTimeString:self.addMomentTimeString];
+        [[segue destinationViewController] setPhotoType:1];
     }
 }
 

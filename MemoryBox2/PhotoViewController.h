@@ -2,20 +2,19 @@
 //  PhotoViewController.h
 //  MemoryBox2
 //
-//  Created by Samia Al Rahmani on 4/25/15.
+//  Created by Samia Al Rahmani on 4/28/15.
 //  Copyright (c) 2015 Samya Al Rahmani. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-#import <UIKit/UIKit.h>
-
 @interface PhotoViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *photos;  // array of ALAsset objects
+@property (weak, nonatomic) IBOutlet UITextField *photoTitleTextfield;
 
-@property NSUInteger pageIndex;
+- (IBAction)addPhoto:(UIButton *)sender;
 
-+ (PhotoViewController *)photoViewControllerForPageIndex:(NSUInteger)pageIndex;
+@property (nonatomic, strong) NSString *photoTimeString;
+@property (nonatomic, assign) int photoType;
 
 @end

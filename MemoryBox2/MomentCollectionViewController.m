@@ -10,6 +10,7 @@
 #import "MomentCollectionViewCell.h"
 #import "AddMomentViewController.h"
 #import "DiaryDetailViewController.h"
+#import "PhotoDetailViewController.h"
 
 @interface MomentCollectionViewController ()
 
@@ -84,7 +85,11 @@ static NSString * const reuseIdentifier = @"Cell";
         Moment *selectedMoment = self.momentArray[self.selectedIndexPath.row];
         [[segue destinationViewController] setDiaryDetail:selectedMoment];
     }
-    //else if [[segue identifier] isEqualToString:@"photoDetail"])
+    else if ([[segue identifier] isEqualToString:@"photoDetail"]){
+        Moment *selectedMoment = self.momentArray[self.selectedIndexPath.row];
+        [[segue destinationViewController] setPhotoDetail:selectedMoment];
+    }
+    
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -112,6 +117,11 @@ static NSString * const reuseIdentifier = @"Cell";
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment diaryNote];
+    } else if (moment.type == 1){
+        UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
+        NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+        cell.momentIconImage.image = [UIImage imageWithData:data];
+        cell.momentNoteLabel.text = [moment photoNote];
     }
     return cell;
 }
@@ -128,20 +138,18 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (IBAction)deleteMemory:(UIButton *)sender {
-    Moment *moment = [self.momentArray objectAtIndex:self.selectedIndexPath.row];
+    NSInteger selectedIndex = sender.tag;
+    Moment *moment = [self.momentArray objectAtIndex:selectedIndex];
     [self deleteObject:moment];
     [self reloadDataWithoutDelete];
     //    NSLog(@"%ld", sender.tag);
 }
 
-- (void)deleteObject:(RLMObject *)object{
+- (void)deleteObject:(RLMObject *)moment{
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    Moment *moment = [self.momentArray objectAtIndex:self.selectedIndexPath.row];
     [defaultRealm beginWriteTransaction];
     [defaultRealm deleteObject:moment];
     [defaultRealm commitWriteTransaction];
-    [self reloadDataWithoutDelete];
 }
-
 
 @end

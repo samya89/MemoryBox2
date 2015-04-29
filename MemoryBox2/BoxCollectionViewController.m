@@ -129,7 +129,6 @@ static NSString * const reuseIdentifier = @"Cell";
 - (IBAction)deleteBox:(UIButton *)sender {
     NSInteger selectedIndex = sender.tag;
     Box *box = [self.array objectAtIndex:selectedIndex];
-    
     [self deleteObject:box];
     [self reloadDataWithoutDelete];
      //    NSLog(@"%ld", sender.tag);
