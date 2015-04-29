@@ -16,6 +16,9 @@
 		93A0D1B71AF08E8500F277F2 /* mapDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D1B51AF08E8500F277F2 /* mapDetail.png */; };
 		93A0D1B81AF08E8500F277F2 /* mapView.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D1B61AF08E8500F277F2 /* mapView.png */; };
 		93A0D1BB1AF093DB00F277F2 /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1BA1AF093DB00F277F2 /* MapDetailViewController.m */; };
+		93A0D1BD1AF0A4B400F277F2 /* memoryIconX.gif in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D1BC1AF0A4B400F277F2 /* memoryIconX.gif */; };
+		93A0D1BF1AF0A61900F277F2 /* memoryIconXsmall.gif in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D1BE1AF0A61900F277F2 /* memoryIconXsmall.gif */; };
+		93A0D1C11AF0A6AF00F277F2 /* memoryIconDrawer.gif in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D1C01AF0A6AF00F277F2 /* memoryIconDrawer.gif */; };
 		93CF25981AE80B2B007B6C24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF25971AE80B2B007B6C24 /* main.m */; };
 		93CF259B1AE80B2B007B6C24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF259A1AE80B2B007B6C24 /* AppDelegate.m */; };
 		93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CF259F1AE80B2B007B6C24 /* Main.storyboard */; };
@@ -76,6 +79,9 @@
 		93A0D1B61AF08E8500F277F2 /* mapView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapView.png; sourceTree = "<group>"; };
 		93A0D1B91AF093DB00F277F2 /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1BA1AF093DB00F277F2 /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
+		93A0D1BC1AF0A4B400F277F2 /* memoryIconX.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = memoryIconX.gif; sourceTree = "<group>"; };
+		93A0D1BE1AF0A61900F277F2 /* memoryIconXsmall.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = memoryIconXsmall.gif; sourceTree = "<group>"; };
+		93A0D1C01AF0A6AF00F277F2 /* memoryIconDrawer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = memoryIconDrawer.gif; sourceTree = "<group>"; };
 		93CF25921AE80B2B007B6C24 /* MemoryBox2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryBox2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CF25961AE80B2B007B6C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CF25971AE80B2B007B6C24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -164,6 +170,9 @@
 				93CF25AE1AE80B2B007B6C24 /* MemoryBox2Tests */,
 				93CF25931AE80B2B007B6C24 /* Products */,
 				93CF25BD1AE80CBE007B6C24 /* libc++.dylib */,
+				93A0D1C01AF0A6AF00F277F2 /* memoryIconDrawer.gif */,
+				93A0D1BE1AF0A61900F277F2 /* memoryIconXsmall.gif */,
+				93A0D1BC1AF0A4B400F277F2 /* memoryIconX.gif */,
 				93A0D1B51AF08E8500F277F2 /* mapDetail.png */,
 				93A0D1B61AF08E8500F277F2 /* mapView.png */,
 				93CF25EA1AE8BDD6007B6C24 /* cameraIcon.png */,
@@ -350,12 +359,15 @@
 				93CF25EE1AE8BDD6007B6C24 /* diaryIcon.png in Resources */,
 				93A0D1B71AF08E8500F277F2 /* mapDetail.png in Resources */,
 				93CF25EF1AE8BDD6007B6C24 /* mapIcon.png in Resources */,
+				93A0D1BF1AF0A61900F277F2 /* memoryIconXsmall.gif in Resources */,
 				93CF25ED1AE8BDD6007B6C24 /* cameraIcon.png in Resources */,
 				93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */,
 				93CF25A61AE80B2B007B6C24 /* LaunchScreen.xib in Resources */,
 				93A0D1B81AF08E8500F277F2 /* mapView.png in Resources */,
+				93A0D1BD1AF0A4B400F277F2 /* memoryIconX.gif in Resources */,
 				93CF25A31AE80B2B007B6C24 /* Images.xcassets in Resources */,
 				93CF25C91AE80F32007B6C24 /* drawerIcon.png in Resources */,
+				93A0D1C11AF0A6AF00F277F2 /* memoryIconDrawer.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +542,7 @@
 				INFOPLIST_FILE = MemoryBox2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -544,6 +557,7 @@
 				INFOPLIST_FILE = MemoryBox2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

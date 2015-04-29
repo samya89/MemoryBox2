@@ -49,7 +49,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (Box *)insertNewObject:(id)sender {
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     
-    UIImage *myImage = [UIImage imageNamed:@"drawerIcon.png"];
+    UIImage *myImage = [UIImage imageNamed:@"memoryIconDrawer.gif"];
     NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
     Box *box = [[Box alloc] init];
     box.boxName = @"";

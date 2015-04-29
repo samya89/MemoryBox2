@@ -16,7 +16,7 @@
     rotateAnimation.fromValue = @(-1*M_PI * 0.05);
     rotateAnimation.toValue = @(M_PI * 0.05);
     rotateAnimation.duration = 0.1;
-    rotateAnimation.repeatCount = 50;
+    rotateAnimation.repeatCount = 500;
     rotateAnimation.autoreverses = YES;
     rotateAnimation.delegate = delegate;
     
