@@ -85,7 +85,7 @@
     NSString *photoTitleText = self.photoTitleTextfield.text;
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.photoTimeString andType:self.photoType andDiaryText:@"" andDiaryNote:@"" andPhotoImage:selectedPhotoData andPhotoNote:photoTitleText]];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.photoTimeString andType:self.photoType andDiaryText:@"" andDiaryNote:@"" andPhotoImage:selectedPhotoData andPhotoNote:photoTitleText andMapNote:@""]];
     [defaultRealm commitWriteTransaction];
 }
 

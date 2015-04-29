@@ -43,7 +43,7 @@
     NSString *diaryNoteText = self.diaryNoteTextfield.text;
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryEntryTimeString andType:self.diaryEntryType andDiaryText:diaryEntryText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@""]];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryEntryTimeString andType:self.diaryEntryType andDiaryText:diaryEntryText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@"" andMapNote:@""]];
     [defaultRealm commitWriteTransaction];
 }
 

@@ -13,6 +13,7 @@
 typedef NS_ENUM(NSInteger, momentType) {
     DiaryEntry,
     Photo,
+    MapLocation
 };
 
 @interface Moment : RLMObject
@@ -27,7 +28,9 @@ typedef NS_ENUM(NSInteger, momentType) {
 @property NSData *photoImageData;
 @property NSString *photoNote;
 
-- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote;
+@property NSString *mapNote;
+
+- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote andMapNote:(NSString *)mapNote;
 
 
 @end

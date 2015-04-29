@@ -9,6 +9,7 @@
 #import "AddMomentViewController.h"
 #import "DiaryEntryViewController.h"
 #import "PhotoViewController.h"
+#import "MapViewController.h"
 
 @interface AddMomentViewController ()
 
@@ -39,6 +40,9 @@
     } else if ([[segue identifier] isEqualToString:@"addPhoto"]) {
         [[segue destinationViewController] setPhotoTimeString:self.addMomentTimeString];
         [[segue destinationViewController] setPhotoType:1];
+    } else if ([[segue identifier] isEqualToString:@"addMap"]) {
+        [[segue destinationViewController] setMapTimeString:self.addMomentTimeString];
+        [[segue destinationViewController] setMapType:2];
     }
 }
 

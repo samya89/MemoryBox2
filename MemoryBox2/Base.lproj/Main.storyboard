@@ -534,6 +534,7 @@
                     <connections>
                         <segue destination="Mkz-nl-WO6" kind="show" identifier="diaryDetail" id="5sD-gZ-PkL"/>
                         <segue destination="ClL-sA-QBd" kind="show" identifier="photoDetail" id="WJ1-85-IhZ"/>
+                        <segue destination="LVa-gT-RfS" kind="show" identifier="mapDetail" id="NLu-zu-NSU"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycG-hY-Csh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -731,6 +732,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="addLocation:" destination="VW1-zo-3SZ" eventType="touchUpInside" id="i9w-4o-lyC"/>
                                     <segue destination="xXp-h5-9gB" kind="unwind" unwindAction="prepareForUnwind:" id="c8J-Dg-Hzb"/>
                                 </connections>
                             </button>
@@ -830,6 +832,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapTextfield" destination="3pY-WF-sXA" id="Tvf-Nm-hfo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZjY-XY-Dpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xXp-h5-9gB" userLabel="Exit" sceneMemberID="exit"/>
@@ -1090,7 +1095,7 @@
                     <view key="view" contentMode="scaleToFill" id="bwj-ZM-6YI">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="1p5-BB-6YF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1p5-BB-6YF">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="333" id="4h3-b1-i3A"/>
@@ -1119,7 +1124,9 @@
                         <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="1p5-BB-6YF" secondAttribute="centerX" id="8Qn-g9-yE5"/>
-                            <constraint firstItem="1p5-BB-6YF" firstAttribute="top" secondItem="eq8-oK-M3w" secondAttribute="bottom" constant="36" id="GXp-oo-2ks"/>
+                            <constraint firstItem="1p5-BB-6YF" firstAttribute="top" secondItem="eq8-oK-M3w" secondAttribute="bottom" constant="36" id="GXp-oo-2ks">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="eq8-oK-M3w" secondAttribute="centerX" id="Sdf-O6-Tcm"/>
                             <constraint firstItem="GX7-0t-Hrg" firstAttribute="top" secondItem="1p5-BB-6YF" secondAttribute="bottom" constant="42" id="TTQ-3k-B6R"/>
                         </constraints>
@@ -1157,22 +1164,87 @@
             </objects>
             <point key="canvasLocation" x="3169.5" y="1395"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Detail View Controller-->
         <scene sceneID="KVc-cD-WFZ">
             <objects>
-                <viewController id="LVa-gT-RfS" sceneMemberID="viewController">
+                <viewController id="LVa-gT-RfS" customClass="MapDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bft-rl-6sw"/>
                         <viewControllerLayoutGuide type="bottom" id="xcB-Hb-380"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bYV-fh-aO9">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="dr4-fI-6UH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="333" id="D0M-Gh-97J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="221" id="IbH-IP-Aac"/>
+                                    <constraint firstAttribute="width" constant="333" id="xof-Ah-aeF"/>
+                                    <constraint firstAttribute="height" constant="221" id="yho-ff-zGr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D0M-Gh-97J"/>
+                                        <exclude reference="IbH-IP-Aac"/>
+                                        <exclude reference="xof-Ah-aeF"/>
+                                        <exclude reference="yho-ff-zGr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="D0M-Gh-97J"/>
+                                        <include reference="IbH-IP-Aac"/>
+                                        <include reference="xof-Ah-aeF"/>
+                                        <include reference="yho-ff-zGr"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-Xk-U5y">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dr4-fI-6UH" firstAttribute="top" secondItem="NwR-Xk-U5y" secondAttribute="bottom" constant="20" id="1PU-Tt-9Dv">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="NwR-Xk-U5y" secondAttribute="centerX" id="2qz-xZ-ZvA"/>
+                            <constraint firstAttribute="centerX" secondItem="dr4-fI-6UH" secondAttribute="centerX" id="TtA-py-Bwv"/>
+                            <constraint firstItem="xcB-Hb-380" firstAttribute="top" secondItem="dr4-fI-6UH" secondAttribute="bottom" constant="42" id="e7k-lH-eQW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dr4-fI-6UH"/>
+                                <exclude reference="NwR-Xk-U5y"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1PU-Tt-9Dv"/>
+                                <exclude reference="TtA-py-Bwv"/>
+                                <exclude reference="2qz-xZ-ZvA"/>
+                                <exclude reference="e7k-lH-eQW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dr4-fI-6UH"/>
+                                <include reference="NwR-Xk-U5y"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1PU-Tt-9Dv"/>
+                                <include reference="TtA-py-Bwv"/>
+                                <include reference="2qz-xZ-ZvA"/>
+                                <include reference="e7k-lH-eQW"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLD-k4-tiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3855" y="1395"/>
+            <point key="canvasLocation" x="3832.5" y="1395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qr6-xO-qFc">

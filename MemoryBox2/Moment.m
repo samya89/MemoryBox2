@@ -10,7 +10,7 @@
 
 @implementation Moment
 
-- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote{
+- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote andMapNote:(NSString *)mapNote{
     self = [super init];
     if (self) {
         self.timeString = timeString;
@@ -19,6 +19,7 @@
         self.diaryNote = diaryNote;
         self.photoImageData = photoImageData;
         self.photoNote = photoNote;
+        self.mapNote = mapNote;
     }
     return self;
 }

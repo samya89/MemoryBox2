@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Moment.h"
 
 @interface MapViewController : UIViewController
+
+@property (nonatomic, strong) NSString *mapTimeString;
+
+@property (nonatomic, assign) int mapType;
+
+@property (weak, nonatomic) IBOutlet UITextField *mapTextfield;
+
+- (IBAction)addLocation:(UIButton *)sender;
 
 @end
