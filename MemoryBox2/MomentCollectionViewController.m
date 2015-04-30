@@ -117,7 +117,7 @@ static NSString * const reuseIdentifier = @"Cell";
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment diaryNote];
     } else if (moment.type == 1){
-        UIImage *myImage = [UIImage imageNamed:@"cameraIcon.png"];
+        UIImage *myImage = [UIImage imageNamed:@"cameraIconNew.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment photoNote];

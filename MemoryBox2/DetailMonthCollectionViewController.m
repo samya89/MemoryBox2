@@ -28,7 +28,32 @@ static NSString * const reuseIdentifier = @"Cell";
     
     if ([monthName isEqualToString:@"January"]) {
         self.collectionView.backgroundColor = [UIColor colorWithRed:27.0/255.0 green:66.0/255.0 blue:109.0/255.0 alpha:1];
+    }else if ([monthName isEqualToString:@"February"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:209.0/255.0 green:67.0/255.0 blue:109.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"March"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:92.0/255.0 green:179.0/255.0 blue:52.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"April"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:230.0/255.0 green:99.0/255.0 blue:99.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"May"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:107.0/255.0 green:191.0/255.0 blue:116.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"June"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:242.0/255.0 green:187.0/255.0 blue:187.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"July"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:236.0/255.0 green:207.0/255.0 blue:36.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"August"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:137.0/255.0 blue:178.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"September"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:208.0/255.0 green:98.0/255.0 blue:30.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"October"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:122.0/255.0 green:41.0/255.0 blue:21.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"November"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:126.0/255.0 green:164.0/255.0 blue:189.0/255.0 alpha:1.0];
+    }else if ([monthName isEqualToString:@"December"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:215.0/255.0 green:24.0/255.0 blue:47.0/255.0 alpha:1.0];
     }
+
+
+
     
     ((UICollectionViewFlowLayout *)self.collectionViewLayout).minimumInteritemSpacing = CGFLOAT_MAX;
 }
@@ -71,7 +96,29 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSString *monthName = self.monthItem.monthName;
     if ([monthName isEqualToString:@"January"]) {
-    cell.dayNumberLabel.textColor = [UIColor colorWithRed:27.0/255.0 green:66.0/255.0 blue:109.0/255.0 alpha:1];
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:27.0/255.0 green:66.0/255.0 blue:109.0/255.0 alpha:1];
+    } else if ([monthName isEqualToString:@"February"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:209.0/255.0 green:67.0/255.0 blue:109.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"March"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:92.0/255.0 green:179.0/255.0 blue:52.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"April"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:230.0/255.0 green:99.0/255.0 blue:99.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"May"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:107.0/255.0 green:191.0/255.0 blue:116.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"June"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:242.0/255.0 green:187.0/255.0 blue:187.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"July"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:236.0/255.0 green:207.0/255.0 blue:36.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"August"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:47.0/255.0 green:137.0/255.0 blue:178.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"September"]) {
+        cell.dayNumberLabel.textColor =  self.collectionView.backgroundColor = [UIColor colorWithRed:208.0/255.0 green:98.0/255.0 blue:30.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"October"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:122.0/255.0 green:41.0/255.0 blue:21.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"November"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:126.0/255.0 green:164.0/255.0 blue:189.0/255.0 alpha:1.0];
+    } else if ([monthName isEqualToString:@"December"]) {
+        cell.dayNumberLabel.textColor = [UIColor colorWithRed:215.0/255.0 green:24.0/255.0 blue:47.0/255.0 alpha:1.0];
     }
     return cell;
 }
