@@ -35,4 +35,8 @@
     [super touchesBegan:touches withEvent:event];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    [self.mapTextfield setText:@""];
+}
+
 @end

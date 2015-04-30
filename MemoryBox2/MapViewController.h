@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Moment.h"
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString *mapTimeString;
 

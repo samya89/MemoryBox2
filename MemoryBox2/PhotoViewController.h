@@ -10,7 +10,7 @@
 #import <Realm/Realm.h>
 #import "Moment.h"
 
-@interface PhotoViewController : UIViewController
+@interface PhotoViewController : UIViewController <UITextFieldDelegate> 
 
 @property (weak, nonatomic) IBOutlet UITextField *photoTitleTextfield;
 @property (weak, nonatomic) IBOutlet UIButton *addPhotoButton;

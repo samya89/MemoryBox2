@@ -488,17 +488,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapView.png" translatesAutoresizingMaskIntoConstraints="NO" id="yLJ-wI-n7t">
-                                <rect key="frame" x="0.0" y="107" width="600" height="268"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mapView.png" translatesAutoresizingMaskIntoConstraints="NO" id="yLJ-wI-n7t">
+                                <rect key="frame" x="125" y="74" width="350" height="366"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="20f-Uy-8Np"/>
-                                    <constraint firstAttribute="height" constant="268" id="gYj-da-y1e"/>
+                                    <constraint firstAttribute="width" constant="350" id="KQ4-cZ-3Rj"/>
                                     <constraint firstAttribute="height" constant="212" id="hf2-hz-byX"/>
+                                    <constraint firstAttribute="height" constant="200" id="olL-He-ggs"/>
                                     <constraint firstAttribute="width" constant="400" id="yza-Jy-2Lf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="hf2-hz-byX"/>
+                                        <exclude reference="olL-He-ggs"/>
                                         <exclude reference="yza-Jy-2Lf"/>
                                     </mask>
                                 </variation>
@@ -509,18 +510,18 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add Location" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99c-Dd-QUL">
-                                <rect key="frame" x="166" y="399" width="268" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99c-Dd-QUL">
+                                <rect key="frame" x="166" y="450" width="268" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XOS-I0-t0t"/>
-                                    <constraint firstAttribute="width" constant="268" id="pTF-on-ArI"/>
+                                    <constraint firstAttribute="height" constant="30" id="9ne-3b-uq8"/>
+                                    <constraint firstAttribute="width" constant="268" id="Igk-Gg-L7R"/>
                                 </constraints>
                                 <color key="textColor" red="0.32156862749999998" green="0.50196078430000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-Dz-Tad">
-                                <rect key="frame" x="254" y="447" width="92" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-Dz-Tad">
+                                <rect key="frame" x="254" y="495" width="92" height="30"/>
                                 <state key="normal" title="Add Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,7 +532,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDA-Xy-btr">
-                                <rect key="frame" x="278" y="485" width="45" height="30"/>
+                                <rect key="frame" x="278" y="555" width="45" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -544,15 +545,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nbj-tR-eXJ" firstAttribute="top" secondItem="lDA-Xy-btr" secondAttribute="bottom" constant="85" id="AMj-Cz-SxJ"/>
-                            <constraint firstItem="bM7-Dz-Tad" firstAttribute="top" secondItem="99c-Dd-QUL" secondAttribute="bottom" constant="18" id="G0i-RN-Z6P"/>
-                            <constraint firstItem="99c-Dd-QUL" firstAttribute="top" secondItem="yLJ-wI-n7t" secondAttribute="bottom" constant="24" id="IvA-cV-Gnc"/>
-                            <constraint firstItem="yLJ-wI-n7t" firstAttribute="top" secondItem="HUl-5g-gZf" secondAttribute="bottom" constant="43" id="Ord-xu-HiM"/>
-                            <constraint firstItem="lDA-Xy-btr" firstAttribute="top" secondItem="bM7-Dz-Tad" secondAttribute="bottom" constant="8" id="PDt-t1-ybi"/>
-                            <constraint firstAttribute="centerX" secondItem="lDA-Xy-btr" secondAttribute="centerX" id="QER-pX-yqY"/>
-                            <constraint firstAttribute="centerX" secondItem="yLJ-wI-n7t" secondAttribute="centerX" id="a1V-Yk-gq4"/>
-                            <constraint firstAttribute="centerX" secondItem="bM7-Dz-Tad" secondAttribute="centerX" id="bDC-o8-CTe"/>
-                            <constraint firstAttribute="centerX" secondItem="99c-Dd-QUL" secondAttribute="centerX" id="gIT-aF-v4D"/>
+                            <constraint firstAttribute="centerX" secondItem="bM7-Dz-Tad" secondAttribute="centerX" id="1dz-du-rch"/>
+                            <constraint firstAttribute="centerX" secondItem="lDA-Xy-btr" secondAttribute="centerX" id="52H-1n-SqC"/>
+                            <constraint firstItem="bM7-Dz-Tad" firstAttribute="top" secondItem="99c-Dd-QUL" secondAttribute="bottom" constant="15" id="MwH-KD-xRE"/>
+                            <constraint firstAttribute="centerX" secondItem="yLJ-wI-n7t" secondAttribute="centerX" id="VFr-sl-N6q"/>
+                            <constraint firstAttribute="centerX" secondItem="99c-Dd-QUL" secondAttribute="centerX" id="f8C-V8-84O"/>
+                            <constraint firstItem="yLJ-wI-n7t" firstAttribute="top" secondItem="HUl-5g-gZf" secondAttribute="bottom" constant="10" id="s0N-uj-ctl"/>
+                            <constraint firstItem="99c-Dd-QUL" firstAttribute="top" secondItem="yLJ-wI-n7t" secondAttribute="bottom" constant="10" id="tV6-5v-74n"/>
+                            <constraint firstItem="nbj-tR-eXJ" firstAttribute="top" secondItem="lDA-Xy-btr" secondAttribute="bottom" constant="15" id="wbN-wV-E6p"/>
+                            <constraint firstItem="lDA-Xy-btr" firstAttribute="top" secondItem="bM7-Dz-Tad" secondAttribute="bottom" constant="30" id="ziM-xw-RS9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -604,7 +605,8 @@
                                     <constraint firstAttribute="width" constant="268" id="BMN-tF-YgQ"/>
                                     <constraint firstAttribute="height" constant="200" id="fWb-ZR-gtI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.50196078430000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -679,7 +681,8 @@
                                     <constraint firstAttribute="width" constant="350" id="bBD-VC-oLS"/>
                                     <constraint firstAttribute="height" constant="345" id="nZr-f3-DMC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.50196078430000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

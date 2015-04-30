@@ -95,4 +95,8 @@
     [super touchesBegan:touches withEvent:event];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    [self.photoTitleTextfield setText:@""];
+}
+
 @end

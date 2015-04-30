@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Moment.h"
 
-@interface PhotoDetailViewController : UIViewController
+@interface PhotoDetailViewController : UIViewController 
 
 @property (weak, nonatomic) IBOutlet UILabel *photoDetailTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *photoDetailImage;
