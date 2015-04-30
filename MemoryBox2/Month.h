@@ -13,7 +13,7 @@
 
 @property NSString *monthName;
 @property int days; // num of days in month
-//@property NSData *monthImage;
+@property NSData *monthImage;
 
 @end
 RLM_ARRAY_TYPE(Month)

@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *monthImageview;
+
 @end
