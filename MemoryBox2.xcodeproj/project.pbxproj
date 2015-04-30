@@ -21,6 +21,7 @@
 		937FD8981AF1EFBD0041D12D /* OctoberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88E1AF1EFBD0041D12D /* OctoberIcon.png */; };
 		937FD8991AF1EFBD0041D12D /* SeptemberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */; };
 		937FD89B1AF1F4870041D12D /* MayIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD89A1AF1F4870041D12D /* MayIcon2.png */; };
+		937FD89F1AF220990041D12D /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 937FD89E1AF220990041D12D /* ios */; };
 		93A0D1961AEF39A200F277F2 /* DiaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */; };
 		93A0D1A51AF0425F00F277F2 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */; };
 		93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */; };
@@ -91,6 +92,7 @@
 		937FD88E1AF1EFBD0041D12D /* OctoberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OctoberIcon.png; sourceTree = "<group>"; };
 		937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeptemberIcon.png; sourceTree = "<group>"; };
 		937FD89A1AF1F4870041D12D /* MayIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MayIcon2.png; sourceTree = "<group>"; };
+		937FD89E1AF220990041D12D /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		93A0D1941AEF39A200F277F2 /* DiaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryDetailViewController.m; sourceTree = "<group>"; };
 		93A0D1A31AF0425F00F277F2 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		93CF25951AE80B2B007B6C24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				937FD89E1AF220990041D12D /* ios */,
 				93CF25961AE80B2B007B6C24 /* Info.plist */,
 				93CF25971AE80B2B007B6C24 /* main.m */,
 			);
@@ -407,6 +410,7 @@
 				93A0D1B71AF08E8500F277F2 /* mapDetail.png in Resources */,
 				937FD8831AF1C27C0041D12D /* cameraIconNew.png in Resources */,
 				93CF25EF1AE8BDD6007B6C24 /* mapIcon.png in Resources */,
+				937FD89F1AF220990041D12D /* ios in Resources */,
 				937FD89B1AF1F4870041D12D /* MayIcon2.png in Resources */,
 				93A0D1BF1AF0A61900F277F2 /* memoryIconXsmall.gif in Resources */,
 				93CF25ED1AE8BDD6007B6C24 /* cameraIcon.png in Resources */,
