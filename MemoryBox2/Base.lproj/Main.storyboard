@@ -760,13 +760,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mapDetail" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-nB-wTy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-nB-wTy">
                                 <rect key="frame" x="125" y="146" width="350" height="424"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="Ihf-3a-2C5"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-NI-izM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-NI-izM">
                                 <rect key="frame" x="270" y="101" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -783,6 +783,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapDetailImageView" destination="Cag-nB-wTy" id="mVb-NL-xEh"/>
                         <outlet property="mapNoteLabel" destination="vIR-NI-izM" id="RWa-n6-3Mc"/>
                     </connections>
                 </viewController>
@@ -897,7 +898,6 @@
         <image name="cameraTransparent.png" width="846" height="846"/>
         <image name="diaryTransparent.png" width="846" height="846"/>
         <image name="drawerIcon.png" width="395" height="323"/>
-        <image name="mapDetail" width="320" height="233"/>
         <image name="mapTransparent.png" width="846" height="846"/>
         <image name="mapViewNew.png" width="679" height="325"/>
         <image name="memoryIconDrawer.gif" width="366" height="256"/>

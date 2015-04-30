@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mapNoteLabel.text = self.mapDetail.mapNote;
+    self.mapDetailImageView.image = [UIImage imageNamed:@"mapDetail.png"];
+    
 }
 
 

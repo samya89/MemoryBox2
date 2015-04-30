@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *mapNoteLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *mapDetailImageView;
+
 @property (strong, nonatomic) Moment *mapDetail;
 
 @end
