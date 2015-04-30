@@ -24,6 +24,12 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *monthName = self.monthItem.monthName;
+    
+    if ([monthName isEqualToString:@"January"]) {
+        self.collectionView.backgroundColor = [UIColor colorWithRed:27.0/255.0 green:66.0/255.0 blue:109.0/255.0 alpha:1];
+    }
+    
     ((UICollectionViewFlowLayout *)self.collectionViewLayout).minimumInteritemSpacing = CGFLOAT_MAX;
 }
 
@@ -62,7 +68,11 @@ static NSString * const reuseIdentifier = @"Cell";
     int dayNumber = (int)indexPath.row+1;
     NSLog(@"selected day number %d", dayNumber);
     cell.dayNumberLabel.text = [NSString stringWithFormat:@"%d", dayNumber];
-
+    
+    NSString *monthName = self.monthItem.monthName;
+    if ([monthName isEqualToString:@"January"]) {
+    cell.dayNumberLabel.textColor = [UIColor colorWithRed:27.0/255.0 green:66.0/255.0 blue:109.0/255.0 alpha:1];
+    }
     return cell;
 }
 

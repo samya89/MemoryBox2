@@ -202,8 +202,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="223" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NovemberIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="kZu-gG-jei">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DecemberIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="kZu-gG-jei">
                                             <rect key="frame" x="0.0" y="0.0" width="223" height="119"/>
+                                            <color key="tintColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-6Y-4MY">
                                             <rect key="frame" x="87" y="9" width="50" height="21"/>
@@ -890,7 +891,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NovemberIcon.png" width="1360" height="926"/>
+        <image name="DecemberIcon.png" width="1360" height="926"/>
         <image name="cameraIconNew.png" width="217" height="216"/>
         <image name="diaryIcon.png" width="344" height="329"/>
         <image name="drawerIcon.png" width="395" height="323"/>
