@@ -25,7 +25,7 @@
     NSString *mapNoteText = self.mapTextfield.text;
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.mapTimeString andType:self.mapType andDiaryText:@"" andDiaryNote:@"" andPhotoImage:data andPhotoNote:@"" andMapNote:mapNoteText]];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.mapTimeString andType:self.mapType andDiaryText:@"" andDiaryNote:@"" andPhotoImage:data andPhotoNote:@"" andMapNote:mapNoteText andMapImage:data]];
     [defaultRealm commitWriteTransaction];
 }
 

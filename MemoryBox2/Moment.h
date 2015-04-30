@@ -29,8 +29,9 @@ typedef NS_ENUM(NSInteger, momentType) {
 @property NSString *photoNote;
 
 @property NSString *mapNote;
+@property NSData *mapImage;
 
-- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote andMapNote:(NSString *)mapNote;
+- (id)initWithTimeString:(NSString *)timeString andType:(momentType)type andDiaryText:(NSString *)diaryText andDiaryNote:(NSString *)diaryNote andPhotoImage:(NSData *)photoImageData andPhotoNote:(NSString *)photoNote andMapNote:(NSString *)mapNote andMapImage:(NSData *)mapImage;
 
 
 @end

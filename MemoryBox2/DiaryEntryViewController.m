@@ -37,13 +37,19 @@
 //}
 
 - (IBAction)addDiaryNote:(UIButton *)sender {
+    
+//            RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+//            [defaultRealm beginWriteTransaction];
+//            [defaultRealm deleteAllObjects];
+//            [defaultRealm commitWriteTransaction];
+    
     UIImage *myImage = [UIImage imageNamed:@"cameraTransparent.png"];
     NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
     NSString *diaryEntryText = self.diaryTextView.text;
     NSString *diaryNoteText = self.diaryNoteTextfield.text;
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];
     [defaultRealm beginWriteTransaction];
-    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryEntryTimeString andType:self.diaryEntryType andDiaryText:diaryEntryText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@"" andMapNote:@""]];
+    [defaultRealm addObject:[[Moment alloc]initWithTimeString:self.diaryEntryTimeString andType:self.diaryEntryType andDiaryText:diaryEntryText andDiaryNote:diaryNoteText andPhotoImage:data andPhotoNote:@"" andMapNote:@"" andMapImage:data]];
     [defaultRealm commitWriteTransaction];
 }
 
