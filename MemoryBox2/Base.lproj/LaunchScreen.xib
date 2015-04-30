@@ -10,12 +10,6 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Samya Al Rahmani. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="445" width="441" height="15"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drawerIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="dpc-WS-J2e">
                     <rect key="frame" x="115" y="0.0" width="250" height="250"/>
                     <constraints>
@@ -33,9 +27,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Bnk-88-smm" firstAttribute="top" secondItem="dpc-WS-J2e" secondAttribute="bottom" constant="-12" id="GPS-yS-EZG"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
                 <constraint firstAttribute="centerX" secondItem="Bnk-88-smm" secondAttribute="centerX" id="k1S-v2-i6i"/>
                 <constraint firstAttribute="centerX" secondItem="dpc-WS-J2e" secondAttribute="centerX" id="rI9-A3-udO"/>
                 <constraint firstItem="dpc-WS-J2e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="thk-xH-Rlg"/>

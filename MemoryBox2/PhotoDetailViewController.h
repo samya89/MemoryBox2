@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) Moment *photoDetail;
 
+UIImage* rotate(UIImage* src, UIImageOrientation orientation);
+
 @end
