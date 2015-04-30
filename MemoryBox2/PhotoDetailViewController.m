@@ -22,4 +22,6 @@
     self.photoDetailImage.image = image;
 }
 
+
+
 @end

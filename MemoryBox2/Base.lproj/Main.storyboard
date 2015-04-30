@@ -30,7 +30,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-oT-guH">
-                                            <rect key="frame" x="0.0" y="-26" width="212" height="229"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memoryIconDrawer.gif" translatesAutoresizingMaskIntoConstraints="NO" id="gum-ZS-6kP">
                                                     <rect key="frame" x="15" y="25" width="170" height="150"/>
@@ -129,6 +129,9 @@
                                     <constraint firstAttribute="width" constant="260" id="LBt-x5-kMA"/>
                                     <constraint firstAttribute="height" constant="260" id="bPX-gv-KMZ"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="12" width="260" height="260"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-Y7-XsR">
                                 <rect key="frame" x="278" y="392" width="45" height="29"/>
@@ -206,11 +209,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="223" height="119"/>
                                             <color key="tintColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-6Y-4MY">
-                                            <rect key="frame" x="87" y="9" width="50" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-6Y-4MY">
+                                            <rect key="frame" x="53" y="-6" width="119" height="51"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=compact" misplaced="YES">
+                                                <rect key="frame" x="53" y="-6" width="119" height="51"/>
+                                            </variation>
                                             <variation key="heightClass=regular" misplaced="YES">
                                                 <rect key="frame" x="53" y="8" width="119" height="51"/>
                                             </variation>
@@ -715,13 +721,7 @@
                                 <rect key="frame" x="125" y="146" width="350" height="424"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="j9Z-iV-HvP"/>
-                                    <constraint firstAttribute="height" constant="345" id="zV5-Ib-pDu"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="zV5-Ib-pDu"/>
-                                    </mask>
-                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-m2-NoZ">
                                 <rect key="frame" x="270" y="101" width="60" height="30"/>
@@ -760,20 +760,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mapDetailNew.png" translatesAutoresizingMaskIntoConstraints="NO" id="yxk-uC-vFJ">
-                                <rect key="frame" x="125" y="205" width="350" height="365"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mapDetail" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-nB-wTy">
+                                <rect key="frame" x="125" y="146" width="350" height="424"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="345" id="4aX-E1-I62"/>
-                                    <constraint firstAttribute="width" constant="350" id="bWN-FE-P54"/>
+                                    <constraint firstAttribute="width" constant="350" id="Ihf-3a-2C5"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4aX-E1-I62"/>
-                                    </mask>
-                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h0-Iw-qy7">
-                                <rect key="frame" x="270" y="101" width="60" height="89"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-NI-izM">
+                                <rect key="frame" x="270" y="101" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -781,21 +775,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="yxk-uC-vFJ" firstAttribute="top" secondItem="1h0-Iw-qy7" secondAttribute="bottom" constant="15" id="J34-5J-jde"/>
-                            <constraint firstItem="1h0-Iw-qy7" firstAttribute="top" secondItem="Kzm-ef-1D8" secondAttribute="bottom" constant="37" id="h8q-Bp-9cb"/>
-                            <constraint firstItem="OGB-v9-fAG" firstAttribute="top" secondItem="yxk-uC-vFJ" secondAttribute="bottom" constant="30" id="n7N-LZ-e7G"/>
-                            <constraint firstItem="yxk-uC-vFJ" firstAttribute="top" secondItem="1h0-Iw-qy7" secondAttribute="bottom" constant="15" id="uX7-8A-XgO"/>
-                            <constraint firstAttribute="centerX" secondItem="1h0-Iw-qy7" secondAttribute="centerX" id="vWj-JM-zCg"/>
-                            <constraint firstAttribute="centerX" secondItem="yxk-uC-vFJ" secondAttribute="centerX" id="xnT-aQ-Adp"/>
+                            <constraint firstItem="OGB-v9-fAG" firstAttribute="top" secondItem="Cag-nB-wTy" secondAttribute="bottom" constant="30" id="ecF-5K-NAO"/>
+                            <constraint firstAttribute="centerX" secondItem="Cag-nB-wTy" secondAttribute="centerX" id="edW-yS-Ed3"/>
+                            <constraint firstItem="vIR-NI-izM" firstAttribute="top" secondItem="Kzm-ef-1D8" secondAttribute="bottom" constant="37" id="n7v-qb-lx4"/>
+                            <constraint firstAttribute="centerX" secondItem="vIR-NI-izM" secondAttribute="centerX" id="r11-Ep-MAb"/>
+                            <constraint firstItem="Cag-nB-wTy" firstAttribute="top" secondItem="vIR-NI-izM" secondAttribute="bottom" constant="15" id="zhU-Nd-EkA"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="J34-5J-jde"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="mapNoteLabel" destination="1h0-Iw-qy7" id="48d-1g-dA3"/>
+                        <outlet property="mapNoteLabel" destination="vIR-NI-izM" id="RWa-n6-3Mc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ6-BS-JZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -909,7 +897,7 @@
         <image name="cameraTransparent.png" width="846" height="846"/>
         <image name="diaryTransparent.png" width="846" height="846"/>
         <image name="drawerIcon.png" width="395" height="323"/>
-        <image name="mapDetailNew.png" width="466" height="365"/>
+        <image name="mapDetail" width="320" height="233"/>
         <image name="mapTransparent.png" width="846" height="846"/>
         <image name="mapViewNew.png" width="679" height="325"/>
         <image name="memoryIconDrawer.gif" width="366" height="256"/>

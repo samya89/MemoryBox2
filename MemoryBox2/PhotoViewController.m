@@ -21,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    
+    [self pressedAdd:nil];
+    
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
     
@@ -59,13 +61,14 @@
     [actionSheet addAction:cancelAction];
     
     [self presentViewController:actionSheet animated:YES completion:nil];
-        self.photoImageView.hidden = NO;
-        self.photoTitleTextfield.hidden = NO;
-        self.addPhotoButton.hidden = NO;
-        self.cancelPhotoButton.hidden = NO;
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    self.photoImageView.hidden = NO;
+    self.photoTitleTextfield.hidden = NO;
+    self.addPhotoButton.hidden = NO;
+    self.cancelPhotoButton.hidden = NO;
     
     self.selectedPhoto = [info objectForKey:UIImagePickerControllerOriginalImage];
     
