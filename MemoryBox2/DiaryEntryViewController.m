@@ -37,7 +37,7 @@
 //}
 
 - (IBAction)addDiaryNote:(UIButton *)sender {
-    UIImage *myImage = [UIImage imageNamed:@"cameraIconNew.png"];
+    UIImage *myImage = [UIImage imageNamed:@"cameraTransparent.png"];
     NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
     NSString *diaryEntryText = self.diaryTextView.text;
     NSString *diaryNoteText = self.diaryNoteTextfield.text;

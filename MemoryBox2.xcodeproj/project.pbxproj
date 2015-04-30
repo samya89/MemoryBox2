@@ -22,6 +22,9 @@
 		937FD8991AF1EFBD0041D12D /* SeptemberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */; };
 		937FD89B1AF1F4870041D12D /* MayIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD89A1AF1F4870041D12D /* MayIcon2.png */; };
 		937FD89F1AF220990041D12D /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 937FD89E1AF220990041D12D /* ios */; };
+		937FD8A31AF2256B0041D12D /* cameraTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A01AF2256B0041D12D /* cameraTransparent.png */; };
+		937FD8A41AF2256B0041D12D /* diaryTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A11AF2256B0041D12D /* diaryTransparent.png */; };
+		937FD8A51AF2256B0041D12D /* mapTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A21AF2256B0041D12D /* mapTransparent.png */; };
 		93A0D1961AEF39A200F277F2 /* DiaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */; };
 		93A0D1A51AF0425F00F277F2 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */; };
 		93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */; };
@@ -93,6 +96,9 @@
 		937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeptemberIcon.png; sourceTree = "<group>"; };
 		937FD89A1AF1F4870041D12D /* MayIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MayIcon2.png; sourceTree = "<group>"; };
 		937FD89E1AF220990041D12D /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
+		937FD8A01AF2256B0041D12D /* cameraTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraTransparent.png; sourceTree = "<group>"; };
+		937FD8A11AF2256B0041D12D /* diaryTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaryTransparent.png; sourceTree = "<group>"; };
+		937FD8A21AF2256B0041D12D /* mapTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapTransparent.png; sourceTree = "<group>"; };
 		93A0D1941AEF39A200F277F2 /* DiaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryDetailViewController.m; sourceTree = "<group>"; };
 		93A0D1A31AF0425F00F277F2 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
@@ -200,6 +206,9 @@
 				93CF25AE1AE80B2B007B6C24 /* MemoryBox2Tests */,
 				93CF25931AE80B2B007B6C24 /* Products */,
 				93CF25BD1AE80CBE007B6C24 /* libc++.dylib */,
+				937FD8A01AF2256B0041D12D /* cameraTransparent.png */,
+				937FD8A11AF2256B0041D12D /* diaryTransparent.png */,
+				937FD8A21AF2256B0041D12D /* mapTransparent.png */,
 				93A0D1C01AF0A6AF00F277F2 /* memoryIconDrawer.gif */,
 				937FD8861AF1EFBD0041D12D /* AprilIcon.png */,
 				937FD8871AF1EFBD0041D12D /* AugustIcon.png */,
@@ -402,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				937FD8931AF1EFBD0041D12D /* FebruaryIcon.png in Resources */,
+				937FD8A41AF2256B0041D12D /* diaryTransparent.png in Resources */,
 				937FD8981AF1EFBD0041D12D /* OctoberIcon.png in Resources */,
 				937FD8941AF1EFBD0041D12D /* JanuaryIcon.png in Resources */,
 				93CF25EE1AE8BDD6007B6C24 /* diaryIcon.png in Resources */,
@@ -427,7 +437,9 @@
 				93A0D1BD1AF0A4B400F277F2 /* memoryIconX.gif in Resources */,
 				93CF25A31AE80B2B007B6C24 /* Images.xcassets in Resources */,
 				93CF25C91AE80F32007B6C24 /* drawerIcon.png in Resources */,
+				937FD8A51AF2256B0041D12D /* mapTransparent.png in Resources */,
 				93A0D1C11AF0A6AF00F277F2 /* memoryIconDrawer.gif in Resources */,
+				937FD8A31AF2256B0041D12D /* cameraTransparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

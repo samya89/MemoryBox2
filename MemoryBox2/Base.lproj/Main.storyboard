@@ -332,17 +332,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLB-r9-W7d">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="154"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diaryIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="LFG-d3-TZ1">
-                                                    <rect key="frame" x="23" y="4" width="130" height="130"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXr-Sn-Bqh">
-                                                    <rect key="frame" x="69" y="128" width="37" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Me-ey-ywN">
-                                                    <rect key="frame" x="130" y="4" width="38" height="38"/>
+                                                    <rect key="frame" x="130" y="2" width="38" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38" id="He8-hV-KGX"/>
                                                         <constraint firstAttribute="width" constant="38" id="MTC-6K-uep"/>
@@ -356,17 +347,26 @@
                                                         <action selector="deleteMemory:" destination="5ty-yd-6tp" eventType="touchUpInside" id="CPj-1p-Mfl"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXr-Sn-Bqh">
+                                                    <rect key="frame" x="69" y="128" width="37" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.51372549020000002" green="0.73725490199999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diaryTransparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LFG-d3-TZ1">
+                                                    <rect key="frame" x="28" y="8" width="120" height="120"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="LFG-d3-TZ1" secondAttribute="bottom" constant="20" id="01a-yC-IPF"/>
-                                                <constraint firstItem="2Me-ey-ywN" firstAttribute="top" secondItem="iLB-r9-W7d" secondAttribute="top" constant="4" id="Dy6-rR-ogo"/>
+                                                <constraint firstAttribute="bottom" secondItem="LFG-d3-TZ1" secondAttribute="bottom" constant="26" id="01a-yC-IPF"/>
+                                                <constraint firstItem="2Me-ey-ywN" firstAttribute="top" secondItem="iLB-r9-W7d" secondAttribute="top" constant="2" id="Dy6-rR-ogo"/>
                                                 <constraint firstAttribute="trailing" secondItem="2Me-ey-ywN" secondAttribute="trailing" constant="8" id="Hsq-Fa-7pX"/>
                                                 <constraint firstAttribute="centerX" secondItem="FXr-Sn-Bqh" secondAttribute="centerX" id="RPl-H6-0qR"/>
-                                                <constraint firstItem="FXr-Sn-Bqh" firstAttribute="top" secondItem="LFG-d3-TZ1" secondAttribute="bottom" constant="-6" id="ayc-JX-C51"/>
-                                                <constraint firstAttribute="trailing" secondItem="LFG-d3-TZ1" secondAttribute="trailing" constant="23" id="b72-Q2-kbj"/>
-                                                <constraint firstItem="LFG-d3-TZ1" firstAttribute="top" secondItem="iLB-r9-W7d" secondAttribute="top" constant="4" id="kaw-1D-MCA"/>
-                                                <constraint firstItem="LFG-d3-TZ1" firstAttribute="leading" secondItem="iLB-r9-W7d" secondAttribute="leading" constant="23" id="p4w-D1-hDR"/>
+                                                <constraint firstItem="FXr-Sn-Bqh" firstAttribute="top" secondItem="LFG-d3-TZ1" secondAttribute="bottom" id="ayc-JX-C51"/>
+                                                <constraint firstAttribute="trailing" secondItem="LFG-d3-TZ1" secondAttribute="trailing" constant="28" id="b72-Q2-kbj"/>
+                                                <constraint firstItem="LFG-d3-TZ1" firstAttribute="top" secondItem="iLB-r9-W7d" secondAttribute="top" constant="8" id="kaw-1D-MCA"/>
+                                                <constraint firstItem="LFG-d3-TZ1" firstAttribute="leading" secondItem="iLB-r9-W7d" secondAttribute="leading" constant="28" id="p4w-D1-hDR"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -422,12 +422,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdI-Mf-RU0">
-                                <rect key="frame" x="229" y="226" width="143" height="147"/>
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="eGK-Nk-Uhk"/>
-                                    <constraint firstAttribute="height" constant="147" id="z87-ho-yo5"/>
+                                    <constraint firstAttribute="width" constant="150" id="eGK-Nk-Uhk"/>
+                                    <constraint firstAttribute="height" constant="150" id="z87-ho-yo5"/>
                                 </constraints>
-                                <state key="normal" image="cameraIconNew.png">
+                                <state key="normal" image="cameraTransparent.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -435,12 +435,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkY-rV-KIr">
-                                <rect key="frame" x="425" y="223" width="150" height="153"/>
+                                <rect key="frame" x="425" y="225" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="153" id="DSC-wG-O64"/>
+                                    <constraint firstAttribute="height" constant="150" id="DSC-wG-O64"/>
                                     <constraint firstAttribute="width" constant="150" id="zSe-af-mMe"/>
                                 </constraints>
-                                <state key="normal" image="mapIcon.png">
+                                <state key="normal" image="mapTransparent.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -453,7 +453,7 @@
                                     <constraint firstAttribute="height" constant="150" id="Zz6-Q3-N8v"/>
                                     <constraint firstAttribute="width" constant="150" id="dl2-Rd-2F8"/>
                                 </constraints>
-                                <state key="normal" image="diaryIcon.png">
+                                <state key="normal" image="diaryTransparent.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -892,11 +892,11 @@
     </scenes>
     <resources>
         <image name="DecemberIcon.png" width="1360" height="926"/>
-        <image name="cameraIconNew.png" width="217" height="216"/>
-        <image name="diaryIcon.png" width="344" height="329"/>
+        <image name="cameraTransparent.png" width="846" height="846"/>
+        <image name="diaryTransparent.png" width="846" height="846"/>
         <image name="drawerIcon.png" width="395" height="323"/>
         <image name="mapDetail.png" width="640" height="467"/>
-        <image name="mapIcon.png" width="346" height="337"/>
+        <image name="mapTransparent.png" width="846" height="846"/>
         <image name="mapView.png" width="1280" height="613"/>
         <image name="memoryIconDrawer.gif" width="366" height="256"/>
         <image name="memoryIconXsmall.gif" width="57" height="57"/>

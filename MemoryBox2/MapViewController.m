@@ -20,7 +20,7 @@
 }
 
 - (IBAction)addLocation:(UIButton *)sender {
-    UIImage *myImage = [UIImage imageNamed:@"cameraIconNew.png"];
+    UIImage *myImage = [UIImage imageNamed:@"cameraTransparent.png"];
     NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
     NSString *mapNoteText = self.mapTextfield.text;
     RLMRealm *defaultRealm = [RLMRealm defaultRealm];

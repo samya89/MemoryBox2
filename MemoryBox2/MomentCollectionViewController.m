@@ -112,17 +112,17 @@ static NSString * const reuseIdentifier = @"Cell";
         [cell.momentBaseView.layer removeAnimationForKey:@"transform.rotation"];
     }
     if (moment.type == 0){
-        UIImage *myImage = [UIImage imageNamed:@"diaryIcon.png"];
+        UIImage *myImage = [UIImage imageNamed:@"diaryTransparent.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment diaryNote];
     } else if (moment.type == 1){
-        UIImage *myImage = [UIImage imageNamed:@"cameraIconNew.png"];
+        UIImage *myImage = [UIImage imageNamed:@"cameraTransparent.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment photoNote];
     } else if (moment.type == 2){
-        UIImage *myImage = [UIImage imageNamed:@"mapIcon.png"];
+        UIImage *myImage = [UIImage imageNamed:@"mapTransparent.png"];
         NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
         cell.momentIconImage.image = [UIImage imageWithData:data];
         cell.momentNoteLabel.text = [moment mapNote];
