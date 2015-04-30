@@ -76,6 +76,48 @@ static NSString * const reuseIdentifier = @"Cell";
     october.days = 31;
     november.days = 30;
     december.days = 31;
+    
+    
+    UIImage *januaryImage = [UIImage imageNamed:@"JanuaryIcon.png"];
+    UIImage *februaryImage = [UIImage imageNamed:@"FebruaryIcon.png"];
+    UIImage *marchImage = [UIImage imageNamed:@"MarchIcon.png"];
+    UIImage *aprilImage = [UIImage imageNamed:@"AprilIcon.png"];
+    UIImage *mayImage = [UIImage imageNamed:@"MayIcon2.png"];
+    UIImage *juneImage = [UIImage imageNamed:@"JuneIcon.png"];
+    UIImage *julyImage = [UIImage imageNamed:@"JulyIcon.png"];
+    UIImage *augustImage = [UIImage imageNamed:@"AugustIcon.png"];
+    UIImage *septemberImage = [UIImage imageNamed:@"SeptemberIcon.png"];
+    UIImage *octoberImage = [UIImage imageNamed:@"OctoberIcon.png"];
+    UIImage *novemberImage = [UIImage imageNamed:@"NovemberIcon.png"];
+    UIImage *decemberImage = [UIImage imageNamed:@"DecemberIcon.png"];
+    
+    NSData *januaryData = [NSData dataWithData:UIImagePNGRepresentation(januaryImage)];
+    NSData *februaryData = [NSData dataWithData:UIImagePNGRepresentation(februaryImage)];
+    NSData *marchData = [NSData dataWithData:UIImagePNGRepresentation(marchImage)];
+    NSData *aprilData = [NSData dataWithData:UIImagePNGRepresentation(aprilImage)];
+    NSData *mayData = [NSData dataWithData:UIImagePNGRepresentation(mayImage)];
+    NSData *juneData = [NSData dataWithData:UIImagePNGRepresentation(juneImage)];
+    NSData *julyData = [NSData dataWithData:UIImagePNGRepresentation(julyImage)];
+    NSData *augustData = [NSData dataWithData:UIImagePNGRepresentation(augustImage)];
+    NSData *septemberData = [NSData dataWithData:UIImagePNGRepresentation(septemberImage)];
+    NSData *octoberData = [NSData dataWithData:UIImagePNGRepresentation(octoberImage)];
+    NSData *novemberData = [NSData dataWithData:UIImagePNGRepresentation(novemberImage)];
+    NSData *decemberData = [NSData dataWithData:UIImagePNGRepresentation(decemberImage)];
+
+    january.monthImage = januaryData;
+    february.monthImage = februaryData;
+    march.monthImage = marchData;
+    april.monthImage = aprilData;
+    may.monthImage = mayData;
+    june.monthImage = juneData;
+    july.monthImage = julyData;
+    august.monthImage = augustData;
+    september.monthImage = septemberData;
+    october.monthImage = octoberData;
+    september.monthImage = septemberData;
+    october.monthImage = octoberData;
+    november.monthImage = novemberData;
+    december.monthImage = decemberData;
 
     self.monthArray = [Month allObjects];
     
@@ -132,6 +174,9 @@ static NSString * const reuseIdentifier = @"Cell";
     MonthCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     Month *month = self.monthArray[indexPath.row];
     cell.monthLabel.text = [month monthName];
+    NSData *data = [month monthImage];
+    UIImage *image = [UIImage imageWithData:data];
+    cell.monthImageview.image = image;
     return cell;
 }
 

@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		937FD8811AF1C1100041D12D /* cameraIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8801AF1C1100041D12D /* cameraIconBlue.png */; };
 		937FD8831AF1C27C0041D12D /* cameraIconNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8821AF1C27C0041D12D /* cameraIconNew.png */; };
+		937FD8851AF1EE800041D12D /* NovemberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8841AF1EE800041D12D /* NovemberIcon.png */; };
+		937FD8901AF1EFBD0041D12D /* AprilIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8861AF1EFBD0041D12D /* AprilIcon.png */; };
+		937FD8911AF1EFBD0041D12D /* AugustIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8871AF1EFBD0041D12D /* AugustIcon.png */; };
+		937FD8921AF1EFBD0041D12D /* DecemberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8881AF1EFBD0041D12D /* DecemberIcon.png */; };
+		937FD8931AF1EFBD0041D12D /* FebruaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8891AF1EFBD0041D12D /* FebruaryIcon.png */; };
+		937FD8941AF1EFBD0041D12D /* JanuaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88A1AF1EFBD0041D12D /* JanuaryIcon.png */; };
+		937FD8951AF1EFBD0041D12D /* JulyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88B1AF1EFBD0041D12D /* JulyIcon.png */; };
+		937FD8961AF1EFBD0041D12D /* JuneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88C1AF1EFBD0041D12D /* JuneIcon.png */; };
+		937FD8971AF1EFBD0041D12D /* MarchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88D1AF1EFBD0041D12D /* MarchIcon.png */; };
+		937FD8981AF1EFBD0041D12D /* OctoberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88E1AF1EFBD0041D12D /* OctoberIcon.png */; };
+		937FD8991AF1EFBD0041D12D /* SeptemberIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */; };
+		937FD89B1AF1F4870041D12D /* MayIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD89A1AF1F4870041D12D /* MayIcon2.png */; };
 		93A0D1961AEF39A200F277F2 /* DiaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */; };
 		93A0D1A51AF0425F00F277F2 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */; };
 		93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */; };
@@ -67,6 +79,18 @@
 /* Begin PBXFileReference section */
 		937FD8801AF1C1100041D12D /* cameraIconBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIconBlue.png; sourceTree = "<group>"; };
 		937FD8821AF1C27C0041D12D /* cameraIconNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIconNew.png; sourceTree = "<group>"; };
+		937FD8841AF1EE800041D12D /* NovemberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NovemberIcon.png; sourceTree = "<group>"; };
+		937FD8861AF1EFBD0041D12D /* AprilIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AprilIcon.png; sourceTree = "<group>"; };
+		937FD8871AF1EFBD0041D12D /* AugustIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AugustIcon.png; sourceTree = "<group>"; };
+		937FD8881AF1EFBD0041D12D /* DecemberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DecemberIcon.png; sourceTree = "<group>"; };
+		937FD8891AF1EFBD0041D12D /* FebruaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FebruaryIcon.png; sourceTree = "<group>"; };
+		937FD88A1AF1EFBD0041D12D /* JanuaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JanuaryIcon.png; sourceTree = "<group>"; };
+		937FD88B1AF1EFBD0041D12D /* JulyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JulyIcon.png; sourceTree = "<group>"; };
+		937FD88C1AF1EFBD0041D12D /* JuneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JuneIcon.png; sourceTree = "<group>"; };
+		937FD88D1AF1EFBD0041D12D /* MarchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarchIcon.png; sourceTree = "<group>"; };
+		937FD88E1AF1EFBD0041D12D /* OctoberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OctoberIcon.png; sourceTree = "<group>"; };
+		937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeptemberIcon.png; sourceTree = "<group>"; };
+		937FD89A1AF1F4870041D12D /* MayIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MayIcon2.png; sourceTree = "<group>"; };
 		93A0D1941AEF39A200F277F2 /* DiaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryDetailViewController.m; sourceTree = "<group>"; };
 		93A0D1A31AF0425F00F277F2 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
@@ -175,6 +199,18 @@
 				93CF25931AE80B2B007B6C24 /* Products */,
 				93CF25BD1AE80CBE007B6C24 /* libc++.dylib */,
 				93A0D1C01AF0A6AF00F277F2 /* memoryIconDrawer.gif */,
+				937FD8861AF1EFBD0041D12D /* AprilIcon.png */,
+				937FD8871AF1EFBD0041D12D /* AugustIcon.png */,
+				937FD8881AF1EFBD0041D12D /* DecemberIcon.png */,
+				937FD8891AF1EFBD0041D12D /* FebruaryIcon.png */,
+				937FD88A1AF1EFBD0041D12D /* JanuaryIcon.png */,
+				937FD88B1AF1EFBD0041D12D /* JulyIcon.png */,
+				937FD88C1AF1EFBD0041D12D /* JuneIcon.png */,
+				937FD89A1AF1F4870041D12D /* MayIcon2.png */,
+				937FD88D1AF1EFBD0041D12D /* MarchIcon.png */,
+				937FD88E1AF1EFBD0041D12D /* OctoberIcon.png */,
+				937FD88F1AF1EFBD0041D12D /* SeptemberIcon.png */,
+				937FD8841AF1EE800041D12D /* NovemberIcon.png */,
 				937FD8821AF1C27C0041D12D /* cameraIconNew.png */,
 				937FD8801AF1C1100041D12D /* cameraIconBlue.png */,
 				93A0D1BE1AF0A61900F277F2 /* memoryIconXsmall.gif */,
@@ -362,16 +398,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937FD8931AF1EFBD0041D12D /* FebruaryIcon.png in Resources */,
+				937FD8981AF1EFBD0041D12D /* OctoberIcon.png in Resources */,
+				937FD8941AF1EFBD0041D12D /* JanuaryIcon.png in Resources */,
 				93CF25EE1AE8BDD6007B6C24 /* diaryIcon.png in Resources */,
+				937FD8971AF1EFBD0041D12D /* MarchIcon.png in Resources */,
+				937FD8901AF1EFBD0041D12D /* AprilIcon.png in Resources */,
 				93A0D1B71AF08E8500F277F2 /* mapDetail.png in Resources */,
 				937FD8831AF1C27C0041D12D /* cameraIconNew.png in Resources */,
 				93CF25EF1AE8BDD6007B6C24 /* mapIcon.png in Resources */,
+				937FD89B1AF1F4870041D12D /* MayIcon2.png in Resources */,
 				93A0D1BF1AF0A61900F277F2 /* memoryIconXsmall.gif in Resources */,
 				93CF25ED1AE8BDD6007B6C24 /* cameraIcon.png in Resources */,
+				937FD8851AF1EE800041D12D /* NovemberIcon.png in Resources */,
+				937FD8951AF1EFBD0041D12D /* JulyIcon.png in Resources */,
 				93CF25A11AE80B2B007B6C24 /* Main.storyboard in Resources */,
 				93CF25A61AE80B2B007B6C24 /* LaunchScreen.xib in Resources */,
 				937FD8811AF1C1100041D12D /* cameraIconBlue.png in Resources */,
+				937FD8961AF1EFBD0041D12D /* JuneIcon.png in Resources */,
+				937FD8911AF1EFBD0041D12D /* AugustIcon.png in Resources */,
+				937FD8991AF1EFBD0041D12D /* SeptemberIcon.png in Resources */,
 				93A0D1B81AF08E8500F277F2 /* mapView.png in Resources */,
+				937FD8921AF1EFBD0041D12D /* DecemberIcon.png in Resources */,
 				93A0D1BD1AF0A4B400F277F2 /* memoryIconX.gif in Resources */,
 				93CF25A31AE80B2B007B6C24 /* Images.xcassets in Resources */,
 				93CF25C91AE80F32007B6C24 /* drawerIcon.png in Resources */,
