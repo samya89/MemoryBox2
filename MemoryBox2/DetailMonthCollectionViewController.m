@@ -128,7 +128,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     self.selectedIndexPath = indexPath;
     [self performSegueWithIdentifier:@"dayDetail" sender:self];
-    NSLog(@"selected date = %@, %ld", self.monthItem,indexPath.row+1);
+//    NSLog(@"selected date = %@, %ld", self.monthItem,indexPath.row+1);
 }
 
 /*
