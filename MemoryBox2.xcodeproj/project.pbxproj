@@ -25,6 +25,8 @@
 		937FD8A31AF2256B0041D12D /* cameraTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A01AF2256B0041D12D /* cameraTransparent.png */; };
 		937FD8A41AF2256B0041D12D /* diaryTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A11AF2256B0041D12D /* diaryTransparent.png */; };
 		937FD8A51AF2256B0041D12D /* mapTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A21AF2256B0041D12D /* mapTransparent.png */; };
+		937FD8A71AF2B4B60041D12D /* mapViewNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A61AF2B4B60041D12D /* mapViewNew.png */; };
+		937FD8A91AF2B7650041D12D /* mapDetailNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 937FD8A81AF2B7650041D12D /* mapDetailNew.png */; };
 		93A0D1961AEF39A200F277F2 /* DiaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */; };
 		93A0D1A51AF0425F00F277F2 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A41AF0425F00F277F2 /* PhotoViewController.m */; };
 		93A0D1A81AF0637F00F277F2 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D1A71AF0637F00F277F2 /* PhotoDetailViewController.m */; };
@@ -99,6 +101,8 @@
 		937FD8A01AF2256B0041D12D /* cameraTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraTransparent.png; sourceTree = "<group>"; };
 		937FD8A11AF2256B0041D12D /* diaryTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaryTransparent.png; sourceTree = "<group>"; };
 		937FD8A21AF2256B0041D12D /* mapTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapTransparent.png; sourceTree = "<group>"; };
+		937FD8A61AF2B4B60041D12D /* mapViewNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapViewNew.png; sourceTree = "<group>"; };
+		937FD8A81AF2B7650041D12D /* mapDetailNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapDetailNew.png; sourceTree = "<group>"; };
 		93A0D1941AEF39A200F277F2 /* DiaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryDetailViewController.h; sourceTree = "<group>"; };
 		93A0D1951AEF39A200F277F2 /* DiaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryDetailViewController.m; sourceTree = "<group>"; };
 		93A0D1A31AF0425F00F277F2 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				937FD8A21AF2256B0041D12D /* mapTransparent.png */,
 				93A0D1C01AF0A6AF00F277F2 /* memoryIconDrawer.gif */,
 				937FD8861AF1EFBD0041D12D /* AprilIcon.png */,
+				937FD8A61AF2B4B60041D12D /* mapViewNew.png */,
+				937FD8A81AF2B7650041D12D /* mapDetailNew.png */,
 				937FD8871AF1EFBD0041D12D /* AugustIcon.png */,
 				937FD8881AF1EFBD0041D12D /* DecemberIcon.png */,
 				937FD8891AF1EFBD0041D12D /* FebruaryIcon.png */,
@@ -431,6 +437,7 @@
 				937FD8811AF1C1100041D12D /* cameraIconBlue.png in Resources */,
 				937FD8961AF1EFBD0041D12D /* JuneIcon.png in Resources */,
 				937FD8911AF1EFBD0041D12D /* AugustIcon.png in Resources */,
+				937FD8A71AF2B4B60041D12D /* mapViewNew.png in Resources */,
 				937FD8991AF1EFBD0041D12D /* SeptemberIcon.png in Resources */,
 				93A0D1B81AF08E8500F277F2 /* mapView.png in Resources */,
 				937FD8921AF1EFBD0041D12D /* DecemberIcon.png in Resources */,
@@ -439,6 +446,7 @@
 				93CF25C91AE80F32007B6C24 /* drawerIcon.png in Resources */,
 				937FD8A51AF2256B0041D12D /* mapTransparent.png in Resources */,
 				93A0D1C11AF0A6AF00F277F2 /* memoryIconDrawer.gif in Resources */,
+				937FD8A91AF2B7650041D12D /* mapDetailNew.png in Resources */,
 				937FD8A31AF2256B0041D12D /* cameraTransparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
